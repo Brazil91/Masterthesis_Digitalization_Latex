@@ -1,0 +1,495 @@
+\documentclass[
+fontsize=12pt, 
+paper=a4, 
+ BCOR=10mm, 
+twoside=false,
+ DIV=15,5, 
+ headsepline, 
+ footsepline,
+usegeometry%<- ergänzt
+%headinclude=false
+%footinclude=false 
+]{scrartcl} 
+ 
+
+\usepackage
+[bottom=3.3cm
+%,footskip=60pt
+]{geometry}
+
+%\setlength{\footskip}{4em}
+
+% 1,5 facher ZeilenAbstand
+\usepackage[onehalfspacing]{setspace}
+%\usepackage[singlespacing]{setspace}
+%\usepackage[doublespacing]{setspace}
+%
+%oder man nehme \linespread{value}
+%
+%where value determine line spacing. This value is somewhat confusing, because:
+%
+%Value	Line spacing
+%1.0		single spacing
+%1.3		one-and-a-half spacing
+%1.6		double spacing
+
+% Bindungskorrektur papierverlust durch Hefter 7,5 und durchs knicken 0,75
+%\KOMAoptions{BCOR=8.25mm}
+%%________________________________________________________
+
+\AfterTOCHead{\singlespacing} %Nach der Überschrift des Inhaltsverzeichnisses wird ein \\gesetzt
+
+
+%Neue Satztspiegelberchenen
+\recalctypearea
+\KOMAoptions{DIV=last}
+
+%\KOMAoptions{headsepline}
+%\KOMAoptions{footsepline}
+
+\usepackage[autooneside=true]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+%\lohead{}
+%\rohead{Daniel Ludwig}
+%\lofoot{HAW Hamburg}
+\setkomafont{pageheadfoot}{\small} % Aufrechte und kleine Schrift in header und foot
+\chead{\headmark}
+\automark[subsection]{section}
+
+%Kollumnentitel (Section) wird links in den Header geschrieben, mit Stern
+%\ihead*{\headmark}
+%\ohead{Daniel Ludwig}
+
+%Wer das Dokument nicht mit KOMA/typeare nach Satzspiegel formatieren möchte
+% nutzt
+
+\usepackage[english,ngerman]{babel} % Die letzte angegebene Sprache wird als Hauptsprache festgelegt.
+
+%\usepackage[utf8]{inputenc} %UTF-8 Codierung (Umlaute etc.; Deutsch, Englisch, Portugiesisch...)
+%\usepackage[T1]{fontenc} % zum nutzen von pdfLaTeX
+
+%Schrifttyp
+%\setmainfont{QTCaslan}
+%\setmainfont{Arno Pro}
+
+%%________________________________________________________ 
+%%________________________________________________________ 
+
+\usepackage{fontspec} %Um installierte fonts mit XeTeX zu nutzen
+\usepackage{caption}
+
+\newfontfamily\Menlo[Mapping=tex-text, Scale=.78]{Menlo}
+\newfontfamily\Hypatia[Mapping=tex-text, Scale=0.95]{Hypatia Sans Pro}
+
+%\DeclareCaptionFormat{Menlo}{\captionfont\normalsize#1#2}
+%\captionsetup{labelformat=Menlo}
+%Serifen Schiften
+%_____________________________________________________________________________
+%
+\setromanfont{Arno Pro}
+%\setromanfont{Century Schoolbook}
+%\setromanfont{PT Serif}
+
+%Serifenlose Schiften
+%_____________________________________________________________________________
+
+\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Futura}
+%\setsansfont{PT Sans}
+
+%Typewriter (Programmiercode, Hyperref) Schiften
+%_____________________________________________________________________________
+%\setmonofont[Color={0019D4},Scale=0.85]{Special Elite}
+%\setmonofont[Scale=0.9]{Special Elite}
+%\setmonofont[Color={0019D4},Scale=1]{Lucida Grande}
+\setmonofont[Color={0019D4}, Scale=.78]{Menlo}
+%\setmonofont[Color={0019D4},Scale=.8]{Andale Mono}
+%\setmonofont[Color={0019D4}]{RM Typerighter}
+%\setmonofont[Color={0019D4}]{Courier New} %Typewriter/Schreibmaschinen Schrift in Blau 
+
+%\newfontfamily\captionfont[Scale=.78]{Menlo} 
+
+%Progammcode/Typewriter Umgebung
+%\begin{verbatim}
+%usually this environment is used to display code
+%\end{verbatim}
+
+%\usepackage{geometry}                		
+%\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+
+% \geometry{
+% left = 3cm,
+% right = 2cm,
+% top = 2cm
+% bottom = 2cm}
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage[graphicx]{realboxes}
+\usepackage{rotating} 				%Picture rotation
+\usepackage[table,xcdraw,dvipsnames]{xcolor} % https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{caption}								
+\usepackage{float}
+
+\usepackage{pdfpages}
+
+%%====================================================================
+%%====================================================================
+% Tabellen packages!!!!!!!
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+\usepackage{siunitx}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{nicematrix}
+\usepackage{booktabs}
+
+\definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
+\definecolor{hellgrün}{RGB}{198,224,180}
+\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+
+\usepackage{colortbl}
+\usepackage{textcomp} % Griechischesymbole richtig im Mathemodus darstellendarstellen
+\usepackage{multirow}
+\usepackage{makecell} % Tabellenzelle formatieren
+
+\usepackage{wrapfig}
+
+%%====================================================================
+%%====================================================================
+
+\usepackage{varwidth}
+%\begin{figure}[h!]
+%\centering
+%\begin{varwidth}{\linewidth}
+%\begin{verbatim}
+%'\s\+\s\s\s\s12\.8\sg\s\r\n'
+%\end{verbatim}
+%\end{varwidth}
+%\end{figure}
+%___________________________________________________________________________
+
+\usepackage{fancyvrb}
+%\begin{figure}[h!]
+%\centering
+%\begin{BVerbatim}
+%'\s''\+''\s''\s''\s''\s''12''\.''8''\s''g''\s''\r''\n'
+%\end{BVerbatim}
+%\end{figure}
+%___________________________________________________________________________%___________________________________________________________________________
+
+\usepackage{tikz}
+
+%=======================================
+% Tikz schraffierte Zelle programmieren
+%=======================================
+\usetikzlibrary{patterns} % für die Schraffur
+
+\ExplSyntaxOn
+\cs_new_protected:Nn \__pantigny_hatchcell:nnn
+{
+	\begin { tikzpicture }
+		\fill [ pattern = north~west~lines , pattern~color = #3 ]
+		( row - #1 -| col - #2)
+		rectangle
+		( row - \int_eval:n { #1 + 1 } -| col - \int_eval:n { #2 + 1 } ) ;
+	\end { tikzpicture }
+}
+\NewDocumentCommand \hatchcell { ! O { black } }
+{
+\tl_gput_right:Nx \g_nicematrix_code_before_tl
+{
+\__pantigny_hatchcell:nnn
+	{ \int_use:c { c@iRow } }
+		{ \int_use:c { c@jCol } }
+			{ #1 }
+		}
+	}
+\ExplSyntaxOff
+
+%\begin{NiceTabular}{ccc}[hvlines]   % \usepackage{nicematrix,tikz}
+%Tokyo & Paris & London \\
+%Roma & \hatchcell[blue!30]Oslo & Miami \\
+%Los Angeles & Madrid & Roma
+%\end{NiceTabular}
+
+%========================================
+
+\usetikzlibrary{chains}
+
+%==========================================
+
+%\include{tikz-chains-beispiel}
+
+%==========================================
+
+
+%%Bibtex JabRef *.bib Datei
+%__________________________________________________________________
+\bibliographystyle{unsrt}
+\usepackage[backend=biber]{biblatex}  %biblatex mit biber laden
+
+
+%\ExecuteBibliographyOptions{
+%sorting=nyt, %Sortierung Autor, Titel, Jahr
+%bibwarn=true, %Probleme mit den Daten, die Backend betreffen anzeigen
+%isbn=false, %keine isbn anzeigen
+%url=false %keine url anzeigen
+%}
+\addbibresource{Masterthesis_Literaturverzeichnis.bib} 
+%__________________________________________________________________
+%__________________________________________________________________
+
+
+
+
+
+%%__________________________________________________________________
+%%\usepackage{subcaption}
+\usepackage{subfig} %zwei Bilder nebeneinander
+
+%\renewcommand{\thefigure}{\Alph{chapter}.\Alph{figure}}
+\renewcommand{\thesubfigure}{\texttt{\alph{subfigure}}} % \roman{...} kleine römische Ziffern für die Subcaptions
+
+% Globale Label formattierung tt =Typewriter, bf= Boldface, rm = roman...
+\captionsetup{labelfont={tt,tt}}
+
+%\usepackage{pdfpages}
+\def\bild#1#2#3#4#5#6{%
+\begin{figure}[h!] %[htbp!] bedeutet here top bottom page und das ! bedeutet die Begrenzungen von Latex aufzuheben
+\centering
+\includegraphics[width=#1\textwidth]{Bilder/#2}
+\vspace{#3}
+\caption[#4]{#5}\label{#6}
+\end{figure}
+}
+
+\def\bildp#1#2#3#4#5#6#7{%
+\begin{figure}[#1] %[htbp!] bedeutet here top bottom page und das ! bedeutet die Begrenzungen von Latex aufzuheben
+\centering
+\includegraphics[width=#2\textwidth]{Bilder/#3}
+\vspace{#4}
+\caption[#5]{#6}\label{#7}
+\end{figure}
+}
+
+\usepackage[export]{adjustbox}
+\usepackage[section]{placeins} %% hinter den abbildungen und tabellen gibt es eine float bariere
+\usepackage[most]{tcolorbox}
+\newtcbox{\one}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline={1pt}{-3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  #1
+}
+\newtcbox{\two}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline west={1pt}{3pt}{black},
+  borderline south={1pt}{3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  colframe=black,
+  #1}
+\newtcbox{\three}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline west={1pt}{-3pt}{black},
+  borderline south={1pt}{-3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  colframe=black,
+  #1}
+  
+  \newtcbox{\four}[1][]{%
+    enhanced,
+    frame hidden,colback=white,enhanced,overlay unbroken={%
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    #1}
+    
+    
+
+\newtcolorbox{five}[1][]{%
+    enhanced,
+    breakable,
+    frame hidden,
+    colback=white,
+    overlay unbroken={%
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    overlay first={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay middle={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay last={
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    #1,
+}
+
+%\begin{five}
+%    \lipsum
+%\end{five}
+
+%__________________________________________________________________
+
+%Inhaltsangabentiefenformatierung
+
+\setcounter{tocdepth}{4}
+%__________________________________________________________________
+
+
+%Paragraph verhält sich wie die vierte Ebene (subsubsubsection)
+%__________________________________________________________________
+%\setcounter{secnumdepth}{4}
+
+
+\makeatletter
+\newcommand*\addsubsec{\secdef\@addsubsec\@saddsubsec}
+\newcommand*{\@addsubsec}{}
+\def\@addsubsec[#1]#2{\subsection*{#2}\addcontentsline{toc}{subsection}{#1}
+  \if@twoside\ifx\@mkboth\markboth\markright{#1}\fi\fi
+}
+%\newcommand*{\@saddsubsec}[1]{\subsection*{#1}\@mkboth{}{}}
+%\makeatother
+ 
+
+
+
+%% Global ITEMIZE alignment!!!
+%%====================================================
+\usepackage{enumitem}
+
+\newlength\mylen
+\settowidth\mylen{\textbullet}
+\addtolength\mylen{-3mm}
+%\setlist[itemize,1]{leftmargin=*,labelsep=-\mylen} GLOBAL!!!!!!!!!!!!!
+
+%\noindent\begin{itemize}[leftmargin=*,labelsep=-\mylen]
+%\item First item.
+%\item Second item.
+%\item Third item.
+%\end{itemize}
+%
+%\noindent\rule{3mm}{1pt}Fourth item?
+%%====================================================
+
+
+\usepackage{adjustbox} %vlaign of subfigures
+
+
+\setlength\parindent{0pt} % keine Zeileneinrückung nah einem Absatz
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+%\usepackage{epigraph}
+\usepackage{csquotes}
+\usepackage{abstract}
+
+
+
+
+%\includeonly{
+%%veroeffentlichungserklaerung,
+%%Danksagung,
+%%Verzeichnisse,
+%%
+%%Einleitung,
+%%Stand_der_Technik,
+%%Konzeptentwicklung,
+%\include{Teilumsetzung}
+%%Schnittstellenkonfiguration_und_Signalverarbeitung_von_Messeinrichtungen,
+%%Fazit,
+%%Tools
+%}
+
+
+
+
+
+\begin{document} 
+
+\include{Titelseite}
+\pagebreak
+
+
+%\thispagestyle{empty}
+\tableofcontents
+%\thispagestyle{empty}
+\pagebreak
+
+
+\include{veroeffentlichungserklaerung}
+\include{Danksagung}
+\include{Verzeichnisse}
+\include{Tools}
+%\section*{Abstract}
+\pagestyle{scrheadings}
+%Seitenzähler reset mit arabischen Ziffern
+%%_____________________________________________________________________
+%\pagenumbering{arabic}
+%
+% oder
+%
+%\setcounter{page}{1}
+\include{Zusammenfassung}
+\pagenumbering{arabic}
+\include{Einleitung}
+\include{Stand_der_Technik}
+\include{Konzeptentwicklung}
+\include{Schnittstellenkonfiguration_und_Signalverarbeitung_von_Messeinrichtungen}
+\include{Teilumsetzung}
+\include{Fazit}
+
+
+\pagebreak
+\pagenumbering{roman}
+
+\setmonofont[Scale=.78]{Menlo}
+\printbibliography
+\setmonofont[Color={0019D4}, Scale=.78]{Menlo}
+
+\newpage
+
+%\thispagestyle{empty}
+\listoffigures
+%\thispagestyle{empty}
+\listoftables
+
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\pagebreak
+%\thispagestyle{empty}
+\include{Anhang}
+
+\end{document}  

@@ -1,0 +1,1802 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{techszenario_i40}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a6a688c453557d0178b0552488e2350f}{%
+           family={4.0},
+           familyi={4\bibinitperiod},
+           given={Plattform\bibnamedelima Industrie},
+           giveni={P\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6a688c453557d0178b0552488e2350f}
+      \strng{fullhash}{a6a688c453557d0178b0552488e2350f}
+      \strng{bibnamehash}{a6a688c453557d0178b0552488e2350f}
+      \strng{authorbibnamehash}{a6a688c453557d0178b0552488e2350f}
+      \strng{authornamehash}{a6a688c453557d0178b0552488e2350f}
+      \strng{authorfullhash}{a6a688c453557d0178b0552488e2350f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bundesministerium für Wirtschaftund Energie (BMWi)}
+      \field{title}{Technologieszenario„Künstliche Intelligenz in der Industrie 4.0“}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/KI-industrie-40.pdf?__blob=publicationFile&v=10
+      \endverb
+      \verb{url}
+      \verb https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/KI-industrie-40.pdf?__blob=publicationFile&v=10
+      \endverb
+    \endentry
+    \entry{lab40}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1d55af1659424cf94d869e2580a11bf8}{%
+           family={Accenture},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d55af1659424cf94d869e2580a11bf8}
+      \strng{fullhash}{1d55af1659424cf94d869e2580a11bf8}
+      \strng{bibnamehash}{1d55af1659424cf94d869e2580a11bf8}
+      \strng{authorbibnamehash}{1d55af1659424cf94d869e2580a11bf8}
+      \strng{authornamehash}{1d55af1659424cf94d869e2580a11bf8}
+      \strng{authorfullhash}{1d55af1659424cf94d869e2580a11bf8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{journaltitle}{CHEManager}
+      \field{month}{2}
+      \field{title}{Labor 4.0 – digitale Transformation erfasst Forschung und Entwicklung}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.chemanager-online.com/themen/strategie/labor-40-digitale-transformation-erfasst-forschung-und-entwicklung
+      \endverb
+      \verb{url}
+      \verb https://www.chemanager-online.com/themen/strategie/labor-40-digitale-transformation-erfasst-forschung-und-entwicklung
+      \endverb
+    \endentry
+    \entry{bti40}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1f9eabcf66f4ecf6788de2511cc806b9}{%
+           family={Andrea},
+           familyi={A\bibinitperiod},
+           given={Gillhuber},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \strng{fullhash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \strng{bibnamehash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \strng{authorbibnamehash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \strng{authornamehash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \strng{authorfullhash}{1f9eabcf66f4ecf6788de2511cc806b9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{5}
+      \field{title}{Bluetooth in Industrie 4.0}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.industrial-production.de/ki---datenanalyse/bluetooth-in-industrie-4-0.htm
+      \endverb
+      \verb{url}
+      \verb https://www.industrial-production.de/ki---datenanalyse/bluetooth-in-industrie-4-0.htm
+      \endverb
+    \endentry
+    \entry{BTTG2021}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8a033dab6985d22b357f56ae3130eb69}{%
+           family={{B+B Thermo-Technik GmbH}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a033dab6985d22b357f56ae3130eb69}
+      \strng{fullhash}{8a033dab6985d22b357f56ae3130eb69}
+      \strng{bibnamehash}{8a033dab6985d22b357f56ae3130eb69}
+      \strng{authorbibnamehash}{8a033dab6985d22b357f56ae3130eb69}
+      \strng{authornamehash}{8a033dab6985d22b357f56ae3130eb69}
+      \strng{authorfullhash}{8a033dab6985d22b357f56ae3130eb69}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{2}
+      \field{title}{Technische Daten des DRTR-AL-10V-RV1 Drucksensors}
+      \field{urlday}{21}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://b2c.bb-sensors.com/out/media/Datenblatt_Relativdrucktransmitter_Aluminium.pdf
+      \endverb
+      \verb{url}
+      \verb https://b2c.bb-sensors.com/out/media/Datenblatt_Relativdrucktransmitter_Aluminium.pdf
+      \endverb
+    \endentry
+    \entry{digitale_trans_kondratjew}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d58c9aa33d6f81f10d0ebfcdd25c8ad0}{%
+           family={Böhm},
+           familyi={B\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \strng{fullhash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \strng{bibnamehash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \strng{authorbibnamehash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \strng{authornamehash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \strng{authorfullhash}{d58c9aa33d6f81f10d0ebfcdd25c8ad0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{journaltitle}{Computerwoche}
+      \field{month}{6}
+      \field{title}{Digitale Transformation – Trend oder industrielle Revolution?}
+      \field{urlday}{5}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.computerwoche.de/a/digitale-transformation-trend-oder-industrielle-revolution,3312556
+      \endverb
+      \verb{url}
+      \verb https://www.computerwoche.de/a/digitale-transformation-trend-oder-industrielle-revolution,3312556
+      \endverb
+    \endentry
+    \entry{machine_learning_kompakt}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e7bec4aeb6cbfe8741541f4a2ab78c26}{%
+           family={Burkov},
+           familyi={B\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Frechen}%
+      }
+      \list{publisher}{1}{%
+        {mitp Verlag}%
+      }
+      \strng{namehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{fullhash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{bibnamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authorbibnamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authornamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authorfullhash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1.}
+      \field{isbn}{978-3-9-5845-9}
+      \field{title}{Machine Learning Kompakt}
+      \field{year}{2019}
+    \endentry
+    \entry{Busch2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3b31de16bf44474e432d2a08dc00a970}{%
+           family={Busch},
+           familyi={B\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{3b31de16bf44474e432d2a08dc00a970}
+      \strng{fullhash}{3b31de16bf44474e432d2a08dc00a970}
+      \strng{bibnamehash}{3b31de16bf44474e432d2a08dc00a970}
+      \strng{authorbibnamehash}{3b31de16bf44474e432d2a08dc00a970}
+      \strng{authornamehash}{3b31de16bf44474e432d2a08dc00a970}
+      \strng{authorfullhash}{3b31de16bf44474e432d2a08dc00a970}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-658-09675-5}
+      \field{title}{Elektrotechnik und Elektronik - Für Maschinenbauer und Verfahrenstechniker}
+      \field{year}{2015}
+    \endentry
+    \entry{bt5}{article}{}
+      \name{author}{1}{}{%
+        {{hash=68b623772231adaa408252a4fa1458d4}{%
+           family={Cross},
+           familyi={C\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{68b623772231adaa408252a4fa1458d4}
+      \strng{fullhash}{68b623772231adaa408252a4fa1458d4}
+      \strng{bibnamehash}{68b623772231adaa408252a4fa1458d4}
+      \strng{authorbibnamehash}{68b623772231adaa408252a4fa1458d4}
+      \strng{authornamehash}{68b623772231adaa408252a4fa1458d4}
+      \strng{authorfullhash}{68b623772231adaa408252a4fa1458d4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{journaltitle}{Computerwoche Voice of Digital}
+      \field{month}{3}
+      \field{title}{Bluetooth-Standard: Mehr Reichweite, mehr Speed}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.computerwoche.de/a/mehr-reichweite-mehr-speed,3544575
+      \endverb
+      \verb{url}
+      \verb https://www.computerwoche.de/a/mehr-reichweite-mehr-speed,3544575
+      \endverb
+    \endentry
+    \entry{structured}{book}{}
+      \name{editor}{3}{}{%
+        {{hash=9f2e6a37c98cf7a4efd4ae06f1af5388}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={O.\bibnamedelimi J.},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fa6182769b69c9f7b1559f8430d88929}{%
+           family={Dijkstra},
+           familyi={D\bibinitperiod},
+           given={E.\bibnamedelimi W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d6facc8397f631d3ef01dd70be993640}{%
+           family={Hoare},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi A.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {GBR}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press Ltd.}%
+      }
+      \strng{namehash}{d14201a161f761867a42838210589d99}
+      \strng{fullhash}{d14201a161f761867a42838210589d99}
+      \strng{bibnamehash}{d14201a161f761867a42838210589d99}
+      \strng{editorbibnamehash}{d14201a161f761867a42838210589d99}
+      \strng{editornamehash}{d14201a161f761867a42838210589d99}
+      \strng{editorfullhash}{d14201a161f761867a42838210589d99}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years there has been an increasing interest in the art of computer programming, the conceptual tools available for the design of programs, and the prevention of programming oversights and error. The initial outstanding contribution to our understanding of this subject was made by E. W. Dijkstra, whose Notes on Structured Programming form the first and major section of this book. They clearly expound the reflections of a brilliant programmer on the methods which he has hitherto unconsciously applied; there can be no programmer of the present day who could not increase his skills by a study and conscious application of these principles.In the second monograph I have tried to describe how similar principles can be applied in the design of data structures. I have suggested that in analysing a problem and groping towards a solution, a programmer should take advantage of abstract concepts such as sets, sequences, and mappings; and judiciously postpone decisions on representation until he is constructing the more detailed code of the program. The monograph also describes a range of useful ideas for data representation, and suggests the criteria relevant for their selection.The third monograph provides a synthesis of the previous two, and expounds the close theoretical and practical connections between the design of data and the design of programs. It introduces useful additional methods for program and data structuring which may be unfamiliar to many programmers. The examples show that structured programming principles can be equally applied in "bottom-up" as in "top-down" program design. The original inspiration, insight, and all the examples were contributed by O.-J. Dahl; I have only assembled the material, and added some additional explanations where I found it difficult to understand.}
+      \field{isbn}{0122005503}
+      \field{title}{Structured Programming}
+      \field{year}{1972}
+    \endentry
+    \entry{Ding2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=91fecfd3799325f0f7b2990211aef367}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Gudrun},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{91fecfd3799325f0f7b2990211aef367}
+      \strng{fullhash}{91fecfd3799325f0f7b2990211aef367}
+      \strng{bibnamehash}{91fecfd3799325f0f7b2990211aef367}
+      \strng{authorbibnamehash}{91fecfd3799325f0f7b2990211aef367}
+      \strng{authornamehash}{91fecfd3799325f0f7b2990211aef367}
+      \strng{authorfullhash}{91fecfd3799325f0f7b2990211aef367}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{journaltitle}{Pharma+Food}
+      \field{month}{4}
+      \field{title}{Die Wirbelschichttechnologie und ihre Möglichkeiten}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pharma-food.de/ausruestung/feststofftechnik/die-wirbelschichttechnologie-und-ihre-moeglichkeiten-1.html
+      \endverb
+      \verb{url}
+      \verb https://www.pharma-food.de/ausruestung/feststofftechnik/die-wirbelschichttechnologie-und-ihre-moeglichkeiten-1.html
+      \endverb
+      \keyw{verfahrenstechnik}
+    \endentry
+    \entry{Kuchenfiltration_Geweke2020}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=50b452cb1c08826dc4b7058722b9cf03}{%
+           family={Geweke},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{50b452cb1c08826dc4b7058722b9cf03}
+      \strng{fullhash}{50b452cb1c08826dc4b7058722b9cf03}
+      \strng{bibnamehash}{50b452cb1c08826dc4b7058722b9cf03}
+      \strng{authorbibnamehash}{50b452cb1c08826dc4b7058722b9cf03}
+      \strng{authornamehash}{50b452cb1c08826dc4b7058722b9cf03}
+      \strng{authorfullhash}{50b452cb1c08826dc4b7058722b9cf03}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Versuchsanweisung für die Kuchenfiltrationsanlage}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{db9}{online}{}
+      \name{author}{1}{}{%
+        {{hash=20957d9a430c28fe6445aaf26ad24931}{%
+           family={GmbH},
+           familyi={G\bibinitperiod},
+           given={Infotip\bibnamedelima Service},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{20957d9a430c28fe6445aaf26ad24931}
+      \strng{fullhash}{20957d9a430c28fe6445aaf26ad24931}
+      \strng{bibnamehash}{20957d9a430c28fe6445aaf26ad24931}
+      \strng{authorbibnamehash}{20957d9a430c28fe6445aaf26ad24931}
+      \strng{authornamehash}{20957d9a430c28fe6445aaf26ad24931}
+      \strng{authorfullhash}{20957d9a430c28fe6445aaf26ad24931}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{10}
+      \field{title}{RS232}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://kompendium.infotip.de/rs-232-die-serielle-schnittstelle.html
+      \endverb
+      \verb{url}
+      \verb https://kompendium.infotip.de/rs-232-die-serielle-schnittstelle.html
+      \endverb
+    \endentry
+    \entry{BigData}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9bbd1070a29b9e9801ce3bb65793b276}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={Gartner},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \strng{fullhash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \strng{bibnamehash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \strng{authorbibnamehash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \strng{authornamehash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \strng{authorfullhash}{9bbd1070a29b9e9801ce3bb65793b276}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{1}
+      \field{title}{Big Data}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gartner.com/en/information-technology/glossary/big-data
+      \endverb
+      \verb{url}
+      \verb https://www.gartner.com/en/information-technology/glossary/big-data
+      \endverb
+    \endentry
+    \entry{ISA-S95_sharing_data}{article}{}
+      \name{author}{2}{}{%
+        {{hash=248a20009be9f061a4df5ffe14a0b713}{%
+           family={Harjunkoski},
+           familyi={H\bibinitperiod},
+           given={Iiro},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ff60de32d37f57e756655033b3e705a8}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Reinhard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{03e8733afd616beaafb805c289a72c0d}
+      \strng{fullhash}{03e8733afd616beaafb805c289a72c0d}
+      \strng{bibnamehash}{03e8733afd616beaafb805c289a72c0d}
+      \strng{authorbibnamehash}{03e8733afd616beaafb805c289a72c0d}
+      \strng{authornamehash}{03e8733afd616beaafb805c289a72c0d}
+      \strng{authorfullhash}{03e8733afd616beaafb805c289a72c0d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{journaltitle}{Frontiers of Energy Research: Process and Energy Systems Engineering}
+      \field{month}{10}
+      \field{subtitle}{METHODS ARTICLE}
+      \field{title}{Sharing data for production scheduling using the ISA-95 standard}
+      \field{urlday}{18}
+      \field{urlmonth}{10}
+      \field{urlyear}{2020}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fenrg.2014.00044/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fenrg.2014.00044/full
+      \endverb
+    \endentry
+    \entry{speicherbedarf_vergleich_binär-ascii}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=2aafe788be648cf721fd7adaff8dc4f7}{%
+           family={Heinrich},
+           familyi={H\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {HAW der Fakultät Technik und Informatik}%
+      }
+      \strng{namehash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \strng{fullhash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \strng{bibnamehash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \strng{authorbibnamehash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \strng{authornamehash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \strng{authorfullhash}{2aafe788be648cf721fd7adaff8dc4f7}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{month}{6}
+      \field{title}{Development of a Portable Process Data Acquisition System}
+      \field{type}{mathesis}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://reposit.haw-hamburg.de/bitstream/20.500.12738/5198/1/Nils_Heinrich_1836842.pdf
+      \endverb
+      \verb{url}
+      \verb https://reposit.haw-hamburg.de/bitstream/20.500.12738/5198/1/Nils_Heinrich_1836842.pdf
+      \endverb
+    \endentry
+    \entry{dbmserklaert}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a123affeb81b737bdbe2734b1c13ec5}{%
+           family={Hosting-Technik},
+           familyi={H\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \strng{fullhash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \strng{bibnamehash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \strng{authorbibnamehash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \strng{authornamehash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \strng{authorfullhash}{4a123affeb81b737bdbe2734b1c13ec5}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{journaltitle}{IONOS}
+      \field{month}{5}
+      \field{title}{Datenbankmanagementsystem (DBMS) erklärt}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ionos.de/digitalguide/hosting/hosting-technik/datenbankmanagementsystem-dbms-erklaert/
+      \endverb
+      \verb{url}
+      \verb https://www.ionos.de/digitalguide/hosting/hosting-technik/datenbankmanagementsystem-dbms-erklaert/
+      \endverb
+    \endentry
+    \entry{hughes2010real}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dfbde9296d8eaf1a6b33fc5279c1de5f}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \strng{fullhash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \strng{bibnamehash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \strng{authorbibnamehash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \strng{authornamehash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \strng{authorfullhash}{dfbde9296d8eaf1a6b33fc5279c1de5f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781449396633}
+      \field{title}{Real World Instrumentation with Python: Automated Data Acquisition and Control Systems}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=MAdNTvLNrJsC
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=MAdNTvLNrJsC
+      \endverb
+      \keyw{python,rs232,seriell}
+    \endentry
+    \entry{blockdiagramm_frontpanel}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e07a8a16139f25a4c05b0e1e9aedfa3a}{%
+           family={Instruments},
+           familyi={I\bibinitperiod},
+           given={National},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{fullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{bibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorbibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authornamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorfullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{10}
+      \field{title}{Grundlagen zur LabVIEW-Umgebung}
+      \field{urlday}{13}
+      \field{urlmonth}{10}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ni.com/getting-started/labview-basics/d/environment
+      \endverb
+      \verb{url}
+      \verb https://www.ni.com/getting-started/labview-basics/d/environment
+      \endverb
+    \endentry
+    \entry{zeitreihenformatierung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e07a8a16139f25a4c05b0e1e9aedfa3a}{%
+           family={Instruments},
+           familyi={I\bibinitperiod},
+           given={National},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{fullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{bibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorbibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authornamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorfullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{12}
+      \field{title}{Zeitreihenformattierung}
+      \field{urlday}{17}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://zone.ni.com/reference/en-XX/help/371361R-01/glang/codes_for_time_format_str/
+      \endverb
+      \verb{url}
+      \verb https://zone.ni.com/reference/en-XX/help/371361R-01/glang/codes_for_time_format_str/
+      \endverb
+    \endentry
+    \entry{intellipaat_unsupervised}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bc175d9d5cb2dd38aac4c40dd1e0acb8}{%
+           family={Intellipaat},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \strng{fullhash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \strng{bibnamehash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \strng{authorbibnamehash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \strng{authornamehash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \strng{authorfullhash}{bc175d9d5cb2dd38aac4c40dd1e0acb8}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{1}
+      \field{title}{Supervised Learning vs Unsupervised Learning vs Reinforcement Learning}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://intellipaat.com/blog/supervised-learning-vs-unsupervised-learning-vs-reinforcement-learning/
+      \endverb
+      \verb{url}
+      \verb https://intellipaat.com/blog/supervised-learning-vs-unsupervised-learning-vs-reinforcement-learning/
+      \endverb
+    \endentry
+    \entry{isa_s95}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1f78ee84d271a8ba4b393e42f28de608}{%
+           family={ISA-S95},
+           familyi={I\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f78ee84d271a8ba4b393e42f28de608}
+      \strng{fullhash}{1f78ee84d271a8ba4b393e42f28de608}
+      \strng{bibnamehash}{1f78ee84d271a8ba4b393e42f28de608}
+      \strng{authorbibnamehash}{1f78ee84d271a8ba4b393e42f28de608}
+      \strng{authornamehash}{1f78ee84d271a8ba4b393e42f28de608}
+      \strng{authorfullhash}{1f78ee84d271a8ba4b393e42f28de608}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{11}
+      \field{title}{ISA-S95}
+      \field{urlday}{23}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://isa-95.com/isa-95-enterprise-control-systems/
+      \endverb
+      \verb{url}
+      \verb https://isa-95.com/isa-95-enterprise-control-systems/
+      \endverb
+    \endentry
+    \entry{smarte_sensoren}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0a5598d12db7fd94fd974acf0825476d}{%
+           family={Jumo\bibnamedelimb GmbH\bibnamedelima Co.},
+           familyi={J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={K.\bibnamedelimi G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a5598d12db7fd94fd974acf0825476d}
+      \strng{fullhash}{0a5598d12db7fd94fd974acf0825476d}
+      \strng{bibnamehash}{0a5598d12db7fd94fd974acf0825476d}
+      \strng{authorbibnamehash}{0a5598d12db7fd94fd974acf0825476d}
+      \strng{authornamehash}{0a5598d12db7fd94fd974acf0825476d}
+      \strng{authorfullhash}{0a5598d12db7fd94fd974acf0825476d}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{journaltitle}{CHEManager}
+      \field{month}{6}
+      \field{title}{Smarte Sensoren als Türöffner der Industrie 4.0}
+      \field{urlday}{4}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.chemanager-online.com/themen/mess-automatisierungstechnik/smarte-sensoren-als-tueroeffner-der-industrie-40
+      \endverb
+      \verb{url}
+      \verb https://www.chemanager-online.com/themen/mess-automatisierungstechnik/smarte-sensoren-als-tueroeffner-der-industrie-40
+      \endverb
+    \endentry
+    \entry{kodosky}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=95d4c46c0391991675b6af62f99c967b}{%
+           family={Kodosky},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1400b283d5560e0ab1857cef5bcf0007}{%
+           family={MacCrisken},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fc4b813fd5f707bfb6ca31f98990862d}{%
+           family={Rymar},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Los Alamitos, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \strng{fullhash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \strng{bibnamehash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \strng{authorbibnamehash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \strng{authornamehash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \strng{authorfullhash}{f80c2269617a8e5dd466a5fe455fd2af}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 1991 IEEE Workshop on Visual Languages}
+      \field{month}{10}
+      \field{title}{Visual programming using structured data flow}
+      \field{year}{1991}
+      \field{pages}{34\bibrangessep 35\bibrangessep 36\bibrangessep 37\bibrangessep 38\bibrangessep 39}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/WVL.1991.238853
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.ieeecomputersociety.org/10.1109/WVL.1991.238853
+      \endverb
+      \verb{url}
+      \verb https://doi.ieeecomputersociety.org/10.1109/WVL.1991.238853
+      \endverb
+      \keyw{instruments;laboratories;computer languages;automation;testing;software systems;signal generators;frequency;costs;lifting equipment}
+    \endentry
+    \entry{reinforced_learning_go}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2dd858848580e34df5546088a10114a9}{%
+           family={Lemke},
+           familyi={L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2dd858848580e34df5546088a10114a9}
+      \strng{fullhash}{2dd858848580e34df5546088a10114a9}
+      \strng{bibnamehash}{2dd858848580e34df5546088a10114a9}
+      \strng{authorbibnamehash}{2dd858848580e34df5546088a10114a9}
+      \strng{authornamehash}{2dd858848580e34df5546088a10114a9}
+      \strng{authorfullhash}{2dd858848580e34df5546088a10114a9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{journaltitle}{Digitale Welt}
+      \field{month}{10}
+      \field{title}{Mit Reinforcement Learning auf dem Weg zur Allgemeinen KI}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://digitaleweltmagazin.de/2019/10/18/mit-reinforcement-learning-auf-dem-weg-zur-allgemeinen-ki/
+      \endverb
+      \verb{url}
+      \verb https://digitaleweltmagazin.de/2019/10/18/mit-reinforcement-learning-auf-dem-weg-zur-allgemeinen-ki/
+      \endverb
+    \endentry
+    \entry{wasistrs232}{online}{}
+      \name{author}{2}{}{%
+        {{hash=95c5b2bb99f983119bb81ec2bf7fa2aa}{%
+           family={Luber},
+           familyi={L\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4a5c78f4258f5f4219282e459bfead76}{%
+           family={Donner},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{fullhash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{bibnamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authorbibnamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authornamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authorfullhash}{309887f7487ea3bb9882f5ad92384a1e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{3}
+      \field{title}{Was ist RS-232?}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ip-insider.de/was-ist-rs-232-a-807547/
+      \endverb
+      \verb{url}
+      \verb https://www.ip-insider.de/was-ist-rs-232-a-807547/
+      \endverb
+    \endentry
+    \entry{cloudcomputing_insider}{article}{}
+      \name{author}{2}{}{%
+        {{hash=95c5b2bb99f983119bb81ec2bf7fa2aa}{%
+           family={Luber},
+           familyi={L\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f314375ba9a8c7578d65bbb3697ed31a}{%
+           family={Karlstetter},
+           familyi={K\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \strng{fullhash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \strng{bibnamehash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \strng{authorbibnamehash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \strng{authornamehash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \strng{authorfullhash}{6e402350eceeacf16c4a4e7ff92213cf}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{journaltitle}{Cloudcomputing Insider}
+      \field{month}{3}
+      \field{title}{Was ist Database as a Service (DBaaS)?}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cloudcomputing-insider.de/was-ist-database-as-a-service-dbaas-a-692502/
+      \endverb
+      \verb{url}
+      \verb https://www.cloudcomputing-insider.de/was-ist-database-as-a-service-dbaas-a-692502/
+      \endverb
+    \endentry
+    \entry{bigdata}{article}{}
+      \name{author}{2}{}{%
+        {{hash=95c5b2bb99f983119bb81ec2bf7fa2aa}{%
+           family={Luber},
+           familyi={L\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47db407ac66669da54b848de91cee6ed}{%
+           family={Litzel},
+           familyi={L\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{fullhash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{bibnamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authorbibnamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authornamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authorfullhash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{journaltitle}{BigData Insider}
+      \field{month}{2}
+      \field{title}{Was ist ein Datalake?}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bigdata-insider.de/was-ist-ein-data-lake-a-686778/
+      \endverb
+      \verb{url}
+      \verb https://www.bigdata-insider.de/was-ist-ein-data-lake-a-686778/
+      \endverb
+    \endentry
+    \entry{ELN_laborjournal}{article}{}
+      \name{author}{1}{}{%
+        {{hash=433fafc22069331e0490596187041168}{%
+           family={Mäder},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{433fafc22069331e0490596187041168}
+      \strng{fullhash}{433fafc22069331e0490596187041168}
+      \strng{bibnamehash}{433fafc22069331e0490596187041168}
+      \strng{authorbibnamehash}{433fafc22069331e0490596187041168}
+      \strng{authornamehash}{433fafc22069331e0490596187041168}
+      \strng{authorfullhash}{433fafc22069331e0490596187041168}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Laborjournal}
+      \field{month}{3}
+      \field{title}{Überflüssiger Papierkram}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{44\bibrangedash 45}
+      \range{pages}{2}
+      \verb{urlraw}
+      \verb http://www.laborjournal-archiv.de/epaper/LJ_18_03/44/
+      \endverb
+      \verb{url}
+      \verb http://www.laborjournal-archiv.de/epaper/LJ_18_03/44/
+      \endverb
+    \endentry
+    \entry{infos_teilgebiete_ai}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8c0a1b3dcb92fb0ce0622baebd00b80b}{%
+           family={Manhart},
+           familyi={M\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \strng{fullhash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \strng{bibnamehash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \strng{authorbibnamehash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \strng{authornamehash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \strng{authorfullhash}{8c0a1b3dcb92fb0ce0622baebd00b80b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{3}
+      \field{journaltitle}{Computerwoche}
+      \field{month}{9}
+      \field{title}{Was Sie über Maschinelles Lernen wissen müssen}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.computerwoche.de/a/was-sie-ueber-maschinelles-lernen-wissen-muessen,3329560
+      \endverb
+      \verb{url}
+      \verb https://www.computerwoche.de/a/was-sie-ueber-maschinelles-lernen-wissen-muessen,3329560
+      \endverb
+    \endentry
+    \entry{low-cost_daq}{article}{}
+      \name{author}{5}{}{%
+        {{hash=f953c67be8bf5ff9a3a226b969e50410}{%
+           family={Martín},
+           familyi={M\bibinitperiod},
+           given={F.J.\bibnamedelimi Ferrero},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=5d688ddc7100f1c69ca60128f2964657}{%
+           family={Llopis},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi Valledor},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=c7e3047f6977684e454ecf9474fa4cbe}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={J.C.\bibnamedelimi Campo},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2a03a6545d77334a86939b622721f25d}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={J.R.\bibnamedelimi Blanco},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=b88fe9a6e5f4526ba8993bd06fd194a0}{%
+           family={Blanco},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi Menéndez},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ed76499386b603a89f5c120a618e276}
+      \strng{fullhash}{d06c89779d74da5498a1cabb9be20f7b}
+      \strng{bibnamehash}{1ed76499386b603a89f5c120a618e276}
+      \strng{authorbibnamehash}{1ed76499386b603a89f5c120a618e276}
+      \strng{authornamehash}{1ed76499386b603a89f5c120a618e276}
+      \strng{authorfullhash}{d06c89779d74da5498a1cabb9be20f7b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{journaltitle}{Science Direct}
+      \field{month}{5}
+      \field{title}{Low-cost open-source multifunction data acquisition systemfor accurate measurements}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0263224114002206
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0263224114002206
+      \endverb
+    \endentry
+    \entry{sqlnosql}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c85850c63c930c4211bd1baa46598989}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d193ef606aaaf76bdda5c5a747a9f59}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \strng{fullhash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \strng{bibnamehash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \strng{authorbibnamehash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \strng{authornamehash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \strng{authorfullhash}{e9cb0cceebc437cca15c29d94cf2455e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-47664-2}
+      \field{title}{SQL- and NoSQL-Datenbanken}
+      \field{year}{2016}
+    \endentry
+    \entry{B2MML}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9d1a43925da5c0dedc7cd028b1e81074}{%
+           family={MESA},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \strng{fullhash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \strng{bibnamehash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \strng{authorbibnamehash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \strng{authornamehash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \strng{authorfullhash}{9d1a43925da5c0dedc7cd028b1e81074}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{9}
+      \field{title}{Business to Manufacturing Markup Language - B2MML}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.mesa.org/en/B2MML.asp
+      \endverb
+      \verb{url}
+      \verb http://www.mesa.org/en/B2MML.asp
+      \endverb
+    \endentry
+    \entry{cloudcomputing}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1853840cd1882f24780cedd18977bbe1}{%
+           family={Minnich},
+           familyi={M\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{fullhash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{bibnamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authorbibnamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authornamehash}{1853840cd1882f24780cedd18977bbe1}
+      \strng{authorfullhash}{1853840cd1882f24780cedd18977bbe1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{journaltitle}{heise}
+      \field{month}{5}
+      \field{title}{Vor- und Nachteile des Cloudcomputing}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041
+      \endverb
+    \endentry
+    \entry{HandbuchfuerLabview}{book}{}
+      \name{author}{1}{}{%
+        {{hash=41e841f240ce81bb61b255cb6cf0565b}{%
+           family={Mütterlein},
+           familyi={M\bibinitperiod},
+           given={Bernward},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{41e841f240ce81bb61b255cb6cf0565b}
+      \strng{fullhash}{41e841f240ce81bb61b255cb6cf0565b}
+      \strng{bibnamehash}{41e841f240ce81bb61b255cb6cf0565b}
+      \strng{authorbibnamehash}{41e841f240ce81bb61b255cb6cf0565b}
+      \strng{authornamehash}{41e841f240ce81bb61b255cb6cf0565b}
+      \strng{authorfullhash}{41e841f240ce81bb61b255cb6cf0565b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-827-42338-2}
+      \field{title}{Handbuch für die Programmierung mit LabVIEW - mit Studentenversion LabVIEW 2009}
+      \field{year}{2009}
+    \endentry
+    \entry{Nolten2013}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d9f6ba7503e6046fcbec96328a1b450c}{%
+           family={Nolten},
+           familyi={N\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen}%
+      }
+      \strng{namehash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \strng{fullhash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \strng{bibnamehash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \strng{authorbibnamehash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \strng{authornamehash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \strng{authorfullhash}{d9f6ba7503e6046fcbec96328a1b450c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{4}
+      \field{title}{Entwicklung und Charakterisierung dehnungsbasierter Kraft- und Momentensensoren für medizinische Anwendungen}
+      \field{type}{phdthesis}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://publications.rwth-aachen.de/record/229156/files/4667.pdf
+      \endverb
+      \verb{url}
+      \verb http://publications.rwth-aachen.de/record/229156/files/4667.pdf
+      \endverb
+    \endentry
+    \entry{digitwin_prozessmodellierung}{article}{}
+      \name{author}{4}{}{%
+        {{hash=08a696e955b0524eb54c43c9e4469a38}{%
+           family={Pfeiffer},
+           familyi={P\bibinitperiod},
+           given={B.\bibnamedelimi Markus},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8d381e03d6ef741c64bcccb2f3ead075}{%
+           family={Bozek},
+           familyi={B\bibinitperiod},
+           given={Ewa},
+           giveni={E\bibinitperiod}}}%
+        {{hash=af429904f1157e6d3dcb180c80291904}{%
+           family={Oppelt},
+           familyi={O\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a6d1bba074632a465093ef5cd54d4ee3}{%
+           family={Kempf},
+           familyi={K\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{97e58b1d3b90e994dc12a50e45c8115e}
+      \strng{fullhash}{56a039ad7b42c67177eeb83a7e2e2c18}
+      \strng{bibnamehash}{97e58b1d3b90e994dc12a50e45c8115e}
+      \strng{authorbibnamehash}{97e58b1d3b90e994dc12a50e45c8115e}
+      \strng{authornamehash}{97e58b1d3b90e994dc12a50e45c8115e}
+      \strng{authorfullhash}{56a039ad7b42c67177eeb83a7e2e2c18}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{journaltitle}{Process Vogel}
+      \field{month}{1}
+      \field{title}{Digitale Zwillinge und Prozessmodellierung – wie Sie davon profitieren können}
+      \field{urlday}{20}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.process.vogel.de/digitale-zwillinge-und-prozessmodellierung-wie-sie-davon-profitieren-koennen-a-896481/
+      \endverb
+      \verb{url}
+      \verb https://www.process.vogel.de/digitale-zwillinge-und-prozessmodellierung-wie-sie-davon-profitieren-koennen-a-896481/
+      \endverb
+    \endentry
+    \entry{processisa95}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b93c13848c6490ae962feec15fbdd151}{%
+           family={PROCESS},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c13848c6490ae962feec15fbdd151}
+      \strng{fullhash}{b93c13848c6490ae962feec15fbdd151}
+      \strng{bibnamehash}{b93c13848c6490ae962feec15fbdd151}
+      \strng{authorbibnamehash}{b93c13848c6490ae962feec15fbdd151}
+      \strng{authornamehash}{b93c13848c6490ae962feec15fbdd151}
+      \strng{authorfullhash}{b93c13848c6490ae962feec15fbdd151}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{journaltitle}{Process Vogel}
+      \field{month}{9}
+      \field{title}{ISA-95 schließt letzte Lücke zwischen Geschäfts- und Produktions-Prozessen}
+      \field{urlday}{24}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.process.vogel.de/isa-95-schliesst-letzte-luecke-zwischen-geschaefts-und-produktions-prozessen-a-60348/
+      \endverb
+      \verb{url}
+      \verb https://www.process.vogel.de/isa-95-schliesst-letzte-luecke-zwischen-geschaefts-und-produktions-prozessen-a-60348/
+      \endverb
+    \endentry
+    \entry{Reuter2011}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e2553ef6fc5494001506ab84bf4b416e}{%
+           family={Reuter},
+           familyi={R\bibinitperiod},
+           given={Silke},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen}%
+      }
+      \strng{namehash}{e2553ef6fc5494001506ab84bf4b416e}
+      \strng{fullhash}{e2553ef6fc5494001506ab84bf4b416e}
+      \strng{bibnamehash}{e2553ef6fc5494001506ab84bf4b416e}
+      \strng{authorbibnamehash}{e2553ef6fc5494001506ab84bf4b416e}
+      \strng{authornamehash}{e2553ef6fc5494001506ab84bf4b416e}
+      \strng{authorfullhash}{e2553ef6fc5494001506ab84bf4b416e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Partikeldynamik in Wirbelschichtsystemen - Geschwindigkeit und Zirkulation granularer Medien untersucht mit bildgebender und geschwindigkeitskodierender NMR}
+      \field{type}{phdthesis}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://publications.rwth-aachen.de/record/82677/files/3846.pdfKorngroessenreduktionsmechanismen in Wirbelschichten bei unterschiedlichen Betriebsbedingungen.pdf
+      \endverb
+      \verb{url}
+      \verb http://publications.rwth-aachen.de/record/82677/files/3846.pdfKorngroessenreduktionsmechanismen%20in%20Wirbelschichten%20bei%20unterschiedlichen%20Betriebsbedingungen.pdf
+      \endverb
+    \endentry
+    \entry{unstrukturierte_daten_ki}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e14be5b81aacdd252630fddab2a1f45e}{%
+           family={Selz},
+           familyi={S\bibinitperiod},
+           given={Dorian},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e14be5b81aacdd252630fddab2a1f45e}
+      \strng{fullhash}{e14be5b81aacdd252630fddab2a1f45e}
+      \strng{bibnamehash}{e14be5b81aacdd252630fddab2a1f45e}
+      \strng{authorbibnamehash}{e14be5b81aacdd252630fddab2a1f45e}
+      \strng{authornamehash}{e14be5b81aacdd252630fddab2a1f45e}
+      \strng{authorfullhash}{e14be5b81aacdd252630fddab2a1f45e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{journaltitle}{Digitale Welt}
+      \field{month}{10}
+      \field{title}{Entscheidungsrelevantes Wissen aus unstrukturierten Daten produzieren}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://digitaleweltmagazin.de/2018/10/16/entscheidungsrelevantes-wissen-aus-unstrukturierten-daten-produzieren/
+      \endverb
+      \verb{url}
+      \verb https://digitaleweltmagazin.de/2018/10/16/entscheidungsrelevantes-wissen-aus-unstrukturierten-daten-produzieren/
+      \endverb
+    \endentry
+    \entry{ics_kompendium}{article}{}
+      \name{author}{1}{}{%
+        {{hash=efe74daf243f42c1fc627f32068bd59a}{%
+           family={Sicherheit\bibnamedelimb in\bibnamedelimb der\bibnamedelima Informationstechnik},
+           familyi={S\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Bundesamt},
+           giveni={B\bibinitperiod},
+           prefix={für},
+           prefixi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{efe74daf243f42c1fc627f32068bd59a}
+      \strng{fullhash}{efe74daf243f42c1fc627f32068bd59a}
+      \strng{bibnamehash}{efe74daf243f42c1fc627f32068bd59a}
+      \strng{authorbibnamehash}{efe74daf243f42c1fc627f32068bd59a}
+      \strng{authornamehash}{efe74daf243f42c1fc627f32068bd59a}
+      \strng{authorfullhash}{efe74daf243f42c1fc627f32068bd59a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ICS-Security-Kompendium}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ICS/ICS-Security_kompendium_pdf.pdf?__blob=publicationFile
+      \endverb
+      \verb{url}
+      \verb https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ICS/ICS-Security_kompendium_pdf.pdf?__blob=publicationFile
+      \endverb
+    \endentry
+    \entry{vdiwaermeatlas2019}{book}{}
+      \name{author}{6}{}{%
+        {{hash=ff0ac2196894992f4bc2a04c89db557a}{%
+           family={Stephan},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ce7313ded08221c34c58adec3210d137}{%
+           family={Kabelac},
+           familyi={K\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=61676f1fbd42b2269e850b61afc7f9fa}{%
+           family={Kind},
+           familyi={K\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a14f58d3797195eff75bb8a5ff2df56b}{%
+           family={Mewes},
+           familyi={M\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4785aff4c497784cf88df1a6ea6c6a2c}{%
+           family={Schaber},
+           familyi={S\bibinitperiod},
+           given={Karlheinz},
+           giveni={K\bibinitperiod}}}%
+        {{hash=178015ad096e4d93b68c14b3e8a6321c}{%
+           family={Wetzel},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{07f24b7d0d8ac070d2eab8dad2ceee25}
+      \strng{fullhash}{12ee4500e7e66dceb3fbf8b28cac8d2a}
+      \strng{bibnamehash}{07f24b7d0d8ac070d2eab8dad2ceee25}
+      \strng{authorbibnamehash}{07f24b7d0d8ac070d2eab8dad2ceee25}
+      \strng{authornamehash}{07f24b7d0d8ac070d2eab8dad2ceee25}
+      \strng{authorfullhash}{12ee4500e7e66dceb3fbf8b28cac8d2a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-52988-1}
+      \field{title}{VDI-Wärmeatlas - Fachlicher Träger VDI-Gesellschaft Verfahrenstechnik und Chemieingenieurwesen}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \keyw{vdi,waermeatlas,wärmeatlas,verfahrenstechnik}
+    \endentry
+    \entry{Stiess2013_verfahrensmechanik_band2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4a50ee29fd1c2853657fa6185d8c7bd8}{%
+           family={Stiess},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{fullhash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{bibnamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authorbibnamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authornamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authorfullhash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-08599-8}
+      \field{title}{Mechanische Verfahrenstechnik - Band 2}
+      \field{year}{2013}
+    \endentry
+    \entry{Stiess2008}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4a50ee29fd1c2853657fa6185d8c7bd8}{%
+           family={Stiess},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{fullhash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{bibnamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authorbibnamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authornamehash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \strng{authorfullhash}{4a50ee29fd1c2853657fa6185d8c7bd8}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-32552-9}
+      \field{title}{Mechanische Verfahrenstechnik - Partikeltechnologie 1 -}
+      \field{year}{2008}
+    \endentry
+    \entry{digitale_umformtechnik}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b674bdae5daa9ebafeb6a3fce3b1b824}{%
+           family={Stöver},
+           familyi={S\bibinitperiod},
+           given={Enno},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \strng{fullhash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \strng{bibnamehash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \strng{authorbibnamehash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \strng{authornamehash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \strng{authorfullhash}{b674bdae5daa9ebafeb6a3fce3b1b824}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{2}
+      \field{title}{Lernort digitale Umformtechnik}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.haw-hamburg.de/hochschule/technik-und-informatik/departments/maschinenbau-und-produktion/institute-und-einrichtungen/ipt/schwerpunkte/lernort-digitale-umformtechnik/
+      \endverb
+      \verb{url}
+      \verb https://www.haw-hamburg.de/hochschule/technik-und-informatik/departments/maschinenbau-und-produktion/institute-und-einrichtungen/ipt/schwerpunkte/lernort-digitale-umformtechnik/
+      \endverb
+    \endentry
+    \entry{digitale_transformation}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e6af7f488100437dbcf276bdde33fafd}{%
+           family={Technikum-Wien-Academy},
+           familyi={T\bibinithyphendelim W\bibinithyphendelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6af7f488100437dbcf276bdde33fafd}
+      \strng{fullhash}{e6af7f488100437dbcf276bdde33fafd}
+      \strng{bibnamehash}{e6af7f488100437dbcf276bdde33fafd}
+      \strng{authorbibnamehash}{e6af7f488100437dbcf276bdde33fafd}
+      \strng{authornamehash}{e6af7f488100437dbcf276bdde33fafd}
+      \strng{authorfullhash}{e6af7f488100437dbcf276bdde33fafd}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{month}{8}
+      \field{title}{Was ist digitale Transformation?}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://academy.technikum-wien.at/ratgeber/digitale-transformation-was-ist-das/
+      \endverb
+      \verb{url}
+      \verb https://academy.technikum-wien.at/ratgeber/digitale-transformation-was-ist-das/
+      \endverb
+    \endentry
+    \entry{tensorflow_framework}{software}{}
+      \name{author}{1}{}{%
+        {{hash=074dd699710da0ec1eb45f13b31788e3}{%
+           family={TensorFlow},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{fullhash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{bibnamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authorbibnamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authornamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authorfullhash}{074dd699710da0ec1eb45f13b31788e3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{1}
+      \field{title}{Das neuronale strukturierte Lern-Framework}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/neural_structured_learning/framework
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/neural_structured_learning/framework
+      \endverb
+    \endentry
+    \entry{Tränkler2015}{book}{}
+      \name{author}{2}{}{%
+        {{hash=bd3d4878ece126ac6f4c7f95ec82e2c1}{%
+           family={Tränkler},
+           familyi={T\bibinitperiod},
+           given={Hans-Rolf},
+           giveni={H\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=504c51f77999cebbbf72bd0de013342e}{%
+           family={Reindl},
+           familyi={R\bibinitperiod},
+           given={Leonhard\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{25779910d8121aea969845de5ad7a851}
+      \strng{fullhash}{25779910d8121aea969845de5ad7a851}
+      \strng{bibnamehash}{25779910d8121aea969845de5ad7a851}
+      \strng{authorbibnamehash}{25779910d8121aea969845de5ad7a851}
+      \strng{authornamehash}{25779910d8121aea969845de5ad7a851}
+      \strng{authorfullhash}{25779910d8121aea969845de5ad7a851}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-642-29942-1}
+      \field{title}{Sensortechnik - Handbuch für Praxis und Wissenschaft}
+      \field{year}{2015}
+    \endentry
+    \entry{Verstehen2020}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fdfc816f7bc481406d77ab59552aedf2}{%
+           family={Verstehen},
+           familyi={V\bibinitperiod},
+           given={Datenbanken},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdfc816f7bc481406d77ab59552aedf2}
+      \strng{fullhash}{fdfc816f7bc481406d77ab59552aedf2}
+      \strng{bibnamehash}{fdfc816f7bc481406d77ab59552aedf2}
+      \strng{authorbibnamehash}{fdfc816f7bc481406d77ab59552aedf2}
+      \strng{authornamehash}{fdfc816f7bc481406d77ab59552aedf2}
+      \strng{authorfullhash}{fdfc816f7bc481406d77ab59552aedf2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{11}
+      \field{title}{XML-Datenbank}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.datenbanken-verstehen.de/lexikon/xml-datenbank/#:~:text=Man unterscheidet dabei zwischen nativen und relationalen XML-Datenbanken:&text=Dabei liegen die Inhalte in,dem SQL-XML-Standard.
+      \endverb
+      \verb{url}
+      \verb https://www.datenbanken-verstehen.de/lexikon/xml-datenbank/#:~:text=Man%20unterscheidet%20dabei%20zwischen%20nativen%20und%20relationalen%20XML-Datenbanken:&text=Dabei%20liegen%20die%20Inhalte%20in,dem%20SQL-XML-Standard.
+      \endverb
+    \endentry
+    \entry{db9-male-female}{online}{}
+      \name{author}{1}{}{%
+        {{hash=dacd8172043540f50ff4329d9949fe6b}{%
+           family={Weiß},
+           familyi={W\bibinitperiod},
+           given={Olga},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{dacd8172043540f50ff4329d9949fe6b}
+      \strng{fullhash}{dacd8172043540f50ff4329d9949fe6b}
+      \strng{bibnamehash}{dacd8172043540f50ff4329d9949fe6b}
+      \strng{authorbibnamehash}{dacd8172043540f50ff4329d9949fe6b}
+      \strng{authornamehash}{dacd8172043540f50ff4329d9949fe6b}
+      \strng{authorfullhash}{dacd8172043540f50ff4329d9949fe6b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{6}
+      \field{title}{Pinbelegung und Verwendung des RS-232 DB9}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.eltima.com/de/article/9-pin-serial-port.html
+      \endverb
+      \verb{url}
+      \verb https://www.eltima.com/de/article/9-pin-serial-port.html
+      \endverb
+    \endentry
+    \entry{Wiegleb2016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6a0a63008a3533958c098d3baec5c94c}{%
+           family={Wiegleb},
+           familyi={W\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{6a0a63008a3533958c098d3baec5c94c}
+      \strng{fullhash}{6a0a63008a3533958c098d3baec5c94c}
+      \strng{bibnamehash}{6a0a63008a3533958c098d3baec5c94c}
+      \strng{authorbibnamehash}{6a0a63008a3533958c098d3baec5c94c}
+      \strng{authornamehash}{6a0a63008a3533958c098d3baec5c94c}
+      \strng{authorfullhash}{6a0a63008a3533958c098d3baec5c94c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-658-10687-4}
+      \field{title}{Gasmesstechnik in Theorie und Praxis - Messgeräte, Sensoren, Anwendungen}
+      \field{year}{2016}
+    \endentry
+    \entry{Wolff2016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8782673a458fb4108cd499972111d737}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter GmbH \& Co KG}%
+      }
+      \strng{namehash}{8782673a458fb4108cd499972111d737}
+      \strng{fullhash}{8782673a458fb4108cd499972111d737}
+      \strng{bibnamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authorbibnamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authornamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authorfullhash}{8782673a458fb4108cd499972111d737}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-110-46095-7}
+      \field{title}{Sensor-Technologien - Band 1: Position, Entfernung, Verschiebung, Schichtdicke}
+      \field{year}{2016}
+    \endentry
+    \entry{SensorTechnologien}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8782673a458fb4108cd499972111d737}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Boston}%
+      }
+      \list{publisher}{1}{%
+        {De Gruyter Oldenbourg}%
+      }
+      \strng{namehash}{8782673a458fb4108cd499972111d737}
+      \strng{fullhash}{8782673a458fb4108cd499972111d737}
+      \strng{bibnamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authorbibnamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authornamehash}{8782673a458fb4108cd499972111d737}
+      \strng{authorfullhash}{8782673a458fb4108cd499972111d737}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-11-047784-9}
+      \field{title}{Sensor-Technologien: Band 2: Geschwindigkeit, Durchfluss, Strömungsfeld}
+      \field{year}{2017}
+      \verb{doi}
+      \verb https://doi.org/10.1515/9783110477849
+      \endverb
+      \verb{urlraw}
+      \verb https://www.degruyter.com/view/title/521081
+      \endverb
+      \verb{url}
+      \verb https://www.degruyter.com/view/title/521081
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

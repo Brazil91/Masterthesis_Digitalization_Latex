@@ -1,0 +1,347 @@
+\section{Fazit}
+
+Das verfahrenstechnische Labor soll, zeitgemäß, digital transformiert werden. An der Stelle muss nochmals erwähnt werden, dass eine digitale Transformation ein Prozess und kein Projekt ist. Das Konzept 3.0, ohne Datenbankmanagementsystem (DBMS), sollte als Vorstufe des Konzept 4.0, mit DBMS, betrachtet werden. Das Konzept 3.0 ist eine Mindestanforderung für die digitale Transformation des verfahrenstechnischem Labors. Im folgenden werden die wünsche und Anforderung aus dem Kapitel \ref{sec:konzeptentwicklung} {\Hypatia Konzeptentwicklung für die Labordigitalisierung} aufgelistet. Die erfüllten Anforderungen werden mit einem Haken (\cmark) und die Anforderungen, die im Rahmen dieses Projekts nicht umgesetzt wurden, werden mit einem Kreuz (\xmark) markiert. Stichpunkte die Anmerkungen enthalten werden mit einem $\diamond$ gelabelt.
+
+\begin{enumerate}[leftmargin = 1.2em, label = \textbullet , itemsep = 0.1em]
+\item[\cmark] Das Konzept soll für das verfahrenstechnische Labor allgemeingültig sein.
+\item[\cmark] Die \glqq digitalen Kompetenzen\grqq{} der Studierenden sollen maximiert werden, ohne die fachlichen Kompetenzen signifikant zu reduzieren, durch 
+
+
+	\begin{enumerate}[leftmargin = 1.2em, label = -- , itemsep = 0.1em]
+	\item[\cmark] ein Minimum an Automatisierung 
+	\item[\cmark] Unter Automatisierung kann z.B.  die Manipulation von Daten, wie die Detektion von Ausreißer und dessen Entfernung, genaue Leitfäden in der Handhabung, die keine Fehler mehr zulassen o.ä., verstanden werden.
+	\end{enumerate}
+	
+\item[\cmark] Der monetäre Aufwand soll minimal sein.
+\item[\cmark] Möglichkeiten der Datenerfassung/Signalverarbeitung sollen eruiert werden. 
+\item[\cmark] Die inkrementelle Implementation von Applikationen im Rahmen von Industrie 4.0 und Big Data (KI, Digital Twin etc.) soll tendenziell möglich sein.
+	\begin{enumerate}[leftmargin = 1.2em, label = $\diamond$ , itemsep = 0.1em]
+	\item Es wurden keine Schritte eingeleitet, die eine inkrementelle Implementation von Applikationen ausschließen.
+	\end{enumerate}
+
+
+\item[\cmark] Cloud Computing soll in Betracht gezogen werden.
+	\begin{enumerate}[leftmargin = 1.2em, label = $\diamond$ , itemsep = 0.1em]
+	\item Die Implementation eines Cloudservice (HAW Cloud) ist im Verlauf des Projekts nicht erfolgt. Laut einem ITSC-Mitarbeiter scheinen die HAW Richtlinien es	\textbf{derzeit} nicht zu gestatten, dass Kennungen an nicht humane Entitäten bzw. nicht natürliche Personen vergeben werden (siehe Anhang \ref{appendix:Cloudnutzung}).	Nicht humane Entitäten könnten die folgenden sein:
+	 
+		\begin{enumerate}[leftmargin = 1.2em, label = - , itemsep = 0.1em]
+		\item Aggregate
+		\item Maschinen
+		\item Geräte
+			\begin{enumerate}[leftmargin = 1.2em, label = $\circ$ , itemsep = 0.1em]
+			\item HMI's 
+			\item Sensoren
+			\end{enumerate} 
+		\end{enumerate}
+	\end{enumerate}
+	
+	\begin{enumerate}[leftmargin = 1.2em, label = -- , itemsep = 0.1em]
+	\item[\xmark] First Step: Speicherung der Rohdaten auf der HAW Cloud
+		\begin{enumerate}[leftmargin = 1.2em, label = $\diamond$ , itemsep = 0.1em]
+		\item Da die Nutzung der HAW Cloud möglich wäre, der Aufwand dem Nutzen jedoch nicht gerecht wird, wurde eine alternative Lösung entwickelt (siehe Protokoll im Anhang \ref{appendix:Cloudnutzung}). Als Alternative Lösung wurde ein Speicherlösung mittels lokalem Server vorgeschlagen.
+		
+		\end{enumerate} 
+	\item[\xmark] Zukunftsvision, gemäß des Impulsvortrags zum Digitalisierungsfond: Amazon, Google, Microsoft Azure
+	\end{enumerate}
+	
+\item[\xmark] Die gesamte Protokollierung der Studierenden soll in Zukunft digital sein.
+\end{enumerate}
+
+Ziel dieses Projekts ist es, Messwerte digital verfügbar zu machen und diese zu dokumentieren. Ein weiteres Ziel des Projekts ist es einen Wandel von der Versuchsdokumentation in Hardcopy, zu einer digitalen Dokumentation einzuleiten. Es ist anzumerken, dass dieses Konzept die \textbf{\emph{\underline{absolute Mindestanforderung}}} für den ersten Schritt in die digitale Transformation darstellt.\\
+
+Im folgenden werden die Vorteile des Konzepts ohne eine Datenbank aufgelistet: 
+
+\begin{itemize}
+\singlespacing
+\item Die Verfügbarkeit von digitalen Messwerten wird ermöglicht, 
+\item Die Dokumentation der Versuchsrandbedingung, eingesetzte Rohstoffe etc. kann digital durchgeführt werden,
+\item Die Verfügbarkeit der Versuchsdaten und Ergebnisse wird durch die Einführung eines elektronischen Labor Notebooks verbessert,
+\item Versuchsbeobachtungen können direkt dem Zeitstempel zugeordnet werden.
+\end{itemize}
+
+
+
+%An dieser Stelle nun ein radikales dennoch wahres Beispiel aus meinem sechsten und siebten, Semester des erst Studiums, im Jahr 2017.
+%
+%\glqq Ich persönlich habe Vorlesungen, \textbf{\emph{\underline{mit Potential}}}, besuchen müssen, in denen \textbf{permanent} teilweise unlesbare Zeitungsartikel aus dem Jahr 19XX auf \textit{Over Head Projektoren} abgebildet wurden.\grqq{} Wie war das noch mit dem Stand der Technik? Das ist ebenfalls eine bis dato gelebte Mindestanforderung an der Hochschule! Eine harte, traurige, dennoch ware Tatsache!
+
+Eine Mindestanforderung sollte jedoch kein Maßstab für eine Hochschule darstellen! Meines Erachtens nach unterliegt der Aufwand dem Nutzen der Konzeptrealisierung unter der Verwendung einer Datenbank im hohem Maße, aus den folgenden Gründen. 
+
+Im akademischen Rahmen unterliegt der Aufwand, der Realisierung des zweiten Konzepts mit Datenbank, einen \textbf{großen} Mehrwert in Bezug auf das Verständnis und Lernerfolg der Studierenden. Die Datenbank könnte auch für den Laborbetrieb des Departments genutzt werden, wodurch sich möglicherweise organisatorische Vereinfachungen, wie z.B. Chemie- und Verfahrenstechniklagerverwaltung o.ä. realisieren lassen. Des Weiteren könnte die Datenbank für die verfahrenstechnische Forschung, Projekte im Rahmen der angewandten numerische Simulation uvm. genutzt werden.. Die \textbf{größte Hürde} für die Konzept 4.0 Realisierung könnte der \textbf{Changeprozess} sein, daher wurde der Punkt Changeprozess, in der Tabelle \ref{tab:konzept4.0_2} mit einem Dicken -- versehen.\\
+
+In unserer agitierten Welt ist weder Platz für schwere Unternehmenstanker noch für träge Universitäten oder Hochschulen. In der Zeit der Globalisierung und digitalen Transformation ist Flexibilität und Vernetzung nicht nur eine hinreichende Forderung, sondern absolut notwendig. Unternehmen sollten sich Ihre Spitzenkräfte schaffen. Der Spruch, \glqq von der Berufsausbildung oder dem Studium braucht man am Ende des Tages maximal 15 \%\grqq , ist nicht tolerierbar sowie zu verantworten und doch ist es aus eigenen Erfahrungen Realität. Wie lange Überlebt ein Unternehmen welches 85 \% Ausschuss hat? Wenn durch diese Art des Paradigmenwechsels eine Ausschussreduktion auf bspw. 70 \% erfolgt, ist das ein immenser Fortschritt! 
+In der Tabelle \ref{tab:konzept4.0} sind die Vor- und Nachteile des Konzepts 4.0 aufgelistet.\\
+
+
+
+
+\begin{table}[p!]
+\caption{Vor- und Nachteile des Konzeptentwurfs 4.0} \label{tab:konzept4.0_2}
+\begin{center}
+\begin{tabularx}{1\textwidth}{X|X}
+Vorteile & Nachteile \\ \toprule \vspace{-1,5em}
+\begin{itemize}[leftmargin=*,labelsep=-\mylen]
+\item[+] Stand der Technik in der Industrie	/ Zeitgemäß 
+\item[+] Nutzbar für Tätigkeiten außerhalb vom VT1 und VT2 Praktikum (Forschung, Organisatorisches 
+wie 
+\item[+] Lagerverwaltung, angewandte numerische Simulation	uvm.)
+\item[+] wenn Cloudservicenutzung, dann Port\-folio\-software Kompatibilität des \mbox{Anbieters}
+\item[+] Image/Professionalität (u.a. auch Anmerkungen von Bachelorabsolventen Ende 2020)
+\item[+] ggf. mehr Kooperationsprojekte mit Unternehmen und Universitäten
+\item[+] Kompetenzsteigerung der Hochschule und Absolventen
+\item[+] interdisziplinäre Vernetzung/Projekte  (Industrie 4.0 $\equiv$ Vernetzung)
+\item[+] gute Investigationsmöglichkeiten bei Produktabweichung bei konstanten Parametern $\rightarrow$ Studentenprojekte
+\end{itemize}
+
+&
+\vspace{-1,5em}
+\begin{itemize}[leftmargin=*,labelsep=-\mylen]
+\item[--] Changeprozesse
+\item[-] notwendiges Know-How erforderlich
+\item[-] Aufwand der Erstellung der Datenbank
+\item[-] Einrichtung automatischer Einspeisung der Sensordaten in die Datenbank
+\item[-] Kosten könnten entstehen
+\begin{itemize}[leftmargin=*,labelsep=-\mylen] 
+\item[\textbullet] möglicherweise Sponsoring/Kooperation (als Gegenleistung Projekte o.ä) da Hochschule 
+\item[\textbullet] geringe Datenmengen im vgl. zu Unternehmen $\rightarrow$ möglicherweise keine oder geringe Kosten
+\end{itemize}
+
+\end{itemize}
+\end{tabularx}
+\end{center}
+\end{table}
+
+
+
+Der Versuchsstand wurde mit geeigneter Sensorik aufgerüstet, um die kontinuierlichen Parameter Druck $p$ und Volumenstrom $\dot{V}$ zu erfassen. Die Signale des Drucksensors sind von 0~-~10~V und die des thermischen Massendurchflusssensors sind 4~-~20~mA. Eine digitale Erfassung der Festbett- bzw. Wirbelschichthöhe ist denkbar. Bei bedarf könnten bspw. geeignete optische, akustische, mechanische Entfernungsmesser, im Rahmen einer studentischen Projektarbeit, recherchiert und umgesetzt werden.
+
+
+
+Die Idee, dass jeder Laboraccount eine eigene Kennung erhält, wodurch die Laborgeräte wie HMI's ein Cloudverzeichnis auf der HAW Cloud erhalten würden, ist derzeit nicht realisierbar. Die Idee, dass nicht humane Entitäten eine Kennung erhalten können, sollte in höheren Instanzen der HAW diskutiert werden, damit zukünftige Cloudlösungen HAW global realisiert werden können. Die Hochschule sollte das Ziel haben die Privatwirtschaft abzubilden. Das nicht humane Entitäten ein eigenes Kommunikationbsnetzwerk erhalten ist bereits Stand der Technik (siehe Abschnitt \ref{sec:bluetooth}). \textsl{•}
+
+
+
+
+\addsec{Anhang}
+%\addcontentsline{toc}{section}{Anhang}
+\pagenumbering{roman}
+%\vspace{-14pt}
+
+\begin{table}[h!] % Parameter
+\caption{Versuchsparameter der MVT Geräte und Anlagen} \label{tab:Versuchsparameter}
+\begin{center}
+\vspace{-14pt}
+\begin{NiceTabular}{r|c|ccr|c|c}%[hvlines-except-corners=NW]
+MVT Versuchsstände 	&	diskret 	& konti. & &MVT Versuchsstände 	&	diskret 	& konti. \\ \cline{1-3}  \cline{5-7}
+\Block{1-7}{} 						& 						& &&&& \\[-13pt] \cline{1-3}  \cline{5-7}
+Kuchenfiltration & &&& \makecell{Hochdruckhomo-\\genisator (HDH)}  \\ \cline{1-3}  \cline{5-7}
+Gewicht 							& & \cmark && Fluid1 & \cmark &\\
+Druck 								& & \cmark && Fluidvolumen1& \cmark &\\
+Suspensionskonzentration 	& \cmark &&&Fluid2& \cmark & \\
+Suspensionsvolumen 			& \cmark &&&Fluidvolumen2& \cmark &\\
+Filterkuchendicke 				& \cmark &&&Disperer RPM& \cmark &   \\
+Filterkuchendurchmesser		& \cmark &&&Dispersionsdauer& \cmark &\\
+Filterkuchenvolumen 			& \cmark &&&Druck& \cmark &\\
+Filterkuchenfeuchtegehalt 	& \cmark &&&HDH Dauer& \cmark &\\
+Filternutschen Nr. 				& \cmark &&&Temperatur& \cmark & \\
+Filterporösität 					& \cmark &&&Partikelgrößenverteilung& \cmark & \\
+\Block{1-7}{} 						& 						& &&&& \\
+
+Gas-Feststoff Wirbelschicht & &&& ZickZack Sichten && \\  \cline{1-3}  \cline{5-7}
+$\mathrm{Volumenstrom_{Luft}}$ & & \cmark && Feststoff & \cmark & \\
+Druck & & \cmark && Gesamtmasse & \cmark & \\
+Festbetthöhe & \cmark & && Masse Grobgut&\cmark &\\
+Schüttgutmasse & \cmark & && Masse Feingut&& \\
+Partikeldichte & \cmark & && \makecell{ Vibrationsintensität der\\ Vibrationsförderung} & \cmark &\\
+Wirbelschichthöhe = f(p) & \cmark &  \cmark && Volumenstrom & \cmark &  \\
+Wirbelschichtporösität = f(p) & \cmark &  \cmark && Förderklappenstellung & \cmark & \\
+Sauterdurchmesser & \cmark & \Block{1-5}{} &&& \\
+Festbettporösität & \cmark & \Block{1-5}{} &&&& \\
+\Block{1-7}{} 				& 						& &&&& \\
+
+Rührversuch &&&& Walzenmühle && \\  \cline{1-3} \cline{5-7}
+Fluid & \cmark  &&& Feststoff & \cmark & \\
+Fluiddichte & \cmark &&& Masse & \cmark & \\
+dynamische Viskosität & \cmark &&& Walzengeometrie (Profil) & \cmark & \\
+Rührer & \cmark &&& Walzenspalt & \cmark & \\
+Rührereintauchtiefe & \cmark &&& Umfangsgeschwindigkeit & \cmark & \\
+Strombrecher & \cmark & \Block{1-5}{} &&&& \\
+RPM & \cmark & \Block{1-5}{} &&&& \\
+Drehmoment &  & \cmark & \Block{1-4}{} &&& \\
+
+%Kuchenfiltration & \xmark 			& \textcolor{red}{\xmark} \\
+
+\end{NiceTabular}
+\end{center}
+\end{table}
+
+%%==================================================================================
+%\newpage
+%\begin{figure}[]
+%\centering
+%\includegraphics[width=0.8\textwidth]{Bilder/speicherbedarf_ascii-binär.jpg}
+%\caption{Speicherbedarfsvergleich ASCII/binär \cite[S. 44]{speicherbedarf_vergleich_binär-ascii}}
+%\label{fig:speicherbedarf_vergleich}
+%\end{figure}
+
+\paragraph*{Ergänzung des Abschnitts Dehnungsresistive Sensoren}
+
+Die Drucksensoren mittels DMS sind dehnungsresistive Sensoren. Das Messprinzip beruht auf die Änderung des elektrischen Widerstandes R, eines elektrisch leitenden Werkstoffs, als Folge einer mechanischen Verformung. Ein zylinderförmiger Werkstoff, charakterisiert durch die Ausgangslänge $l_0$, Ausgangsquerschnitt $A_0$ und dem spezifischem elektrischem Widerstand $\rho_{el}$, hat einen elektrischen Widerstand R gemäß folgender Gleichung \cite[S. 4 ff.]{Wolff2016}:
+
+\begin{align}
+R=\rho_{el} \cdot \frac{l_0}{A_0}
+\end{align}
+
+Um die relative Widerstandsänderung $\Delta R / R$ zu berechnen wird das totale Differenzial (Gleichung \ref{eq:totaldif_dms}) aus Gleichung \ref{eq:zyl_wiederstand} gebildet.
+
+
+\begin{align}  
+\label{eq:totaldif_dms}
+	dR &=\frac{\partial R}{\partial \rho_{el}} \: d\rho_{el}+\frac{\partial R}{\partial l_0} \: dl_0+\frac{\partial R}{\partial A} \: dA \\[1em]
+		&= \frac{l_0}{A} ~ d\rho_{el} + \frac{\rho_{el}}{A} \: dl_0 - \frac{\rho_{el} \cdot l_0}{A^2} \: dA \\[1em]
+		&= R \cdot ( \frac{d\rho_{el}}{\rho_{el}} + \frac{dl_0}{l_0} - \frac{dA}{A} )
+\end{align}
+
+
+Ersetzt man das Infinitisimal $d$ durch eine eine größere Schrittweite $\Delta$, unter der Bedingung dass $\Delta \rho \ll \rho,\, \Delta l_0 \ll l_0, \Delta A \ll A$, dann erhält man Gleichung \ref{eq:delta}. 
+
+\begin{align}
+% \label{eq:delta}
+\frac{\Delta R}{R} = \frac{\Delta \rho_{el}}{\rho_{el}} + \frac{\Delta l}{l_0} - \frac{\Delta A}{A_0}
+\end{align}
+
+Die geometrische Verformung wird durch die beiden letzten Terme repräsentiert. Die Dehnung $\varepsilon$ ersetzt $\Delta l / l_0$ und der Term $\Delta A/A$ wird durch die Querkontraktion ($\varepsilon_Q = \frac{\Delta D}{D_0} = - \nu \cdot \varepsilon$), mit der Querkontraktionszahl (Poisson-Konstante) $\nu$, beschrieben und führt zu der Lösung der Gleichung (\ref{eq:querkontraktion}) .
+
+%\begin{equation}
+ \begin{align}
+\frac{\Delta A}{A} &= \frac{\frac{\pi}{4} \cdot \bigl((D+\Delta D)^2-D^2 \bigr)}{\frac{\pi}{4} \cdot D^2}  \\[0.7em]
+&= \frac{2D \cdot \Delta D + (\Delta D)^2}{D^2} \\[0.7em]
+&\approx \frac{2 \Delta D}{D} \\[0.7em]
+&=2\varepsilon_Q = -2 \cdot \nu \cdot \varepsilon %\label{eq:querkontraktion}
+\end{align}
+%\end{equation}
+
+Durch Einsetzen der Gleichung (\ref{eq:querkontraktion}) und der Dehnung $\varepsilon$ in die Gleichung (\ref{eq:delta}) erhält man:
+
+\begin{align}
+\label{eq:wiederstand_substi}
+\frac{\Delta R}{R} =(1+2 \cdot \nu) \cdot \varepsilon + \frac{\Delta \rho_{el}}{\rho_{el}}
+\end{align}
+
+Der Term $\frac{\Delta \rho_{el}}{\rho_{el}}$ ist der sog. \glqq piezoresistive Effekt\grqq , der bei metallischen Leitern vernachlässigbar ist, jedoch bei Halbleitern überwiegt. 
+
+
+
+\begin{figure}[h!]
+\centering
+\caption{Kenndaten von Kapazitiven und piezoresistenten Drucksensoren \cite[S. 472 ff.]{Tränkler2015}}
+\includegraphics[width=1\textwidth]{Bilder/piezo_kapa.jpg}
+\label{tab:piezo_kapa} 
+\end{figure}
+
+
+\begin{minipage}[][][t]{1\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{Bilder/speicherbedarf_ascii-binär.jpg}
+\captionof{figure}{Speicherbedarfsvergleich ASCII/binär \cite[S. 44]{speicherbedarf_vergleich_binär-ascii}}
+\label{fig:speicherbedarf_vergleich}
+\end{minipage}
+
+%\newpage
+\begin{figure}[ph!]
+\centering
+\includegraphics[width=1\textwidth]{Bilder/Hierarchische_Gliederung_eines_ICS_gemäß_ICS-Kompendium.jpg}
+\vspace{0em}
+\captionof{figure}{Hierarchische Gliederung eines ICS, gemäß ICS-Kompendium des Bundesamtes für Sicherheit in der Informationstechnik \cite[S. 18]{ics_kompendium}}\label{fig:Hierarchische_Gliederung_gem_ICS}
+\end{figure}
+
+\begin{figure}[ph!]
+\centering 
+\includegraphics[width=1\textwidth]{Bilder/processsegmentinformationtype.jpg}
+\caption[]{Ausschnitt der \textit{ProcessSegment} XSD der B2MML-V0600-ProcessSegment.xsd}
+\label{fig:processsegment}
+\end{figure}
+
+
+\newpage
+
+
+
+\section*{Machine Learning}
+
+Einige Algorithmen müssen angelernt werden (\textit{engl. \textbf{supervised} or \textbf{semi-supervised}}), z.B. das vom Google-Brain-Team entwickelte open-source Modell, Tensor Flow \cite{tensorflow_framework}. Andere werden nicht angelernt und generieren Ihren Algorithmus autonom (\textit{engl. \textbf{unsupervised}}; vgl. \ref{fig:supervised_machinelearning} im Anhang). \textbf{Supervised Learning}  (vgl. Abbildung \ref{fig:supervised_machinelearning} im Anhang) bedeutet, dass Datensätze vorgegeben werden und zugleich deren Lösung bzw. Klassifizierungen. Anhand des dadurch generierten Algorithmus werden unbekannte Datensätze klassifiziert. Je nach verwendetem Algorithmus können Klassifizierungen binär wie Spam, nicht Spam; Mann, Frau oder Multi-Class-Klassifizierungen, wie z.B. Porsche, Mercedes, VW, .... sein. \textbf{Semi-Supervised Learning} Algorithmen verändern ihren angelernt Algorithmen, bzw. können Ihren Algorithmus, anhand der unvalidierten Daten, die sie nach dem anlernen erhalten, optimieren. KI Algorithmen benötigen große, Datenmengen. Einfache KI's benötigen zusätzlich strukturierte Daten, damit ist die Verfügbarkeit der Daten in Datenbanken gemeint. Die neusten, komplexen \cite{unstrukturierte_daten_ki} maschine learning Algorithmen können auch mit unstrukturierten Daten verwertbare Ergebnisse generieren, doch es gilt stets GIGO, \glqq garbage in, garbage out!\grqq{} Die Güte der Ergebnisse einer KI wird durch die Güte der Ausgangsdaten bestimmt, demnach ist die Wahrscheinlichkeit mit strukturierten Daten ein sinnvolles, aussagekräftiges Ergebnis zu erzielen wahrscheinlich höher.
+Es existiert noch eine vierte Kategorie, die \textbf{Reinforced Learning} Algorithmen. Diese Algorithmen unterscheiden sich von den unsupervised Algorithmen in der Art, dass sie mit einer Umgebung (\textit{engl. environment}) interagieren und dadurch lernen \cite[S. 15 f.]{machine_learning_kompakt}. Als Beispiele können Roboter oder KI in einem Spiel wie Schach, Go (die asiatische, komplexere Schachvariante), aber auch in Videospielen genannt werden \cite{reinforced_learning_go}.
+
+Zu den \textbf{Unsupervised Lerning} Algorithmen zählen z.B. die Regressionsanalyse oder die k-mean Clusteranalyse \cite[S. 114]{machine_learning_kompakt}. Um bei \textbf{supervised} oder \textbf{semi-supervised} verwertbare Ergebnisse zu erhalten, wird in vielen Anwendungsfällen eine \glqq große\grqq{} Datenbasis benötigt. Des Weiteren ist die Güte der Daten entscheidend für die Güte der Ergebnisse. Weniger komplexe KI Algorithmen benötigen strukturierte Daten, wofür sich Datenbankmanagementsysteme (DBMS) auszeichnen.\\
+
+   \begin{figure}[b!] % 
+%\captionsetup{position=top}
+\centering
+     \subfloat[Supervised Machine Learning][Supervised Machine Learning \label{fig:supervised_machinelearning}]{%
+       \hspace{0em}
+       \includegraphics[width=0.8\textwidth]{Bilder/supervised.jpg}
+            }
+    \phantomcaption
+    \vspace{1em}
+    \ContinuedFloat
+\captionsetup{position=bottom}
+\subfloat[Unsupervised Machine Learning][Unsupervised Machine Learning \label{fig:unsupervised_machinelearning}]{%
+       \includegraphics[width=0.8\textwidth]{Bilder/unsupervised.jpg}
+       }
+        \phantomcaption
+    \vspace{1em}
+    \ContinuedFloat
+\captionsetup{position=bottom}
+\subfloat[Reinforced Machine Learning][Reinforced Machine Learning \label{fig:reinforced_machinelearning}]{%
+       \includegraphics[width=0.8\textwidth]{Bilder/reinforced.jpg}
+       }
+\caption[]{Machine Learning \cite{intellipaat_unsupervised}}
+\label{}
+   \end{figure}
+   
+\begin{sidewaysfigure}
+\caption[]{Dehnungsresistive Sensoren}\label{fig:metall_halbleiter_dms} \vspace{1em}
+\includegraphics[width=1\textwidth]{Bilder/Metall_Halbleiter_dms.jpg}
+\vspace{0em}
+ \end{sidewaysfigure}
+ 
+
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/schwebekörperkennline_ms-0_6585g.jpg}
+ \vspace{0em}
+  \caption[]{Schwebekörperdurchflussmesser (m=0,6585~g) mit einer Messspanne von 0,185~bis~5~l/min, zzgl. Approximationsfunktionen der Kennlinie}\label{fig:kleiner_skdm}
+ \end{figure} 
+ 
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/schwebekörperkennline_ms-2_225g.jpg}
+ \vspace{0em}
+  \caption[]{Schwebekörperdurchflussmesser (m=2,225~g) mit einer Messspanne von 1,86~l/min~bis~50~l/min, zzgl. Approximationsfunktionen der Kennlinie}\label{fig:grosser_skdm}
+ \end{figure}
+ 
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/manometer_plus_0-99_bar_atm.jpg}
+ \vspace{0em}
+  \caption[]{Manometerkennline; Druckdifferenz zzgl. 0,99~bar, laut digitalem Drucksensor am 17.12.20, um 13:02~Uhr}\label{fig:manometer_kennlinie}
+ \end{figure}
+ 
+
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\includegraphics[width=0.5\textwidth]{Bilder/drtr-technische-Daten.jpg}
+\vspace{0em}
+ \caption[]{Technische Daten des DRTR-AL-10V-RV1 Drucksensors, (dem technischen Datenblatt entnommen \cite{BTTG2021})}\label{fig:BTTG2021}
+\end{figure}
+
+%\includepdf[scale=0.8,pages=16,pagecommand={}\label{appendix:bslut}]{mypages}
+\includepdf[scale=0.8,pages=-,pagecommand={\label{appendix:Cloudnutzung}}]{Cloudnutzung.pdf}
+
+
+%%==================================================================================
+%\input{ascii_table}
+
+%\input{Benötigte_LabVIEW_Objekte}
+%\input{Benötigte_LabVIEW_Konfigurationsfunktionen_Teil_2}

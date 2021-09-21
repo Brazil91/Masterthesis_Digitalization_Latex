@@ -1,0 +1,195 @@
+\subsection{Signalverarbeitung}
+
+In diesem Abschnitt werden die Grundlagen der Signalverarbeitung erläutert. Im ersten Abschnitt werden nochmals die Grundlagen der Rechnerkommunikation erläutert, gefolgt von dem Unterschied zwischen analoge und digitale Signale. Es werden einige Kabel gebundene Schnittstellen, aber auch Schnittstellen die via Funk funktionieren erläutert.
+
+\subsubsection{Vom bit bis zur vom Menschen lesbaren alphanumeric}
+
+Sobald man von digitalen Daten spricht, ist von \textit{bit} encodierten, binären Daten die Rede. PC's sind in der Lage, diese Form der Signale direkt zu verarbeiten. In der Abbildung \ref{binary_data_sizes} sind verschiedene Datengrößen binärer Daten aufgezeigt. In der Abbildung variiert die Spanne der Datengrößenlänge von einem bit bis zu einem Wort bestehend aus 16-bits. Binäre digitale Daten sind diskret. Ein bit hat zwei mögliche Zustände, an oder aus die durch die binären Werte 0 oder 1 sowie den boolischen Ausdrücken \textit{True} oder \textit{False} repräsentiert werden können. Die Anzahl, wie viele bits ein Zeichen (\textit{engl. character}) repräsentieren, kann sich unterscheiden. Häufig wird ein byte bestehend aus 7 oder 8-bit verwendet. In der Abbildung \ref{binary_data_sizes} ist eine byte-Länge von 8-bit, häufig auch Oktett genannt, dargestellt. Ein 8-bit byte hat 256 mögliche Zustände. Die Hälfte eines 8-bit byte wird Nibble genannt \cite[S. 3]{hughes2010real}.
+
+\bild{0.8}
+{binary_data_sizes.png}
+{0em}
+{Binary data sizes }
+{Binary data sizes \cite[S. 3]{hughes2010real} }
+{binary_data_sizes}
+
+Sind Signale \textit{ASCII} encodiert, beträgt die byte Länge 7 bit. Der ASCII Zeichensatz beinhaltet somit 128 (0 - 127) Zeichen. Im Anhang befindet sich eine ASCII-Tabelle (siehe Tabelle \ref{ascii}) die alle Zeichen der 7-bit ASCII Codierung sowie die Zuordnung der dezimalen und hexadezimalen Werte beinhaltet. \\
+
+\paragraph{Hexadezimal} Zeichen können neben der binärer Darstellung auch Hexadezimal dargestellt werden. Die Hexadezimale Skala geht von 0 bis 9 gefolgt von A bis F. Die Skala hat eine dezimale Ziffernlänge von 16. Ein Nibble kann somit durch eine hexadezimale Ziffer dargestellt werden.
+
+\subsubsection{Analoge und digitale Signale}
+
+Möchte man Signale verarbeiten, dann ist zwischen zwei Signaltypen zu unterscheiden. Die reale Welt lässt sich durch ein Kontinuum von Zuständen beschreiben. Elektrische Messgeräte erfassen diese Zustände und erzeugen bspw. eine Spannung. Bei einer kontinuierlichen Messung würden in einer definierten Frequenz, Signale in Form von Spannung generiert werden. Als Beispiel werfen wir einen Blick auf das Messen einer Temperatur. Bei diesem Beispiel nehmen wir einmal an, dass wir einen Temperaturfühler verwenden, der eine Messgenauigkeit von \SI{0.0001}{\degreeCelsius} besitzt. Bei der Messung der Temperatur von Wasser könnte man eine Gleitkommazahl (floating point number oder kurz float) von \SI{19,2334}{\degreeCelsius} angezeigt bekommen. Bis zur zweiten Messung könnte ein Temperaturausgleich zwischen Umgebung und dem Wasser erfolgt sein, was zu einem anderen Temperaturmesswert von bspw. \SI{12,240}{\degreeCelsius} führen könnte. Analoge Signale sind ein Kontinuum von Signalen. \\
+
+PC's sind in der Lage digitale Signale sequenziell zu verarbeiten. Ein digitales Signale wird in Form von Strom oder Spannung repräsentiert. 
+
+%Ist die Rede von digitalen Daten, dann ist von binären Codes in Form von $bits$ die Rede. Ein Bit hat wie ein Schalter zwei potentielle Zustände, 0 und 1, an oder aus, true or false. Ein $byte$ besteht in vielen Fällen aus 7 $bits$ ($ASCII$) oder einem Oktett, also 8 $bits$. 
+
+In der Abbildung \ref{analog_digital_data_input} sind typische Methoden abgebildet, wie Daten eines Messobjekts akquiriert und an einen PC übermittelt werden. Oben im Bild sind vier Schalter zu erkennen, die einen Stromkreis schließen können. Diese Form der Signalübertragung wird diskret genannt. Auf dem Bild sind alle Schalter geöffnet, daher wäre pro Leiter ein binär Wert von 0 zu erwarten. In der Mitte der Abbildung ist ein bit serieller Datenstrom anhand der Rechteckfunktion und den binär Werten zu erkennen. Im unteren Teil der Abbildung ist ein analoges Signal zu erkennen, welches mittels eines analog zu digital Wandlers die Signale in eines von einem PC interpretierbares Signal wandelt. Die umgewandelten Daten werden mittels paralleler Schnittstelle an einen PC sendet.  
+
+\bild{0.8}
+{analog_digital_data_input.png}
+{0em}
+{Digital and analog data inputs \cite{hughes2010real}}
+{Digital and analog data inputs \cite{hughes2010real}}
+{analog_digital_data_input}
+
+
+
+\subsubsection{Schnittstellen}
+
+Messgeräte verfügen über Schnittstellen, über die Daten- und Steuersignale an andere Komponenten oder einen Messgerätebus erfolgen. An einen Messgerätebus werden Messgeräte (Slaves) und Rechner (Master) angeschlossen. Die Datenübertragung ist entweder bit- oder byte-seriell. Der Anschluss eines Messgeräts an einen PC kann über zwei Methoden erfolgen. Messgeräte können über analog Signalausgänge verfügen. Diese Signale müssen in einem analog/digital Wandler in ein digitales Signal gewandelt werden. Das Messgerät kann eine integrierte digitale Schnittstelle besitzen, über die Signale direkt an einen PC gesendet werden können. Geräte mit integrierter digitalen Schnittstelle verfügt das Messgerät einen integrierten analog zu digital Signalwandler.  Die zwei Methoden, wie man ein Messgerät an den PC Anschließt kann der Abbildung \ref{anschluss} entnommen werden \cite[S. 479]{Busch2015}.
+
+\bild{1}
+{anschluss.png}
+{-1em}
+{Digitale Schnittstelle oder über Messkarte}
+{Anschluss eines Messgerätes an den PC \cite[S. 479]{Busch2015} 	\\ \textbf{a} mit digitaler Schnittstelle,\\ \textbf{b} mit Messkarte }
+{anschluss}
+
+Diese analoge Signale müssen in einer Messkarte in ein digitales Signal umgewandelt werden, die im Anschluss in einem PC in einer Software weiter verarbeitet werden können. Im folgendem werden einige digitalen Schnittstellen erklärt.
+
+OPC UA!!!!!!!!!
+
+
+
+\subsubsection{Verbinder}
+
+Um eine Kommunikation zwischen den Geräten zu ermöglichen, Bedarf es physikalischer Schnittstellen. Im Laborumfeld werden zwei physikalische Schnittstellen besonders häufig angetroffen. 
+
+\paragraph{DB-Verbinder} Den DB-Verbinder gibt es mit 9 oder 25 pins, bzw. Signalleitungen. In Abbildung \ref{db9_male-female} sind männliche und weiblich DB-9 Stecker abgebildet.
+
+\bild{1}
+{db9_male-female.png}
+{0em}
+{DB-9 pin and socket numbering}
+{DB-9 pin and socket numbering \cite[S. 211]{hughes2010real}}
+{db9_male-female}
+
+
+
+\subsubsection{Bit serielle Datenübertragung}
+
+Es gibt verschiedene Möglichkeiten Signale, bzw. Daten zu übertragen. Eine Möglichkeit ist die serielle Datenübertragung. Eine genauere Bezeichnung wäre bit serielle Datenübertragung, denn genau genommen gibt es eine Reihe von seriellen Datenübertragungssystemen, unter anderem auch die byte serielle Datenübertragung. 
+
+%Bei serieller Datenübertragung werden Daten auf einer Leitung empfangen und über eine andere gesendet. 
+
+Des Weiteren gibt es zwei Formen der seriellen Datenübertragung, die synchrone und die asynchrone Datenübertragung. In Abbildung \ref{seriallio} ist eine synchrone Datenübertragung dargestellt. Es ist zu erkennen, dass das Gerät A den Takt und somit die Austauschrate der Schnittstelle vorgibt.
+
+\bild{0.8}
+{serielle_datenuebertragung.png}
+{-0.5em}
+{Synchronous serial data communication}
+{Synchronous serial data communication \cite[S. 52]{hughes2010real}}
+{seriallio}
+
+Daten sind nur valide zum Zeitpunkt der fallenden Flanke des Taktsignals. Es ist zu erkennen, dass der Takt stets die Mitte der bit Position trifft, um mögliche Fehler vorzubeugen. Die \glqq reale\grqq{} Rechteckfunktion ist eine Superposition von Funktion verschiedener Frequenzen, was dazu führt, dass bei aufsteigender Flanke und beim fallen der Flanke ein Einschwingen der Funktion stattfindet bis sich ein konstanter Wert einstellt (siehe Abbildung \ref{squarefuntion}.
+
+\bild{0.9}
+{square_waves.png}
+{0em}
+{Ideal versus real square waves}
+{Ideal versus real square waves \cite[S. 5]{hughes2010real}}
+{squarefunction}
+
+In der Praxis wird eine asynchrone bit serielle Datenübertragung häufiger genutzt. Eine fehlerfreie Kommunikation soll die sogenannte Datenflußsteuerung (\textit{engl. flow control}) übernehmen. Bei asynchroner Datenübertragung existiert somit kein Taktsignal. Bei einer asynchroner Datenübertragung enthält der bit Datenstrom neben der \glqq gewünschten\grqq{} Infromationen, z.B. von einer Messung, noch Datenflußsignale. Datenflußsignale können physikalische Signale sein. Diese Form der Flußsteuerung nennt sich \textit{Hardware-Handshake}.
+Eine andere Möglichkeit der Datenflußsteuerung ist der sog. \textit{Software-Handshake}. Die Datenflußsignale sind Start, Stop und Paritätbits, die ein Zeichen (\textit{engl. character}) von einem anderen Zeichen abgrenzt. Zeichen können Buchstaben, Zahlen, Vorzeichen etc. sein, die binär versendet werden (0 oder 1) und beispielsweise ASCII encodiert sind.
+
+
+
+\subsubsection{RS-232}
+
+Die RS-232 Schnittstelle wurde in den 1960 Jahren von der Electronic Industrial Alliance (EIA) standardisiert. Jedes zu übertragende Zeichen (Zahl, Buchstabe, Sonderzeichen) wird zwischen 5 und 9 Bit codiert, wobei 7 und 8 Bit am gebräuchlichsten sind. Die Trennung von benachbarten Zeichen werden mit Start- und Stop Bits realisiert. Die Übertragungsrate kann zwischen 0,3 Bd und 115,2 kBd betragen. Die Entfernung, die erzielt werden kann, ist stark vom verwendetem Kabel und der Übertragungsgeschwindigkeit abhängig. Es sind Entfernungen bis zu einem Kilometer realisierbar. Die Übertragungsgeschwindigkeit wird Baudrate genannt. Ein Bd entspricht 1 Symbol pro Sekunde, wobei ein Symbol aus einem oder mehreren Bits besteht. Die Übertragungsrate ist somit im Vergleich zu anderen Schnittstellen mit, im Normalfall von einem Bit pro Symbol, der Übertragungsgeschwindigkeit von 0,3 bis 115,2 kbit/s verhältnismäßig gering, reicht aber für die meisten Messtechnischen Anwendungen aus. Für die Kommunikation mittels RS-232 benötigt man eine sog. Flusssteuerung (engl. \textit{flow control}). Der Sender und der Empfänger müssen sich gegenseitig mitteilen, ob sie sende- oder empfangsbereit sind, um Datenverluste zu vermeiden. Die Signale, die man dafür benötigt, werden \textit{Handshake-Signale} genannt. Der Handshake lässt mit physischen Signalen über Steuerleitungen (\textit{Hardware-Handshake}) oder über digitale Signale (\textit{Software-Handshake}) realisieren. Die Software-Handshake Signale werden über die TxD Signalleitungen versendet (siehe Tabelle \ref{db8pindef}). Für den \textit{Software-Handshake} ist die XON/XOFF und für den \textit{Hardware Handshake} die Datenflußsteuerung mittels CTS/RTS eine gängige Methode \cite[S. 480 f.]{Busch2015}. \\
+
+RS-232 beschreibt Spannungspegel und Timing zwischen der Datenübertragungseinrichtung (DÜE) und Datenendeinrichtung (DEE). Nicht Bestandteil des Standards ist das eigentliche Übertragungsprotokoll, wie die Signale kodiert sind (z.B. ASCII), Fehlererkennung usw.. Solche Parameter müssen zwischen der Datenübertragungseinrichtung und der Datenendeinrichtung ausgehandelt werden \cite{wasistrs232}.
+
+\bild{.9}
+{db9_stecker.png}
+{0em}
+{Pinbelegung eines 9-Poligen D-Sub Kabels}
+{Pinbelegung eines 9-Poligen D-Sub Kabels \cite[S. 222]{hughes2010real}}
+{db9}
+
+\begin{table}[h]
+\caption{RS-232 DB-9 pin definition \cite[S. 223]{hughes2010real}}
+\begin{center}
+
+\begin{tabularx}{1\textwidth}{XX}
+\hline
+Signal & Definition \\
+\hline
+RxD & Received Data \\
+TxD & Transmitted Data\\
+RTS & Request to Send \\
+CTS & Clear to Send \\
+DTR & Data Terminal Ready \\
+DSR & Data Set Ready \\
+DCD & Data Carrier Detect \\
+RI & Ring Indicator \\
+\hline
+\end{tabularx}
+\end{center}
+\label{db8pindef}
+\end{table}
+
+Üblicherweise werden für die Übertragung 9-Polige D-Sub Kabel verwendet, aber RS-232 ist nicht an diese Kabel und Stecker Kombination gebunden. In Tabelle \ref{db8pindef} sind alle Signale und die Definition der Signale der DB-9 Schnittstelle aufgelistet. Bei der Verwendung eines Software-Handshake sind nur 3 Signalleitungen notwendig, da die Steuersignale über die Datenleitungen gesendet wird. Für den Datentransfer mittels 9-Poligen D-Sub Kabel (siehe Abbildung \ref{db9}), sind somit lediglich die Pins 2 (RxD), 3 (TxD) und 5 (GND) notwendig. Bei der Verwendung eines Hardware-Handshakes werden die Datenleitungen über die Pins 7 (RTS) und 8 (CTS) notwendig \cite{db9}. RS-232 ist eine Volt-basierte Schnittstelle. Der logische Wert wahr (\textit{true}) ist dem negativen Volt-Level zugeordnet und der logische Wert falsch (\textit{false} ist dem positiven Volt-Level zugeordnet. Die Spanne der Volt-Spannung ist in RS-232 von +/- 3 V bis +/- 25 V spezifiziert.
+
+\subsubsection{RS-485}
+
+RS-485 ist eine Weiterentwicklung des RS-232 Standards. RS-485 ist ein Bus System, welche bis zu 32 Datensender und Empfänger verbinden kann und wird in der Prozessmess- und Prozessleittechnik angewandt. Es sind Übertragungsgeschwindigkeiten von bis zu 35 MBit/s mit der Verwendung eines 10 Meter Kabels und 100Kbit/s mit einer Kabellänge von 1200 Meter möglich. Die RS-485 Schnittstelle verfügt über 2 Signalkabel. Die Polarität der beiden Kabel ist gegensätzlich (vergleiche Abbildung \ref{RS-485}). Beide Leitungen können Signale in beide Richtungen senden, jedoch nicht zur gleichen Zeit. Der Signalabgriff ist somit differentiell. Das Signal wird somit nicht gegen Null gemessen, sondern zwischen den zwei Leitern gegensätzlicher Polarität. In Abbildung \ref{RS-485} ist eine 8-bit asynchrone Datenübertragung via RS-485 zu erkennen. Am Anfang und dem Ende der 8-bit befindet sich ein Start- und ein Stopbit \cite[S. 222 f.]{hughes2010real}.
+
+
+\bild{1}
+{RS-485.png}
+{0em}
+{RS-485 signal levels}
+{RS-485 signal levels \cite[S. 226]{hughes2010real}}
+{RS-485}
+
+\subsubsection{USB}
+
+Die überbrückbare Länge via USB liegt unter 5 m und liegt somit weit unter der Entfernung, die mit RS-232 möglich sind. USB wurde zwecks Schaffung einer einheitlichen Schnittstelle für alle Arten von PC's Laptops von INTEL entwickelt. USB-Kabel haben vier Leitungen, zwei für die \textit{bitserielle} bidirectionale Datenübertragung, eine Leitung für die +5V Versorgungsspannung und eine für das Massepotenzial. An einen USB-Anschluss eines PC's lassen sich theoretisch bis zu 128 Geräte anschließen, da die angeschlossenen Messgeräte durch den USB-Controller im PC mit einer 7-Bit-Adresse adressiert werden. Daraus folgen $2^7=128$ mögliche Messgeräte. Praktisch sind es 127, da die Adresse \glqq Null \grqq \, (000 0000) für die Geräte-Identifizierung genutzt wird. USB verfügt über zwei Eigenschaften, dem \glqq Hot-Plugging\grqq \, und dem \glqq Plug-and-Play\grqq . Dank dem Hot-Plugging ist es vor dem Verbinden eines Geräts mit dem PC nicht notwendig diesen auszuschalten. Dank Plug-and-Play konfiguriert sich die Verbindung selbst. USB 1.0 hat eine Übertragungsgeschwindigkeit von 1,5 bzw. 12 MBit/s, USB 2.0 bis zu 480 MBit/s und USB 3.0 hat eine Highspeedübertragungsrate von 5 GBit/s. Es ist je nach verwendetem Geräte möglich, diese an einer USB-Schnittstelle zu betreiben, die eine geringere Übertragungsrate besitzen als die USB-Schnittstelle des PC's.
+
+\subsubsection{Bluetooth}
+
+Bluetooth ist eine Kabellose Datenübertragungsmethode via Funk. Der Frequenzbereich ist zwischen 2,402 bis 2,480 GHz. Die Übertragungsdistanz beträgt ca. 10 m mit einer Übertragungsgeschwindigkeit von 2,1 MBit/s für die Spezifikation \textit{Bluetooth 2.0 + EDR} (Enhanced Data Rate) \cite[S. 481 f.]{Busch2015}.
+Bluetooth 2.0 + EDR ist 2004 auf dem Markt erschienen. Bluetooth 4.2 Smart ist 2014 mit Einführungen von wichtigen Funktionen für das Internet der Dinge (IoT) erschienen. Bluetooth 5 (2017) ist die aktuellste Version und hat IoT im Fokus. Bluetooth 5 unterstützt Übertragungsraten von 2 MBit/s und einer Reichweite von maximal ca. 250 m \cite{bt5}.\\
+
+Drahtlose IoT- Lösungen nehmen in der produzierenden Industrie an Bedeutung zu. Da Kabellose Netzwerke beim Aufbau von neuen Fertigungslinien flexibler sind als Kabelgebundene Netzwerke, ist Bluetooth im Rahmen von Industrie 4.0 eine bedeutende Schnittstelle. Bluetooth Mesh Networking wurde unter anderem für industrielle drahtlose Sensornetzwerke konzipiert (WSN). Mit diesem Standard ist es möglich eine viele Geräte und Sensoren in einem Bluetoothnetzwerk kkommunizieren zu lassen. Jedes Gerät wird \glqq Knoten\grqq \, genannt \cite{bti40}.
+
+\paragraph{Sicherheit: Mesh-Vernetzung per Bluetooth \cite{bti40}}
+
+Die Netzwerksicherheit bei Produzierenden betrieben nicht verhandelbar. Die Sicherheit bei der Verwendung von Bluetooth, soll durch die sog. Mesh-Vernetzung gewährleistet werden. Die Informationssicherheit soll durch ein Schichtenmodell erreicht weden, dass auf voneinander getrennten Sicherheitsschlüssel basiert:
+
+\paragraph{Netzwerkschlüssel (NetKeys)} gelten für alle Nachrichten im Netzwerk, damit die Knoten sicher miteinander kommunizieren.
+
+\paragraph{Anwendungsschlüssel (AppKeys)} schützen Nachrichten zu bestimmten Anwendungen wie Klimaanlage, Beleuchtung oder physische Sicherheit.
+
+\paragraph{Geräteschlüssel (DevKey)} ermöglichen das Einrichten und Konfigurieren eines Knotens, um neue Geräte zum Netzwerk hinzuzufügen.
+
+\subsubsection{WLAN}
+
+WLAN ermöglicht die Datenübertragung via Funk, ermöglicht jedoch eine signifikant höhere Übertragungsgeschwindigkeit und Übertagungsreichweite als Bluetooth. Mit der Technischen Lösung 802.11 ist eine Gruppe von Standards für Funknetzwerke des Institute of Electrical and Electronics Engineers (IEEE) entwickelt worden. 
+
+\subsubsection{Verarbeitung digitaler Signale in Labview}
+
+Jeff Kodosky et al. hat in Zusammenarbeit mit der University of Texas die Programmiersprache G und die dazugehörige Enwicklungsumgebung LabVIEW entwickelt. 
+
+LabVIEW stellt zum Umsetzen spezieller Anwendung spezifische Werkzeuge und Modelle bereit. Mit LabVIEW 
+
+Das Ziel war ein Tool zu entwickeln, wodurch Menschen mit unterschiedlichem know-how im Programmieren befähigt werden maßgeschneiderte Programme grafisch generieren zu können, da sich im Laborumfeld Versuchsaufbauten und somit auch Messungsaufgaben und Prozessabläufe schnell ändern. Diese Programmiersprache setzt sich aus zwei Programmiermethoden zusammen, dem strukturorientiertem Programmieren und der datenstromorientierten Programmierung  \cite{kodosky}. Zu den strukturorientierten textbasierten Programmiersprachen gehören unter anderem \textit{C++, Java} und \textit{Python}. Programmiersprachen, die strukturorientiert arbeiten, befolgen auf der untersten Funktionsebene folgende drei Kontrollstrukturen \cite{structured}:
+
+\begin{enumerate}
+\item Sequenzielle Abarbeitung von Programmanweisungen
+\item Verzweigung innerhalb Programmabschnitte (if/when/else)
+\item Iterationen/Schleifen
+\end{enumerate} 
+
+Viele Messobjekte generieren kontinuierliche Datenströme. Die datenstromorientierte Programmiermethode ist bei dieser Art von Messobjekt die Methode der Wahl, daher liegt der Programmiersprache G im wesentlichen das Datenflusskonzept zugrunde. G ist eine effiziente Programmiersprache, die die Kommunikation mit den Geräten, die Visualisierung von Daten und deren Analyse ermöglicht. Mittels LabVIEW lassen sich Programme grafisch mittels Drag and Drop entwickeln. LabVIEW Programme setzen sich aus interaktiven Front Panels und dem Programm in Form von Blockdiagrammen \cite{kodosky}. Das Front Panel ist die Programmoberfläche des Programms, womit das Programm angewendet wird. In Abbildung \ref{blockdiagramm_frontpanel} sind Frontpanel und Blockdiagramm eines einfachen Programms dargestellt.
+
+\bild{0.8}
+{blockdiagramm_frontpanel.png}
+{-1em}
+{Beispiel für ein Blockdiagramm und das zugehörige Frontpanel}
+{Beispiel für ein Blockdiagramm und das zugehörige Frontpanel \cite{blockdiagramm_frontpanel}}
+{blockdiagramm_frontpanel}

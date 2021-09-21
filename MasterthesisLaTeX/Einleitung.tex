@@ -1,0 +1,288 @@
+\section{Einleitung}
+
+%Ende des Jahres 2019 hat sich eine Herausforderung angebahnt, mit der die gesamte Menschheit nicht gerechnet hat. Das folge Jahr 2020 wurde maßgeblich von der Herausforderung, die Bewältigung der Covid-19 Pandemie geprägt. Die globale Marktwirtschaft, Infrastrukturen und vieles mehr wurden auf die Probe gestellt. Systeme die sich über Jahrzehnte etabliert und bewährt haben wurden ins wanken gebracht. Systeme wie unter anderem das Bildungssystem. Dieser Umstand hat neben der bereits fortschreitenden Digitalisierung, sei es im Privatsektor als auch in der Industrie als weiterer Treiber fungiert, die Digitalisierungsgeschwindigkeit zu erhöhen. Im Jahr 2011 wurde für die digitale Transformation in der Industrie der Name Industrie 4.0 in Umlauf gebracht.\\
+
+Die Digitalisierung in der Wirtschaft hat im Jahre 2020 Dimensionen erreicht, dass Forscher mittels \glqq Supercomputern\grqq{} und \textit{\textbf{k}ünstlicher \textbf{I}ntelligenz} (KI) beispielsweise chemische Verbindungen für die Reifenherstellung oder Enzymformulierung errechnen, mit der die Ethanolproduktion optimiert werden kann \cite{lab40}. Mittels \textit{Digitaler Zwilling}, im englischen \textit{digital Twin}, können Produkte, Produktionsabläufe oder ein gesamter Prozess, durch die Kopplung von Produktions- und Produkt Twin, abgebildet und somit optimiert werden. Mittels Digital Twins lassen sich sogenannte Soft-Sensoren integrieren (angewandte numerische Simulation). In Produktionsprozessabschnitten, in denen die Bedingungen es nicht erlauben einen realen Langzeitsensor zu implementieren, können, mittels Digital Twins, Sensoren in Simulationssoftware generiert werden, die mit einem Prozess synchronisiert sind, um Totzeiten zu verringern oder zu eliminieren, bis schlechte Produktionsbedingungen detektiert werden können. Dadurch kann die Effizienz eines Prozesses signifikant gesteigert werden \cite{digitwin_prozessmodellierung}. \\ 
+
+Abhängig vom Kontinent, Staat, Region und Branche wird der digitale Wandel anders wahrgenommen. Eine Einteilung nach Kondratjew ist nicht Eindeutig, dennoch erfüllt der digitale Wandel gemäß \cite{digitale_trans_kondratjew} alle Kriterien, um den Platz des 6. Kondratjew-Zyklus einzunehmen. Im Privatsektor nimmt die Zahl an \glqq smarten\grqq{} Geräten stetig zu. Das ein Smartphone mit einem Smart TV autonom kommuniziert ist bereits gelebter Alltag. Auch in der Industrie kommunizieren Sensoren, Geräte, Maschinen, Aggregate bereits autonom untereinander, aber auch mit \textbf{E}nterprise \textbf{R}esource \textbf{P}lanning (ERP)-, \textbf{M}anufacturing \textbf{E}xcecution \textbf{S}ystemen (MES) oder \textit{\textbf{M}anufacturing \textbf{O}perations \textbf{M}anagement} (MOM) und ähnlichem. Smarte Sensoren sind im Stande, bei autonomer Erkennung einer Erhöhung der Standardabweichung sich selbst zu kalibrieren \cite{smarte_sensoren}.\\
+
+Es lässt sich erahnen, dass sich die Datenmengen pro Zeiteinheit, Prozess o.ä. die nächsten Jahre stetig erhöhen wird. Nun sind Konzepte gefragt, wie sich die \textbf{\glqq relevanten\grqq{}} Daten intelligent archivieren lassen, um sie in Echtzeit oder zu einem späteren Zeitpunkt verhältnismäßig einfach verarbeiten und auswerten zu können, um beispielsweise Produktionsprozesse zu optimieren. \\
+
+Damit zukünftige Absolventen der HAW diesen Anforderungen schneller gerecht werden können, ist das erste Ziel dieser Arbeit, den Status quo des verfahrenstechnischen Labors zu erfassen, um die nächsten Schritte einzuleiten, damit der Stand der Technik in der Industrie noch besser approximiert werden kann.
+
+%Die Zielsetzung dieser Arbeit ist nun, ein ganzheitliches Digitalisierungskonzept für das  Verfahrenstechnische Labor an der HAW- Hamburg Life Science, Standort Bergedorf, zu konzipieren, um Studierende einerseits optimal auf das operative Geschäft in der privat Wirtschaft vorzubereiten und andererseits das operative Geschäft, in Bezug auf Labor Untersuchungen, Datenverwaltungsschemas
+
+\subsection{Ist-Analyse des Verfahrenstechnik Labors}
+
+In der Verfahrenstechnik gibt es für die unterschiedlichsten verfahrenstechnischen Operationen (Unit Operations), wie z.B. das Trennen von Stoffgemischen oder das Zerkleinern von Partikeln, verschiedene Versuchsstände. Um sich einen Überblick über das \textbf{v}erfahrens\textbf{t}echnische (VT) Labor zu machen, kann das Labor auf mindestens drei unterschiedliche Weisen betrachtet werden. 
+
+\begin{enumerate}[leftmargin = 1.2em]
+\item Das VT-Labor kann in die \textbf{Unit Operations}, mit den Versuchsständen und den jeweiligen Komponenten wie Apparate, Messtechnik und Datenverarbeitung, unterteilt werden. Diese Sichtweise eignet sich besonders, um sich einen Überblick zu verschaffen.
+
+\item Betrachtet man das VT-Labor unter dem Aspekt der \textbf{anfallenden Daten} (siehe Tabelle \ref{tab:Versuchsparameter} im Anhang), die bei den Versuchsständen generiert werden, dann kann das VT-Labor in diskrete und kontinuierlich anfallende Daten unterteilt werden. Folglich sind im Rahmen einer Datenverarbeitung mindestens zwei Lösungsansätze notwendig. 
+
+\item Eine differenzierte Betrachtung der anfallenden Daten führt zur nächsten Klassifizierung, die Einteilung nach  \textbf{Messaufgabe}. Verfahrenstechnische Messaufgaben könnten die folgenden sein:
+
+
+\begin{enumerate}[label = \textbullet , itemsep = -0.1em]
+	\item Volumenstrom-/Massenstrommessung (kontinuierlich)
+	\item Temperaturmessung (kontinuierlich/diskret)
+	\item Wiegen (kontinuierlich/diskret)
+	\item Druckmessung (kontinuierlich/diskret)
+	\item Konzentrationsmessung (kontinuierlich/diskret)
+		\begin{enumerate}[label = - , itemsep = -0.25em]
+			\item Luftfeuchtebestimmung (diskret/kontinuierlich)
+			\item Feuchtebestimmung von Feststoffen (diskret)
+			\item pH-Wert Messung (kontinuierlich/diskret)
+			\item Gaskonzentrationsmessung (kontinuierlich)
+		\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\begin{table}[hp!] % Mechanische Unit Operations, deren Versuchsstände und Messtechnische Einrichtungen
+\caption{Mechanische Unit Operations, deren Versuchsstände und messtechnische \\Einrichtungen}
+\centering \vspace{5pt}
+{\fontsize{11}{13,2}
+\begin{NiceTabular}{Wc{2,5cm}Wc{2cm}rl}[hvlines, 
+code-before = \rectanglecolor{blue!13}{19-1}{31-4}, 
+code-before = \rectanglecolor{red!12}{6-2}{8-4}]
+\Block{1-2}{\textbf{Unit Operations}} &						&  \textbf{Versuchsstände} & \textbf{digitale Schnittstelle} \\
+\hline
+\Block{7-1}{ Trennen}	& \Block{1-1}{Klassieren} & Sichten				 & keine \\
+
+								&  \Block{3-1}{Filtration}	& \hatchcell[gray!50] Kuchenfiltration	& keine\\
+								&									& Blaine 										& keine \\
+								&									& Staubabscheidung						& \textcolor{OliveGreen}{\textbf{USB}} \\
+								& \Block{3-1}{thermisch} & Gefriertrocknen 							&  \textcolor{OliveGreen}{\textbf{USB}} \\
+								& 									& Trocknungsofen 							&  \textcolor{OliveGreen}{\textbf{USB, LAN}} \\
+								&									& Vakuumtrockner 							& keine \\								
+\Block{1-2}{Fluidisieren} &								& \hatchcell[gray!50] Wirbelschicht & keine \\
+\Block{6-2}{ Partikelzerkleinerung} &					& Backenbrecher & keine \\
+								& 									&	Planetenkugelmühle 	&  \textcolor{OliveGreen}{\textbf{RS-232, RS-485}} \\
+								&									& Prallmühle					& keine \\
+								&									& Walzenmühle			 	& keine \\
+								&									& Schneidmühle		 		& keine \\
+								&									& Hochdruckhomogenisator 	& keine \\
+\Block{3-2}{ Mischen} 	%&									&	Feststoffdispergierer	& keine	\\	
+								&									& Intensivmischer	& \textcolor{OliveGreen}{\textbf{USB}} \\
+								&									& Conchiermaschine	& keine \\
+								&									& Rührversuch 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\	
+\hline \Block{11-1}{} & \Block{6-1}{MVT}			& Zugversuch    & 	 \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Siebturmanalyse 				& keine \\
+								& 									& Luftstrahlsiebung &\textcolor{OliveGreen}{\textbf{RS-232, USB}} \\
+								&									& Scherzelle 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Stampfdichte 	& keine \\
+								&									& Laserbeugungs-Partikelgrößenanalyse 	& \textcolor{OliveGreen}{\textbf{USB}} \\								
+\Block{3-2}{Analyseeinrichtungen}								&									& Waagen 		& \textcolor{OliveGreen}{\textbf{USB}} \\
+\Block{6-2}{}				&									& IR-Waagen 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Refractometer	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Fluiddichtemesser 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Gaspyknometer 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Mikroskope 	& \textcolor{OliveGreen}{\textbf{USB}} \\		
+								&									& Viskosimeter &	\textcolor{OliveGreen}{\textbf{USB}} \\	
+
+\end{NiceTabular}
+}
+\label{tab:unitoperations}
+\end{table}
+
+\label{sec:bilanz_des_projekts}
+
+\begin{table}[p!] % Grad der Digitalisierung
+\caption{\glqq Grad der Digitalisierung\grqq{} der MVT Geräte und Anlagen} \label{tab:grad_der_digitalisierung}
+\begin{center}
+\begin{NiceTabular}{r|c|c|c|c}%[hvlines-except-corners=NW]
+MVT Versuchsstände 			& 	\makecell{Sensorik\\ zweckmäßig} & \makecell{Sensorik\\ vorhanden} &  \makecell{\glqq effektive\grqq \\Schnittstelle}	& \makecell{\textit{priorisierte} \\Einrichtungen}  	 \\ \hline 
+Sichten 								&						&	 			&  									&\\[0.2em]
+Kuchenfiltration 					&		$\circ$		& 			&									 	& \textcolor{red}{\xmark}\\[0.2em]
+Blaine								&						&			& 										&			\\[0.2em]
+Staubabscheidung 				&		$\circ$		& \cmark			& \cmark							&  \cmark \\[0.2em]
+Wirbelschicht 					&		$\circ$		&				&										& \textcolor{red}{\xmark}	 \\[0.2em]
+Backenbrecher 					&						& 	 		& 										&\\[0.2em]
+Planetenkugelmühle 			&		$\circ$		& \cmark	& 	 \xmark									&\\[0.2em]
+Prallmühle 						&						&			& 										&\\[0.2em]
+Walzenmühle						&						&	 		& 		&\\[0.2em]
+Schneidmühle 					&						&  		& &\\[0.2em]
+Hochdruckhomogenisator 	&						& 			& &\\[0.2em]
+Intensivmischer 					&						& \cmark	& \xmark& \\[0.2em]
+Conchiermaschine 				&						&			& & \\[0.2em]
+Rührversuch 						&		$\circ$		&	\cmark		& \cmark	&   \cmark \\[0.2em]
+\hline \hline
+Summe aller~ \cmark ~oder~ $\circ$		&			5			& 4 					& 2    & 2 \\
+Summe 	aller~ \xmark ~oder~ \textcolor{red}{\xmark}			&						&  	& 2    & 2\\[0.25em]
+\makecell{prozentualer Anteil, relativ zu allen \\
+\textcolor{black!60}{Einrichtungen} | \textbf{Spalteneinträgen}}	&	\textcolor{black!50}{36~\%}				&	\textcolor{black!50}{29 \%} 	 & \textbf{50~ \%} &\textbf{ 50 \%}\\[0.2em]
+
+\Block{1-5}{} 						&			& 						& & \\[0.2em]
+MVT Analyseeinrichtungen	&  \makecell{Sensorik\\ zweckmäßig}	&	\makecell{Sensorik\\ vorhanden} 	& \makecell{\glqq effektive\grqq \\Schnittstelle} & \makecell{ \textit{priorisierte }\\Einrichtungen} \\ \hline 
+Zugversuch 						&	$\circ$	& \cmark 	& 	\cmark	&		\\[0.2em]
+{Siebturmanalyse}\textsubscript{zzgl. digital Waage}				&	$\circ$	& \cmark 			& 		\xmark			&	\textcolor{red}{\xmark}	\\[0.2em]
+Luftstrahlsiebung				& 	$\circ$	& \cmark 			& \cmark 		& \cmark \\[0.2em]
+Scherzelle 							&	$\circ$	& \cmark 	&  \xmark 	& \textcolor{red}{\xmark}\\[0.2em]
+Stampfdichte 					&		&  			&   									&\\[0.2em]
+\makecell[r]{Laserbeugungs-\\
+Partikelgrößenanalyse}					& 	$\circ$	& \cmark 			&  \cmark 							& \cmark\\[0.2em]
+\hline \hline
+Summe aller~ \cmark ~oder~ $\circ$							&	5	& 4 					& 2	&	2		\\
+Summe 	aller~ \xmark ~oder~ \textcolor{red}{\xmark}	&		&  					& 2	&		2	\\[0.25em]
+\makecell{prozentualer Anteil, relativ zu allen \\
+\textcolor{black!60}{Einrichtungen} | \textbf{Spalteneinträgen}} 			& \textcolor{black!50}{83~\%}	&	\textcolor{black!50}{83 \%} 		& \textbf{60 \%} 						& \textbf{50~\%}	\\[0.2em]
+\end{NiceTabular}
+\end{center}
+\end{table}
+
+
+Die Ausgangssituation des \textbf{m}echanischem Teils, des \textbf{v}erfahrens\textbf{t}echnischen Labors (MVT-Labor), wurde in einer Excel-Datei dokumentiert (siehe Anhang: Ist-Analyse-VT-Labor.xlsx). In der Tabelle \ref{tab:unitoperations} sind die Versuchsstände der MVT; drei Versuchsstände der Unit Operation Trennen, der thermischen Verfahrenstechnik (\textcolor{red!85}{hellrot eingefärbt}), die häufig Ihre Anwendung in der MVT finden sowie einige Analyseeinrichtungen (\textcolor{blue!65}{hellblau eingefärbt}); aufgelistet. Das Ziel der Ist-Analyse war es, den \glqq Grad der Digitalisierung\grqq{} zu Beginn des Projekts zu eruieren. Mit \glqq Grad der Digitalisierung\grqq{} ist gemeint, wie viele Versuchsstände digitale Messtechnik verwenden, mit denen Daten, zwecks Weiterverarbeitung, generiert werden können. \textbf{Messtechnikkomponenten mit einer digitalen Schnittstelle werden im Verlauf dieser Arbeit nur Sensoren genannt}. Die Zellen in der Tabelle \ref{tab:unitoperations}, bei denen ein Upgrade auf Sensoren sinnhaft wäre, werden \textcolor{black!70}{grau schraffiert} eingefärbt.\\
+
+
+Der Tabelle \ref{tab:unitoperations} kann entnommen werden, dass 11 der 15 MVT Versuchsstände keine Sensoren besitzen. Einige Analyseeinrichtungen werden i. d. R. nur im Rahmen der MVT genutzt und sind in der Tabelle \ref{tab:unitoperations} mit MVT markiert. Alle weiteren messtechnischen Einrichtungen werden, neben der MVT, auch in der chemischen und thermischen Verfahrenstechnik genutzt. Ein Upgrade mit Sensoren ist bei dem Wirbelschicht- und dem Filterkuchenversuchsstand sinnhaft, daher sind diese zwei Versuchsstände in der Tabelle  \textcolor{black!70}{grau schraffiert}.  \\
+
+\begin{wraptable}{r}{0.37\textwidth} \vspace{-2.2em}
+\caption{Schnittstellenverteilung \\ im MVT-Labor}
+\label{tab:mvt_labor_digi}
+\centering
+\begin{tabular}{r|l}
+Schnittstelle & Anzahl \\\toprule
+RS-232 (DB-9) & 15 \\
+RS-232 (DB-25) & 5 \\ \arrayrulecolor{black!25}\hline
+USB & 7 \\ \hline
+LAN & 3\\ \hline
+RS-485 (DB-9) & 1 \\
+\end{tabular}
+\end{wraptable}
+
+
+In der Tabelle \ref{tab:mvt_labor_digi} ist die Schnittstellenverteilung der Versuchsstände im MVT Labor dargestellt. Der Tabelle ist zu entnehmen, dass 20 (15 DB-9 und 25 DB-25 Stecker, siehe Abbildung \ref{db9_male} in Abschnitt \ref{sec:verbinder}) Geräte die RS-232 Schnittstelle besitzen, sieben Geräte haben eine USB Schnittstelle, drei Geräte haben eine LAN Schnittstelle und ein Gerät hat eine RS-485 Schnittstelle. In der Tabelle \ref{tab:grad_der_digitalisierung} sind die Versuchsstände und Analyseeinrichtungen der MVT aufgelistet. Neben der Spalte mit den Versuchsständen- und Analyseeinrichtungen gibt es vier weitere Spalten: 
+
+\begin{enumerate}[leftmargin = 1.2em, label = \textbullet , itemsep = 0.1em]
+\item Sensorik zweckmäßig
+	\begin{enumerate}[leftmargin = 1.2em, label = - , itemsep = -0.25em]
+		\item Versuchsstände und Analyseeinrichtungen, bei denen Sensoren Zweckmäßig sind, sind in dieser Spalte mit einem Kreis ($\circ$) markiert. Der prozentuale \textcolor{black!60}{Anteil}, der jeweils letzten Zeile, ist relativ zu allen Versuchsständen bzw. Analyseeinrichtungen.
+	\end{enumerate}
+	
+\item Sensorik vorhanden
+	\begin{enumerate}[leftmargin = 1.2em, label = - , itemsep = -0.25em]
+		\item In dieser Spalte haben alle Versuchsstände und Analyseeinrichtungen einen Haken, die bereits über Sensorik verfügen. Der prozentuale \textcolor{black!60}{Anteil}, der jeweils letzten Zeile, ist relativ zu allen Versuchsständen bzw. Analyseeinrichtungen.
+	\end{enumerate}
+	
+\item \glqq effektive\grqq Schnittstelle
+	\begin{enumerate}[leftmargin = 1.2em, label = - , itemsep = -0.25em]
+		\item In dieser Spalte haben die Versuchsstände und Analyseeinrichtungen, die eine digitale Schnittstelle besitzen und auch bei den Versuchen verwendet werden, einen Haken. Der prozentuale \textbf{Anteil}, der jeweils letzten Zeile, ist relativ zu allen Spalteneinträgen.
+	\end{enumerate}
+	
+\item priorisierte Einrichtungen
+ 	\begin{enumerate}[leftmargin = 1.2em, label = - , itemsep = -0.25em]
+		\item Versuchsstände und Analyseeinrichtungen die in dieser Spalte aufgeführt sind, haben für die Präsenzveranstaltung eine hohe
+		Bedeutung \textbf{und} sollten, wenn nicht bereits vorhanden, unverzüglich eine Signalverarbeitungsapplikation erhalten oder mit Sensoren ausgestattet werden. Die roten \textcolor{red}{Kreuze} betonen die
+		\textit{Wichtigkeit} der Versuchsstände, die noch nicht auf dem Stand der \textit{anerkannten Regeln der Technik} sind. Der prozentuale \textbf{Anteil}, der jeweils letzten Zeile, ist relativ zu allen Spalteneinträgen.
+	\end{enumerate}
+	
+\end{enumerate}
+
+\vspace{2em}
+
+
+\subsection{Digitale Transformation}
+
+An dieser Stelle bietet es sich an die Bedeutung der Schlagwortkombination \glqq digitale Transformation\grqq{} kurz zu erläutern. Soll ein Unternehmen oder dergleichen digital transformiert werden, dann ist nicht von einem Projekt die Rede. Die digitale Transformation ist ein Prozess, welche lediglich mit einem Projekt initiiert wird. Solch ein Projekt kann, wie im Rahmen dieses Projekts mit dem erstellen eines Digitalisierungskonzepts, dem Aufrüsten von Versuchsanlagen im Labormaßstab mit Sensoren beginnen, doch darf mit der Beendigung des Projekts nicht als abgeschlossen betrachtet werden! Im akademischen Rahmen sind die Haupttreiber (\textit{engl. enabler}) digitale Technologien, wie die Ermöglichung von Infrastrukturen/Vernetzungen oder Anwendungen. Doch auch Akteure wie der Staat, Unternehmen, die Wissenschaft (Forschung und Lehre) und Gemeinschaften können eine digitale Transformation triggern. In Anlehnung an \cite{digitale_transformation}, tragen die Stufen der digitalen Transformation im akademischen Rahmen folgende Label: 
+
+\begin{enumerate}[label = \textbullet , itemsep = 0.1em]
+\item Digitale Transformation
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Weiterentwicklung der Lehre, des Mindsets der Dozenten sowie Studierenden 
+\item des \textbf{Kunden}erlebnisses -> die Kompetenzen, welche \textbf{Absolventen} in die \textbf{\mbox{Unternehmen}} einbringen werden,
+\item der Geschäftsmodelle, in Analogie der akademischen Modelle, (die Vision des \glqq Lernraums digitale Unformtechnik\grqq{} von Prof. Dr. E. Stöver, siehe Abschnitt \ref{sec:digitalerlernraum} Absatz 7, nach dem Paragraph \textit{künstliche Intelligenz})
+\end{enumerate}
+
+\item Digitale Nutzung
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Anwendung der digitalen Tools von den Dozenten sowie Studierenden und somit zugleich Generierung von praktischen Erfahrungen der Studierenden, im Rahmen der digitaler Dokumentation und Datenverarbeitung,
+\end{enumerate}
+
+\item Digitale Kompetenz
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Einfacher Einstieg im Umgang mit neuen Technologien
+\end{enumerate}
+\end{enumerate}
+
+Um die digitale Transformation erfolgreich einzuleiten, ist zielgerichtetes Handeln erforderlich. Wie \textit{sollte} die digitale Infrastruktur aussehen? Wie sieht das operative Geschäft im Unternehmen heute, in naher Zukunft sowie visionär betrachtet aus und wie kann das als Hochschule approximiert werden? Was für Kompetenzen \textit{sollte} der Hochschulabsolvent von morgen in ein Unternehmen einbringen können? Wer sind die Stakeholder in der Hochschule und wie können diese abgeholt werden? Das Stichwort an der Stelle ist \textbf{Change~Management}. Wie ist die Organisation anzupassen, um den Ansprüchen gerecht zu werden? \\
+
+Diese Fragen sollten im akademischen Rahmen beantwortet werden, um einen erfolgreichen Start gewährleisten zu können. In der folgenden Auflistung, nach \cite{digitale_transformation}, sind einige Hilfestellungen, um die oben genannten Fragen präziser stellen zu können (\textcolor{black!50}{grau markierte Punkte} spielen im akademischen Rahmen eine eher untergeordnete Rolle):
+
+
+\begin{flushleft}
+\begin{tabularx}{1,1\textwidth}{XX}
+\begin{enumerate}[label = \textbullet , itemsep = 0.1em, leftmargin = 0.5em]
+\vspace{-1,5em}
+\item Digitale Infrasturktur
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Datenintegration, 
+\item erweiterte Analysen, 
+\item Datenschutz, 
+\item Datensicherheit, …
+\end{enumerate}
+
+\item Kunde
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Unternehmen, 
+\item Kundenverständnis, 
+\item \textcolor{black!60}{Customer Experience Management, …}
+\end{enumerate} 
+
+\item Transformationsmanagement 
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Digitale Strategie, 
+\item Change Management, …
+\end{enumerate}
+
+\end{enumerate}
+& 
+
+\vspace{-1,5em}
+\begin{enumerate}[label = \textbullet , itemsep = 0.1em, leftmargin = 0.5em]
+\item Operatives Geschäft
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Integrierte IT, 
+\item \textcolor{black!50}{Digitale Wertschöpfungskette,} 
+\item \textcolor{black!50}{Digitale Produktion, …}
+\end{enumerate} 
+
+\item Organisation 
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item Agilität, 
+\item Arbeitsplatz der Zukunft, 
+\item Digitales Denken \& Handeln, …
+\end{enumerate} 
+
+\item \textcolor{black!50}{Wertversprechen}
+\begin{enumerate}[label = - , itemsep = -0.25em]
+\item \textcolor{black!50}{Smarte Produkte, }
+\item \textcolor{black!50}{Individualisierung, }
+\item \textcolor{black!50}{Digitale Ökosysteme, …} \vspace{-1,5em}
+\end{enumerate}  
+
+\end{enumerate}
+\end{tabularx}
+\end{flushleft}
+
+
+Neben dem Change Management, sind oftmals ein fehlendes Bewusstsein, eine nicht vorhandene Dringlichkeit und die fehlende Vision der Entscheider, in Bezug auf die Notwendigkeit einer digitalen Transformation, wesentliche Herausforderungen. Des Weiteren haben wir derzeit das Zeitalter der digitalen Vernetzung. Im Privatsektor sind es Phänomene wie \textit{Social Media} oder \glqq smarte Geräte\grqq{}, die autonom kommunizieren. In der Industrie sind es Sensoren, Prozessketten, Softwarelösungen (ERP, MES, uvm...), aber auch entlang der \textbf{gesamten} Wertschöpfungskette, d.h. vom Forstwirt bis zum Toilettenpapierverkauf im Einzelhandel findet oder besser sollte eine Vernetzung bzw. Kommunikation stattfinden (Stichwort \textit{Bullwhip Effekt}). Aus der Sicht der Hochschule könnte es \textbf{mehr} Kommunikation zwischen den Fakultäten sowie \textbf{mehr} Kommunikation und interdisziplinäre Projekte zwischen den Departements einer Hochschule, aber auch zwischen verschiedenen Hochschulen und Universitäten, als auch mit Unternehmen (Stichwort ist z.B. die Vision des stellvertretendem Departementleiters Prof. Dr. E. Stöver, dem digitalen Lernraum am Berliner Tor) sein.\\
+
+
+\subsection{Motivation und Zielsetzung}
+
+In der Industrie ist der Einsatz (digitaler) Sensoren, der Anlagensteuerung mittels \textit{\textbf{P}rocess \textbf{L}ogic \textbf{C}ontrollern} (PLC, unter Siemens SPS), als auch der Einsatz von Datenbanken \textit{anerkannter Stand der Technik}. Die Dokumentation mittels digitaler Medien ist im operativem Geschehen von Unternehmen, aber auch in der Forschung und Entwicklung bereits Stand der Technik. Durch die strukturierte Archivierung in Datenbanken ist eine präzise Abfrage möglich, wodurch die Daten von verschiedensten Softwarelösungen wie Simulationssoftware, \textit{Machine Learning} Applikationen, \textit{Virtual} oder \textit{Augmented Reality}, CAD, uvm. abgegriffen werden können \cite{lab40, bigdata}.\\
+
+Mit dem Schlagwort Industrie 4.0 assoziiert man die monetäre Nutzung der genannten Softwarelösungen, aber auch die Vernetzung von Applikationen, Sensoren und Prozessketten sowie die multimedialen Dokumentationsmöglichkeiten.\\
+
+Im Gegensatz zu den Datenbanken, werden die Daten in sogenannten \textit{Data Lake's} unstrukturiert abgelegt. In Data Lakes können die unterschiedlichsten Datentypen (Textdateien , Audios, Grafiken, Bilder etc.) archiviert werden. Es ist demnach mit der Verwendung einer Cloud (OneDrive, Dropbox etc.) im Privatbereich vergleichbar \cite{bigdata}. Um die folgenden Generation von Studenten optimal auf das operative Geschäft vorbereiten zu können, ist es notwendig, neben den Einsatz von Sensoren, digitale Medien für die Protokollierung einzuführen sowie Applikationen im Rahmen von Big Data inkrementell zu implementieren.\\
+
+Im Rahmen dieses Projekts soll ein Konzept entworfen werden, dass die digitale Transformation des mechanischen Verfahrenstechnik Labors im Fokus hat. Das Konzept soll neben dem mechanischen Verfahrenstechnik Labor unter anderem auch auf das chemische und thermische Verfahrenstechnik Labor anwendbar sein. Bei der Digitalisierung soll der Grad der Automatisierung der Laborversuche minimal sein, um den Lerneffekt für die Studierenden zu erhalten, den man durch die praktische Durchführung der Versuche erhält. Zu Beginn ist zu eruieren, wie viele Laborversuche digital Messwerte bereitstellen und welche Schnittstellen zur Verfügung stehen. Bei Bedarf soll alternative Messtechnik oder ganz Versuchsanlagen recherchiert und diskutiert werden. Es ist eine Lösung zu eruieren, die digitalen Rohdaten zu archivieren, um sie zu einem beliebigen Zeitpunkt verwenden zu können. Abschließend soll das ganzheitliche Digitalisierungskonzept zum Teil umgesetzt und validiert werden. Folgend sind die Ziele des Projekts noch einmal aufgelistet.
+
+\begin{itemize}
+\item Erstellung eines Digitalisierungskonzept für das Verfahrenstechnik (VT) Labor
+\item Erstellung einer Ist-Analyse des mechanischen Verfahrenstechnik Labors
+\item Die Akquise und Speicherung digitaler Daten (Signalverarbeitung)
+\item im Bedarfsfall digitale Messtechnik eruieren
+\item Validierung des Konzepts, durch Teilumsetzung anhand einer ausgewählten Versuchsanlage
+\end{itemize}

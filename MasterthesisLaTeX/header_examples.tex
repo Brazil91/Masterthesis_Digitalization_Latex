@@ -1,0 +1,94 @@
+%\documentclass[
+%  %a4paper,% default
+%  %pagesize,% default since version 3.17
+%  landscape,
+%  fontsize=6pt,
+%]{scrartcl}
+%\usepackage[left=0.75cm,right=0.75cm, top=1cm, bottom=0.75cm]{geometry}
+%\usepackage{multicol}
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%
+%\usepackage[headsepline]{scrlayer-scrpage}
+%\clearpairofpagestyles
+%\ohead{Name}
+%\chead{\pagemark}
+%\ihead{Title description}
+%
+%\renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage}}
+%\addtokomafont{pageheadfoot}{\upshape}
+%
+%\setlength{\columnsep}{25pt}
+%\setlength{\columnseprule}{0.4pt}
+%
+%\usepackage{blindtext}% dummy text
+%\begin{document}
+%
+%\begin{multicols*}{3}
+%\Blinddocument
+%\end{multicols*}
+%\end{document}
+%But using fancyhdr is also possible if really want to use this package:
+
+%\documentclass[
+%  a4paper,% default
+%  pagesize,% default since version 3.17
+%  landscape,
+%  fontsize=6pt
+%]{scrartcl}
+%\usepackage[left=0.75cm,right=0.75cm, top=1cm, bottom=0.75cm]{geometry}
+%\usepackage{multicol}
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[R]{\usekomafont{pageheadfoot}Name}
+%\fancyhead[C]{\usekomafont{pageheadfoot}\pagemark}
+%\fancyhead[L]{\usekomafont{pageheadfoot}Title description}
+%
+%\renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage}}
+%\addtokomafont{pageheadfoot}{\upshape}
+%
+%\setlength{\columnsep}{25pt}
+%\setlength{\columnseprule}{0.4pt}
+%
+%\usepackage{blindtext}
+%\begin{document}
+%
+%\begin{multicols*}{3}
+%\Blinddocument
+%\end{multicols*}
+%\end{document}
+
+\documentclass[headsepline,footsepline,twoside]{scrartcl}
+% Pseudo one side:
+\addtolength{\oddsidemargin}{\evensidemargin}
+\setlength{\oddsidemargin}{.5\oddsidemargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+\usepackage{scrlayer-scrpage}
+\automark[section]{subsection}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\scshape}
+\clearscrheadfoot
+\lehead{\rightmark\ -- \leftmark}
+\lohead{\rightmark\ -- \leftmark}
+\rofoot{Seite~\pagemark}
+\refoot{Seite~\pagemark}
+\lofoot{TU Braunschweig}
+\lefoot{TU Braunschweig}
+
+\begin{document}
+\section{Test}
+sdfjhsdgerkjgherfdkgfgj
+\subsection{Bla}
+kjhgkjhkjhkjh
+\newpage
+\subsection{tütütü}
+fsdölfksdöl
+\newpage
+zjkjzjkzkjhkjh
+\subsection{fsdfd}
+\end{document}

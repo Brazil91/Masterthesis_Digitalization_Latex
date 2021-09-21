@@ -1,0 +1,16 @@
+
+
+Datum	Startzeit	Endzeit	Gruppe	VT Praktikum Nr.	Bemerkungen
+27.02.2021		15:06:39			Versuchstagsbemerkung
+
+Feststoff		
+Suspensionsmasse	0	
+Volumen	0	
+Nutschennummer	
+Nutschenporösität	
+Nutschendurchmesser	0	
+Nutschengewicht	0	
+Filterkuchendicke	0	
+Feuchtegehalt	0	
+
+Zeitstempel	Druck in bar	Gewicht in g	Versuchsbeobachtung

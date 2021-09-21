@@ -1,0 +1,44 @@
+
+
+Datum	27.02.2021		Gruppen ID	
+
+Konzentration c1 in mg/l	c1		Konzentration c1 in NTU	ntu1
+Konzentration c2 in mg/l	c3		Konzentration c2 in NTU	ntu2
+Konzentration c3 in mg/l	c3		Konzentration c3 in NTU	ntu3
+Konzentration c4 in mg/l	c4		Konzentration c4 in NTU	ntu4
+
+Trübung der Suspension in NTU
+
+Trübungswert 1 in NTU	ntu11
+
+Trübungswert 2 in NTU	ntu22
+
+Trübungswert 3 in NTU	ntu33
+
+
+Massebestimmung der Nutsche und Filterkuchen
+
+Masse Nutsche 1 in g (tara)	mn1
+Nutsche+Filterkuchen 1 in g	nf1
+
+Masse Nutsche 2 in g (tara)	mn2
+Nutsche+Filterkuchen 2 in g	nf2
+
+Masse Nutsche 3 in g (tara)	mn3
+Nutsche+Filterkuchen 3 in g	nf3
+
+
+Feuchtebestimmung des Filterkuchens
+
+Filterkuchen 1 feucht in g	nff1
+Filterkuchen 1 trocken in g	nft1
+Feuchtegehalt 1 in %	1%
+
+Filterkuchen 2 feucht in g	nff2
+Filterkuchen 2 trocken in g	nft2
+Feuchtegehalt 2 in %	2%
+
+Filterkuchen 3 feucht in g	nff1
+Filterkuchen 3 trocken in g	nft3
+Feuchtegehalt 3 in %	3%
+

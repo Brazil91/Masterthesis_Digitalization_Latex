@@ -1,0 +1,1218 @@
+\documentclass[
+fontsize=12pt, 
+paper=a4, 
+BCOR=10mm, 
+twoside=false,
+ DIV=10, 
+ headsepline, 
+ footsepline
+ ]{scrartcl} 
+ 
+ %%________________________________________________________
+
+% 1,5 facher ZeilenAbstand
+\usepackage[onehalfspacing]{setspace}
+%\usepackage[singlespacing]{setspace}
+%\usepackage[doublespacing]{setspace}
+%
+%oder man nehme \linespread{value}
+%
+%where value determine line spacing. This value is somewhat confusing, because:
+%
+%Value	Line spacing
+%1.0		single spacing
+%1.3		one-and-a-half spacing
+%1.6		double spacing
+
+% Bindungskorrektur papierverlust durch Hefter 7,5 und durchs knicken 0,75
+%\KOMAoptions{BCOR=8.25mm}
+%%________________________________________________________
+
+\AfterTOCHead{\singlespacing} %Nach der Überschrift des Inhaltsverzeichnisses wird ein \\gesetzt
+
+
+%Neue Satztspiegelberchenen
+\recalctypearea
+\KOMAoptions{DIV=last}
+
+%\KOMAoptions{headsepline}
+%\KOMAoptions{footsepline}
+
+\usepackage[autooneside=true]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+%\lohead{}
+%\rohead{Daniel Ludwig}
+%\lofoot{HAW Hamburg}
+\setkomafont{pageheadfoot}{\small} % Aufrechte und kleine Schrift in header und foot
+\automark[subsection]{section}
+
+%Kollumnentitel (Section) wird links in den Header geschrieben, mit Stern
+%\ihead*{\headmark}
+%\ohead{Daniel Ludwig}
+
+%Wer das Dokument nicht mit KOMA/typeare nach Satzspiegel formatieren möchte
+% nutzt 
+\usepackage{geometry}                		
+\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+% \geometry{
+% left = 3cm,
+% right = 2cm,
+% top = 2cm
+% bottom = 2cm}
+
+
+\usepackage[english,ngerman]{babel} % Die letzte angegebene Sprache wird als Hauptsprache festgelegt.
+
+\usepackage[utf8]{inputenc} %UTF-8 Codierung (Umlaute etc.; Deutsch, Englisch, Portugiesisch...)
+%\usepackage[T1]{fontenc} % zum nutzen von pdfLaTeX
+
+%Schrifttyp
+%\setmainfont{QTCaslan}
+%\setmainfont{Arno Pro}
+
+%%________________________________________________________ 
+%%________________________________________________________ 
+
+\usepackage{fontspec} %Um installierte fonts mit XeTeX zu nutzen
+
+%Serifen Schiften
+%_____________________________________________________________________________
+%
+\setromanfont{Arno Pro}
+%\setromanfont{Century Schoolbook}
+%\setromanfont{PT Serif}
+
+%Serifenlose Schiften
+%_____________________________________________________________________________
+
+\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Futura}
+%\setsansfont{PT Sans}
+
+%Typewriter (Programmiercode, Hyperref) Schiften
+%_____________________________________________________________________________
+%\setmonofont[Color={0019D4},Scale=0.85]{Special Elite}
+%\setmonofont[Scale=0.9]{Special Elite}
+%\setmonofont[Color={0019D4},Scale=1]{Lucida Grande}
+\setmonofont[Color={0019D4},Scale=.8]{Menlo}
+%\setmonofont[Color={0019D4},Scale=.8]{Andale Mono}
+%\setmonofont[Color={0019D4}]{RM Typerighter}
+%\setmonofont[Color={0019D4}]{Courier New} %Typewriter/Schreibmaschinen Schrift in Blau 
+
+%Progammcode/Typewriter Umgebung
+%\begin{verbatim}
+%usually this environment is used to display code
+%\end{verbatim}
+
+
+\usepackage{geometry}                		
+\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+
+\usepackage[table,xcdraw]{xcolor}				
+\usepackage{caption}								
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+%\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+%___________________________________________________________________________
+%___________________________________________________________________________
+
+\usepackage{varwidth}
+%\begin{figure}[h!]
+%\centering
+%\begin{varwidth}{\linewidth}
+%\begin{verbatim}
+%'\s\+\s\s\s\s12\.8\sg\s\r\n'
+%\end{verbatim}
+%\end{varwidth}
+%\end{figure}
+%___________________________________________________________________________
+
+\usepackage{fancyvrb}
+%\begin{figure}[h!]
+%\centering
+%\begin{BVerbatim}
+%'\s''\+''\s''\s''\s''\s''12''\.''8''\s''g''\s''\r''\n'
+%\end{BVerbatim}
+%\end{figure}
+%___________________________________________________________________________%___________________________________________________________________________
+
+\usepackage{tikz}
+\usetikzlibrary{chains}
+
+%%Bibtex JabRef *.bib Datei
+%__________________________________________________________________
+\bibliographystyle{unsrt}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{Masterthesis_Literaturverzeichnis.bib} 
+%__________________________________________________________________
+
+%\usepackage{subcaption}
+%\usepackage{subfig} %zwei Bilder nebeneinander
+%\begin{figure}%
+%  \centering
+%  \subfloat[][]{\includegraphics[width=0.4\linewidth]{ozean}}%
+%  \qquad
+%  \subfloat[][]{\includegraphics[width=0.4\linewidth]{cow}}%
+%  \caption{Zu Wasser und zu Land}
+%	 \label{}
+%\end{figure}
+
+% Makro bild
+% #1 : Skalierungsfaktor | width=#1\textwidth
+% #2 : Grafikdatei.png
+% #3 : Abstand zwischen Grafik Bildunterschrift | 1em ist ein Abstand der Breite eines 		 			großen M dieser Schriftgröße
+% #4 : Bildunterschrift
+% #5 : Verweis-Label
+
+\def\bild#1#2#3#4#5#6{%
+\begin{figure}[h!] %[htbp!] bedeutet here top bottom page und das ! bedeutet die Begrenzungen von Latex aufzuheben
+\centering
+\includegraphics[width=#1\textwidth]{Bilder/#2}
+\vspace{#3}
+\caption[#4]{#5}\label{#6}
+\end{figure}
+}
+%Ergebnis: \bild{0.8}{template-1.png}{-1em}{Eine Kr¨ote oder ein Frosch}{fig:1}
+
+%Inhaltsangabentiefenformatierung
+%__________________________________________________________________
+
+\setcounter{tocdepth}{4}
+%__________________________________________________________________
+
+
+%Paragraph verhält sich wie die vierte Ebene (subsubsubsection)
+%__________________________________________________________________
+%\setcounter{secnumdepth}{4}
+
+
+\begin{document} 
+
+\include{Titelseite}
+\pagebreak
+
+
+\thispagestyle{empty}
+\tableofcontents
+\pagebreak
+
+
+\section*{Danksagung}
+
+\thispagestyle{empty}
+
+Ich möchte mich herzlich bei den Prof. und Ing. bedanken, die mir mit Rat und tat zur Seite standen.
+
+\pagebreak
+
+\section*{Abkürzungsverzeichnis}
+\thispagestyle{empty}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+
+%Seitenzähler reset mit große römische Ziffern
+%%_____________________________________________________________________
+%\pagenumbering{Roman}
+%%_____________________________________________________________________
+
+
+%\usepackage{acronym}
+
+%\begin{acronym} 
+%
+%%\ac{abktag}   abkürzung wird eingeführt
+%%\acs{abktag} Abkürzung wird nicht eingeführt
+%%\acl{abktag} gibt die ausgeschriebene Form aus
+%
+%\acro{KI}[KI]{künstliche Intelligenz} 
+%\acro{mvt}[mvt]{mechanische Verfahrenstechnik}
+%
+%\end{acronym}
+
+% Wörter untrennbar machen:
+% \mbox{Untrennbar}
+
+\begin{large}
+\begin{tabbing}
+\hspace{90pt}\=\hspace{200pt}\=\kill
+
+KI \> künstliche Intelligenz \\ [6pt]
+MVT \> mechanische Verfahrenstechnik \\
+VT \> Verfahrenstechnik \\
+ERP \> Enterprise Resource Planning \\
+MES \> Manufacturing Excecution \\
+LIMS \> Labor Management Informations Systeme  \\
+ELN \> Elektronischen Labor Notebooks (ELN) \\
+DBMS \> Datenbank Management Systemen \\
+Bd \> Baudrate \\
+CTS \> Clear to Send \\
+RTS \> Request to Send \\
+RxD \> Receive Data \\
+TxD \> Transmit Data \\
+GND \> Signal Ground \\
+EIA \> Electronic Industrial Alliance \\
+USB \> Universal Serial Bus \\
+RS-232 \> Recommended Standard oder Radio Section 232 \\
+DÜE \> Datenübertragungseinrichtung \\
+DEE \> Datenendeinrichtung \\
+ASCII \> American Standard Code for Information Interchange \\
+IoT \> Internet of Things \\
+WSN \> Wireless Sensor Network \\
+VI \> Virtuelles Instrument \\
+BD \> Blockdiagramm \\
+FP \> Front Panel \\
+rM \> rechte Maustaste \\
+PERA \> Purdue Enterprise Reference Architecture \\
+SSVI \> Serial Sub VI \\
+FP \> Front Panel \\
+BD \> Blockdiagramm \\
+ETSV \> Elapsed Time Sub VI \\ 
+
+
+\end{tabbing} 
+\end{large}
+
+%\begin{figure}%
+%  \centering
+%  \subfloat{\includegraphics[width=0.4\linewidth]{%
+%  LabVIEW_serialport/step7_elapsed_true.png}}%
+%  \qquad
+%  \subfloat{\includegraphics[width=0.4\linewidth]{%
+%  LabVIEW_serialport/step7_elapsed_false.png}}%
+% % \vspace{0em}
+%  \caption{Methode 2 \\
+%  \textbf{links} \glqq Elapsed Time\grqq{} (37) \texttt{false} \\
+%  \textbf{rechts}  \glqq Elapsed Time\grqq{} (37) \texttt{true}
+%  }
+%	 \label{elapsed_time}
+%\end{figure}
+
+%\begin{figure}
+%     \centering
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=0.4\linewidth]{%
+%         LabVIEW_serialport/step7_elapsed_true.png}
+%         \caption{\texttt{true}}
+%         \label{fig:true}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=0.4\linewidth]{%
+%         LabVIEW_serialport/step7_elapsed_flase.png}
+%         \caption{\texttt{false}}
+%         \label{fig:false}
+%     \end{subfigure}
+%     \hfill
+%     \caption{Methode 2 \\
+%  \textbf{links} \glqq Elapsed Time\grqq{} (37) \texttt{false} \\
+%  \textbf{rechts}  \glqq Elapsed Time\grqq{} (37) \texttt{true}
+%  }
+%  \label{fig:elapsed_time}
+%\end{figure}
+
+\pagebreak
+
+\section*{Symbolverzeichnis}
+%\thispagestyle{empty}
+\addcontentsline{toc}{section}{Symbolverzeichnis}
+
+\begin{large}
+\begin{tabbing}
+\hspace{90pt}\=\hspace{200pt}\=\kill
+
+
+Bd \> Baudrate \> $1/s \cdot (Byte)$  \\
+
+
+\end{tabbing} 
+\end{large}
+
+\section*{Indexverzeichnis}
+%\thispagestyle{empty}
+\addcontentsline{toc}{section}{Indexverzeichnis}
+
+\begin{large}
+\begin{tabbing}
+\hspace{90pt}\=\hspace{200pt}\=\kill
+
+variable reset \> \> \\
+
+\end{tabbing} 
+\end{large}
+
+%\begin{large}
+%\begin{flushleft}
+%\begin{longtable}{@{}p{2 cm}p{8 cm}@{}} 
+%%\hspace{90pt}\=\hspace{200pt}\=\kill
+%
+
+%WSN & Wireless Sensor Network
+%
+%\end{longtable}
+%\end{flushleft}
+%\end{large}
+
+
+\pagebreak
+
+\section{Zusammenfassung}
+
+%Seitenzähler reset mit arabischen Ziffern
+%%_____________________________________________________________________
+%\pagenumbering{arabic}
+%
+% oder
+%
+%\setcounter{page}{1}
+
+\section{Einleitung}
+
+%Ende des Jahres 2019 hat sich eine Herausforderung angebahnt, mit der die gesamte Menschheit nicht gerechnet hat. Das folge Jahr 2020 wurde maßgeblich von der Herausforderung, die Bewältigung der Covid-19 Pandemie geprägt. Die globale Marktwirtschaft, Infrastrukturen und vieles mehr wurden auf die Probe gestellt. Systeme die sich über Jahrzehnte etabliert und bewährt haben wurden ins wanken gebracht. Systeme wie unter anderem das Bildungssystem. Dieser Umstand hat neben der bereits fortschreitenden Digitalisierung, sei es im Privatsektor als auch in der Industrie als weiterer Treiber fungiert, die Digitalisierungsgeschwindigkeit zu erhöhen. Im Jahr 2011 wurde für die digitale Transformation in der Industrie der Name Industrie 4.0 in Umlauf gebracht.\\
+
+Die Digitalisierung in der Wirtschaft hat im Jahre 2020 Dimensionen erreicht, dass Forscher mittels \glqq Supercomputern\grqq \, und Künstlicher Intelligenz (KI) beispielsweise chemische Verbindung für die Reifenherstellung oder Enymformulierung errechnen, mit der die Ethanolproduktion optimiert werden kann \cite{lab40}. Mittels \glqq Digital Twins\grqq \, können Produkte, Produktionsabläufe oder ein gesamter Prozess, die Kopplung von Produktions- und Produkt Twin, abgebildet und somit optimiert werden. Mittels Digital Twins lassen sich sogenannte Soft-Sensoren integrieren. In Produktionsprozessabschnitten, in der die Bedingungen es nicht erlauben einen realen Langzeitsensor zu implementieren, können mittels Digital Twins, Sensoren in Simulationssoftware generiert werden, die mit einem Prozess synchronisiert sind, um Totzeiten zu verringern bis schlechte Produktionsbedingungen detektiert werden können, wodurch die Effizienz eines Prozesses signifikant gesteigert werden kann \cite{digitwin_prozessmodellierung}. \\
+
+Im Privatsektor nimmt die Zahl an \glqq smarten\grqq \, Geräten stetig zu. Das ein Smartphone mit einem Smart TV halbwegs autonom kommuniziert ist bereits gelebter Alltag. Auch in der Industrie kommunizieren Sensoren, Geräte, Maschinen, Aggregate bereits autonom untereinander, aber auch mit Enterprise Resource Planning (ERP)-, Manufacturing Excecution (MES) Systemen oder ähnlichem. Smarte Sensoren sind im Stande, bei autonomer Erkennung einer Erhöhung der Standardabweichung sich selbst zu kalibrieren.\\
+
+Es lässt sich erahnen, dass sich die Datenmengen die nächsten Jahre stetig erhöhen wird. Nun sind Konzepte gefragt, wie sich die \textbf{\glqq relevanten\grqq{}} Daten intelligent archivieren lassen, um Sie zu einem späteren Zeitpunkt verhältnismäßig einfach auswerten zu können, um beispielsweise Produktionsprozesse zu optimieren. \\
+
+Die Zielsetzung dieser Arbeit ist nun, ein ganzheitliches Digitalisierungskonzept für das  Verfahrenstechnische Labor an der HAW- Hamburg Life Science, Standort Bergedorf, zu konzipieren, um Studierende einerseits optimal auf das operative Geschäft in der privat Wirtschaft vorzubereiten und andererseits das operative Geschäft, in Bezug auf Labor Untersuchungen, Datenverwaltungsschemas
+
+\subsection{Motivation und Zielsetzung}
+
+Im Rahmen dieses Projekts soll ein Konzept entworfen werden das eine die digitale Transformation des mechanischen Verfahrenstechnik Labors im Fokus hat. Das Konzept soll neben dem mechanischen Verfahrenstechnik Labor unter anderem auch auf das chemische und thermische Verfahrenstechnik Labor anwendbar sein. Bei der digitalisierung soll der Grad der Automatisierung der Laborversuche minimal sein, um den Lerneffekt zu erhalten, den man durch die praktische Durchführung der Versuche erhält. Zu Beginn ist zu eruieren, wie viele Laborversuche digital Messwerte und über welche Schnittstelle zu Verfügung stellen. Bei Bedarf soll alternative Messtechnik oder ganz Versuchsanlagen recherchiert und diskutiert werden. Es ist eine Lösung zu eruieren, die digitalen Rohdaten zu archivieren, um sie zu einem beliebigen Zeitpunkt verwenden zu können. Abschließend soll das ganzheitliche Digitalisierungskonzept zum Teil umgesetzt und validiert werden. Folgend sind die Ziele des Projekts noch einmal aufgelistet.
+
+\begin{itemize}
+\item Erstellung eines Digitalisierungskonzept für das Verfahrenstechnik (VT) Labor
+\item Erstellung einer Ist-Analyse des mechanischen Verfahrenstechnik Labors
+\item Die Akquise und Speicherung digitaler Daten (Signalverarbeitung)
+\item alternative, digitale Messtechnik diskutieren
+\item Teilumsetzung des Digitalisierungskonzepts
+\end{itemize}
+
+
+%Um die nächste Generation von Studenten optimal auf das operative Geschäft vorbereiten zu können, ist es notwendig, neben den Einsatz digitaler Messtechnik, digitale Medien für die Protokollierung einzuführen. In der Industrie ist der Einsatz von Datenbanken oder sogenannte Data Lakes bereits Stand der Technik. Data Lakes liegen experimentelle Daten und Beobachtungen unstrukturiert vor. In Datenbanken werden Daten Strukturiert archiviert.
+
+%\include{Stand_der_Technik}
+\section{Stand der Technik}
+
+In diesem Abschnitt wird der Stand der Technik in den Bereichen Messtechnik, Schnittstellen, Signalverarbeitung und Datenverwaltung in Bezug auf Messeinrichtungen im Labormaßstab. 
+
+%\input{Messtechnik}
+\subsection{Messtechnik}
+
+
+
+In diesem Abschnitt werden ausgewählte analoge und digitale Druck- und Volumenstrommesstechniken erläutert, die in Laboren anwendung finden.
+
+\subsubsection{Gas Durchflussmessung}
+
+Den Durchfluss eines Mediums in einer geschlossenen Rohrleitung lässt sich mit verschiedenen Messprinzipien bestimmen. Zu den Volumendurchflussmessungen gehören z.B. die:
+
+\begin{itemize}
+\item Ultraschalldurchflussmessung
+\item Wirkdruckverfahren
+\item Schwebekörperdurchflussmesser
+\end{itemize}
+
+und zu den Massendurchflussmessprinzipien zählen z.B. die:
+
+\begin{itemize}
+\item thermische Massendurchflussmessung
+\item Coriolis Durchflussmessung
+\item Mikromechanische Flusssensormessung
+\end{itemize}
+
+%\paragraph{Volumendurchflussmessung}
+
+%\subparagraph{Wirkdruckverfahren}
+
+%\subparagraph{Ultraschalldurchflussmessung}
+
+\paragraph{Massendurchflussmessung}
+
+Mittels der 
+
+\subparagraph{Coriolis}
+
+Massendurchflussmesser mini CORI-FLOW™ series
+
+\subparagraph{thermische Massendurchflussmessung}
+
+Die Durchflussmessung von Gasen ist mittels thermischen Massendurchflussmesser möglich. Zur Messung des Massendurchflusses wird die Wärmeleitfähigkeit von Fluiden genutzt. Der prinzipielle Aufbau so eines Sensors ist in Abbildung \ref{MFC} dargestellt.
+
+\bild{0.5}
+{MFC.png}
+{0em}
+{Prinzip eines thermischen Massendurchflussensors}
+{Prinzip eines thermischen Massendurchflussensors}
+{MFC}
+
+ Im inneren des Durchflussmessers sind zwei Temperatursensoren verbaut. Ein Sensor befindet sich nicht direkt im Strömungskanal (in einem Sackloch) und misst die Veränderung der Umgebungstemperatur $T_U$, als auch die Wärmeübertragung des Fluids als Referenz. Der zweite Sensor wird beheizt. Die Temperaturdifferenz $\Delta T$ wird konstant gehalten. Je höher die Fließgeschwindigkeit des Mediums, desto mehr Energie muss dem zweiten Sensor zugeführt werden, um die Temperaturdifferenz konstant zu halten.  Der Massenstrom $\dot{m}$ ist dem Wärmestrom $\dot{Q}$ proportional. Es gilt folgender Zusammenhang zwischen Massen- und Wärmestrom:
+
+\begin{align}
+\dot{Q}=\dot{m} \cdot c_p \cdot  \Delta T
+\end{align}
+
+Der Massenstrom ist der zugeführten Energie in Form von Strom $I^2$ proportional. Der zweite Sensor hat einen Temperaturabhängigen Widerstand $R(T)$. 
+
+\begin{align}
+\dot{m}=\dfrac{R(T) \cdot I^2}{c_p \cdot \Delta T}
+\end{align}
+
+Beide Sensoren sind zu einer Wheatstone'schen Messbrücke verschaltet, $\sqrt{\dot{m}}$ ist der Ausgangsspannung $\Delta U_Br$ proportional .
+
+\subsubsection{Druckmessung}
+
+
+
+%\input{Signalverarbeitung}
+\subsection{Signalverarbeitung}
+
+
+
+In diesem Abschnitt werden die Grundlagen der Signalverarbeitung erläutert. Im ersten Abschnitt werden nochmals die Grundlagen der Rechnerkommunikation erläutert, gefolgt von dem Unterschied zwischen analoge und digitale Signale. Es werden einige Kabel gebundene Schnittstellen, aber auch Schnittstellen die via Funk funktionieren erläutert.
+
+\subsubsection{Vom bit bis zur vom Menschen lesbaren alphanumeric}
+
+Sobald man von digitalen Daten spricht, ist von \textit{bit} encodierten, binären Daten die Rede. PC's sind in der Lage, diese Form der Signale direkt zu verarbeiten. In der Abbildung \ref{binary_data_sizes} sind verschiedene Datengrößen binärer Daten aufgezeigt. In der Abbildung variiert die Spanne der Datengrößenlänge von einem bit bis zu einem Wort bestehend aus 16-bits. Binäre digitale Daten sind diskret. Ein bit hat zwei mögliche Zustände, an oder aus die durch die binären Werte 0 oder 1 sowie den boolischen Ausdrücken \textit{True} oder \textit{False} repräsentiert werden können. Die Anzahl, wie viele bits ein Zeichen (\textit{engl. character}) repräsentieren, kann sich unterscheiden. Häufig wird ein byte bestehend aus 7 oder 8-bit verwendet. In der Abbildung \ref{binary_data_sizes} ist eine byte-Länge von 8-bit, häufig auch Oktett genannt, dargestellt. Ein 8-bit byte hat 256 mögliche Zustände. Die Hälfte eines 8-bit byte wird Nibble genannt \cite[S. 3]{hughes2010real}.
+
+\bild{0.8}
+{binary_data_sizes.png}
+{0em}
+{Binary data sizes }
+{Binary data sizes \cite[S. 3]{hughes2010real} }
+{binary_data_sizes}
+
+Sind Signale \textit{ASCII} encodiert, beträgt die byte Länge 7 bit. Der ASCII Zeichensatz beinhaltet somit 128 (0 - 127) Zeichen. Im Anhang befindet sich eine ASCII-Tabelle (siehe Tabelle \ref{ascii}) die alle Zeichen der 7-bit ASCII Codierung sowie die Zuordnung der dezimalen und hexadezimalen Werte beinhaltet. \\
+
+\paragraph{Hexadezimal} Zeichen können neben der binärer Darstellung auch Hexadezimal dargestellt werden. Die Hexadezimale Skala geht von 0 bis 9 gefolgt von A bis F. Die Skala hat eine dezimale Ziffernlänge von 16. Ein Nibble kann somit durch eine hexadezimale Ziffer dargestellt werden.
+
+\subsubsection{Analoge und digitale Signale}
+
+Möchte man Signale verarbeiten, dann ist zwischen zwei Signaltypen zu unterscheiden. Die reale Welt lässt sich durch ein Kontinuum von Zuständen beschreiben. Elektrische Messgeräte erfassen diese Zustände und erzeugen bspw. eine Spannung. Bei einer kontinuierlichen Messung würden in einer definierten Frequenz, Signale in Form von Spannung generiert werden. Als Beispiel werfen wir einen Blick auf das Messen einer Temperatur. Bei diesem Beispiel nehmen wir einmal an, dass wir einen Temperaturfühler verwenden, der eine Messgenauigkeit von \SI{0.0001}{\degreeCelsius} besitzt. Bei der Messung der Temperatur von Wasser könnte man eine Gleitkommazahl (floating point number oder kurz float) von \SI{19,2334}{\degreeCelsius} angezeigt bekommen. Bis zur zweiten Messung könnte ein Temperaturausgleich zwischen Umgebung und dem Wasser erfolgt sein, was zu einem anderen Temperaturmesswert von bspw. \SI{12,240}{\degreeCelsius} führen könnte. Analoge Signale sind ein Kontinuum von Signalen. \\
+
+PC's sind in der Lage digitale Signale sequenziell zu verarbeiten. Ein digitales Signale wird in Form von Strom oder Spannung repräsentiert. 
+
+%Ist die Rede von digitalen Daten, dann ist von binären Codes in Form von $bits$ die Rede. Ein Bit hat wie ein Schalter zwei potentielle Zustände, 0 und 1, an oder aus, true or false. Ein $byte$ besteht in vielen Fällen aus 7 $bits$ ($ASCII$) oder einem Oktett, also 8 $bits$. 
+
+In der Abbildung \ref{analog_digital_data_input} sind typische Methoden abgebildet, wie Daten eines Messobjekts akquiriert und an einen PC übermittelt werden. Oben im Bild sind vier Schalter zu erkennen, die einen Stromkreis schließen können. Diese Form der Signalübertragung wird diskret genannt. Auf dem Bild sind alle Schalter geöffnet, daher wäre pro Leiter ein binär Wert von 0 zu erwarten. In der Mitte der Abbildung ist ein bit serieller Datenstrom anhand der Rechteckfunktion und den binär Werten zu erkennen. Im unteren Teil der Abbildung ist ein analoges Signal zu erkennen, welches mittels eines analog zu digital Wandlers die Signale in eines von einem PC interpretierbares Signal wandelt. Die umgewandelten Daten werden mittels paralleler Schnittstelle an einen PC sendet.  
+
+\bild{0.8}
+{analog_digital_data_input.png}
+{0em}
+{Digital and analog data inputs \cite{hughes2010real}}
+{Digital and analog data inputs \cite{hughes2010real}}
+{analog_digital_data_input}
+
+
+
+\subsubsection{Schnittstellen}
+
+Messgeräte verfügen über Schnittstellen, über die Daten- und Steuersignale an andere Komponenten oder einen Messgerätebus erfolgen. An einen Messgerätebus werden Messgeräte (Slaves) und Rechner (Master) angeschlossen. Die Datenübertragung ist entweder bit- oder byte-seriell. Der Anschluss eines Messgeräts an einen PC kann über zwei Methoden erfolgen. Messgeräte können über analog Signalausgänge verfügen. Diese Signale müssen in einem analog/digital Wandler in ein digitales Signal gewandelt werden. Das Messgerät kann eine integrierte digitale Schnittstelle besitzen, über die Signale direkt an einen PC gesendet werden können. Geräte mit integrierter digitalen Schnittstelle verfügt das Messgerät einen integrierten analog zu digital Signalwandler.  Die zwei Methoden, wie man ein Messgerät an den PC Anschließt kann der Abbildung \ref{anschluss} entnommen werden \cite[S. 479]{Busch2015}.
+
+\bild{1}
+{anschluss.png}
+{-1em}
+{Digitale Schnittstelle oder über Messkarte}
+{Anschluss eines Messgerätes an den PC \cite[S. 479]{Busch2015} 	\\ \textbf{a} mit digitaler Schnittstelle,\\ \textbf{b} mit Messkarte }
+{anschluss}
+
+Diese analoge Signale müssen in einer Messkarte in ein digitales Signal umgewandelt werden, die im Anschluss in einem PC in einer Software weiter verarbeitet werden können. Im folgendem werden einige digitalen Schnittstellen erklärt.
+
+OPC UA!!!!!!!!!
+
+
+
+\subsubsection{Verbinder}
+
+Um eine Kommunikation zwischen den Geräten zu ermöglichen, Bedarf es physikalischer Schnittstellen. Im Laborumfeld werden zwei physikalische Schnittstellen besonders häufig angetroffen. 
+
+\paragraph{DB-Verbinder} Den DB-Verbinder gibt es mit 9 oder 25 pins, bzw. Signalleitungen. In Abbildung \ref{db9_male-female} sind männliche und weiblich DB-9 Stecker abgebildet.
+
+\bild{1}
+{db9_male-female.png}
+{0em}
+{DB-9 pin and socket numbering}
+{DB-9 pin and socket numbering \cite[S. 211]{hughes2010real}}
+{db9_male-female}
+
+
+
+\subsubsection{Bit serielle Datenübertragung}
+
+Es gibt verschiedene Möglichkeiten Signale, bzw. Daten zu übertragen. Eine Möglichkeit ist die serielle Datenübertragung. Eine genauere Bezeichnung wäre bit serielle Datenübertragung, denn genau genommen gibt es eine Reihe von seriellen Datenübertragungssystemen, unter anderem auch die byte serielle Datenübertragung. 
+
+%Bei serieller Datenübertragung werden Daten auf einer Leitung empfangen und über eine andere gesendet. 
+
+Des Weiteren gibt es zwei Formen der seriellen Datenübertragung, die synchrone und die asynchrone Datenübertragung. In Abbildung \ref{seriallio} ist eine synchrone Datenübertragung dargestellt. Es ist zu erkennen, dass das Gerät A den Takt und somit die Austauschrate der Schnittstelle vorgibt.
+
+\bild{0.8}
+{serielle_datenuebertragung.png}
+{-0.5em}
+{Synchronous serial data communication}
+{Synchronous serial data communication \cite[S. 52]{hughes2010real}}
+{seriallio}
+
+Daten sind nur valide zum Zeitpunkt der fallenden Flanke des Taktsignals. Es ist zu erkennen, dass der Takt stets die Mitte der bit Position trifft, um mögliche Fehler vorzubeugen. Die \glqq reale\grqq{} Rechteckfunktion ist eine Superposition von Funktion verschiedener Frequenzen, was dazu führt, dass bei aufsteigender Flanke und beim fallen der Flanke ein Einschwingen der Funktion stattfindet bis sich ein konstanter Wert einstellt (siehe Abbildung \ref{squarefuntion}.
+
+\bild{0.9}
+{square_waves.png}
+{0em}
+{Ideal versus real square waves}
+{Ideal versus real square waves \cite[S. 5]{hughes2010real}}
+{squarefunction}
+
+In der Praxis wird eine asynchrone bit serielle Datenübertragung häufiger genutzt. Eine fehlerfreie Kommunikation soll die sogenannte Datenflußsteuerung (\textit{engl. flow control}) übernehmen. Bei asynchroner Datenübertragung existiert somit kein Taktsignal. Bei einer asynchroner Datenübertragung enthält der bit Datenstrom neben der \glqq gewünschten\grqq{} Infromationen, z.B. von einer Messung, noch Datenflußsignale. Datenflußsignale können physikalische Signale sein. Diese Form der Flußsteuerung nennt sich \textit{Hardware-Handshake}.
+Eine andere Möglichkeit der Datenflußsteuerung ist der sog. \textit{Software-Handshake}. Die Datenflußsignale sind Start, Stop und Paritätbits, die ein Zeichen (\textit{engl. character}) von einem anderen Zeichen abgrenzt. Zeichen können Buchstaben, Zahlen, Vorzeichen etc. sein, die binär versendet werden (0 oder 1) und beispielsweise ASCII encodiert sind.
+
+
+
+\subsubsection{RS-232}
+
+Die RS-232 Schnittstelle wurde in den 1960 Jahren von der Electronic Industrial Alliance (EIA) standardisiert. Jedes zu übertragende Zeichen (Zahl, Buchstabe, Sonderzeichen) wird zwischen 5 und 9 Bit codiert, wobei 7 und 8 Bit am gebräuchlichsten sind. Die Trennung von benachbarten Zeichen werden mit Start- und Stop Bits realisiert. Die Übertragungsrate kann zwischen 0,3 Bd und 115,2 kBd betragen. Die Entfernung, die erzielt werden kann, ist stark vom verwendetem Kabel und der Übertragungsgeschwindigkeit abhängig. Es sind Entfernungen bis zu einem Kilometer realisierbar. Die Übertragungsgeschwindigkeit wird Baudrate genannt. Ein Bd entspricht 1 Symbol pro Sekunde, wobei ein Symbol aus einem oder mehreren Bits besteht. Die Übertragungsrate ist somit im Vergleich zu anderen Schnittstellen mit, im Normalfall von einem Bit pro Symbol, der Übertragungsgeschwindigkeit von 0,3 bis 115,2 kbit/s verhältnismäßig gering, reicht aber für die meisten Messtechnischen Anwendungen aus. Für die Kommunikation mittels RS-232 benötigt man eine sog. Flusssteuerung (engl. \textit{flow control}). Der Sender und der Empfänger müssen sich gegenseitig mitteilen, ob sie sende- oder empfangsbereit sind, um Datenverluste zu vermeiden. Die Signale, die man dafür benötigt, werden \textit{Handshake-Signale} genannt. Der Handshake lässt mit physischen Signalen über Steuerleitungen (\textit{Hardware-Handshake}) oder über digitale Signale (\textit{Software-Handshake}) realisieren. Die Software-Handshake Signale werden über die TxD Signalleitungen versendet (siehe Tabelle \ref{db8pindef}). Für den \textit{Software-Handshake} ist die XON/XOFF und für den \textit{Hardware Handshake} die Datenflußsteuerung mittels CTS/RTS eine gängige Methode \cite[S. 480 f.]{Busch2015}. \\
+
+RS-232 beschreibt Spannungspegel und Timing zwischen der Datenübertragungseinrichtung (DÜE) und Datenendeinrichtung (DEE). Nicht Bestandteil des Standards ist das eigentliche Übertragungsprotokoll, wie die Signale kodiert sind (z.B. ASCII), Fehlererkennung usw.. Solche Parameter müssen zwischen der Datenübertragungseinrichtung und der Datenendeinrichtung ausgehandelt werden \cite{wasistrs232}.
+
+\bild{.9}
+{db9_stecker.png}
+{0em}
+{Pinbelegung eines 9-Poligen D-Sub Kabels}
+{Pinbelegung eines 9-Poligen D-Sub Kabels \cite[S. 222]{hughes2010real}}
+{db9}
+
+\begin{table}[h]
+\caption{RS-232 DB-9 pin definition \cite[S. 223]{hughes2010real}}
+\begin{center}
+
+\begin{tabularx}{1\textwidth}{XX}
+\hline
+Signal & Definition \\
+\hline
+RxD & Received Data \\
+TxD & Transmitted Data\\
+RTS & Request to Send \\
+CTS & Clear to Send \\
+DTR & Data Terminal Ready \\
+DSR & Data Set Ready \\
+DCD & Data Carrier Detect \\
+RI & Ring Indicator \\
+\hline
+\end{tabularx}
+\end{center}
+\label{db8pindef}
+\end{table}
+
+Üblicherweise werden für die Übertragung 9-Polige D-Sub Kabel verwendet, aber RS-232 ist nicht an diese Kabel und Stecker Kombination gebunden. In Tabelle \ref{db8pindef} sind alle Signale und die Definition der Signale der DB-9 Schnittstelle aufgelistet. Bei der Verwendung eines Software-Handshake sind nur 3 Signalleitungen notwendig, da die Steuersignale über die Datenleitungen gesendet wird. Für den Datentransfer mittels 9-Poligen D-Sub Kabel (siehe Abbildung \ref{db9}), sind somit lediglich die Pins 2 (RxD), 3 (TxD) und 5 (GND) notwendig. Bei der Verwendung eines Hardware-Handshakes werden die Datenleitungen über die Pins 7 (RTS) und 8 (CTS) notwendig \cite{db9}. RS-232 ist eine Volt-basierte Schnittstelle. Der logische Wert wahr (\textit{true}) ist dem negativen Volt-Level zugeordnet und der logische Wert falsch (\textit{false} ist dem positiven Volt-Level zugeordnet. Die Spanne der Volt-Spannung ist in RS-232 von +/- 3 V bis +/- 25 V spezifiziert.
+
+\subsubsection{RS-485}
+
+RS-485 ist eine Weiterentwicklung des RS-232 Standards. RS-485 ist ein Bus System, welche bis zu 32 Datensender und Empfänger verbinden kann und wird in der Prozessmess- und Prozessleittechnik angewandt. Es sind Übertragungsgeschwindigkeiten von bis zu 35 MBit/s mit der Verwendung eines 10 Meter Kabels und 100Kbit/s mit einer Kabellänge von 1200 Meter möglich. Die RS-485 Schnittstelle verfügt über 2 Signalkabel. Die Polarität der beiden Kabel ist gegensätzlich (vergleiche Abbildung \ref{RS-485}). Beide Leitungen können Signale in beide Richtungen senden, jedoch nicht zur gleichen Zeit. Der Signalabgriff ist somit differentiell. Das Signal wird somit nicht gegen Null gemessen, sondern zwischen den zwei Leitern gegensätzlicher Polarität. In Abbildung \ref{RS-485} ist eine 8-bit asynchrone Datenübertragung via RS-485 zu erkennen. Am Anfang und dem Ende der 8-bit befindet sich ein Start- und ein Stopbit \cite[S. 222 f.]{hughes2010real}.
+
+
+\bild{1}
+{RS-485.png}
+{0em}
+{RS-485 signal levels}
+{RS-485 signal levels \cite[S. 226]{hughes2010real}}
+{RS-485}
+
+\subsubsection{USB}
+
+Die überbrückbare Länge via USB liegt unter 5 m und liegt somit weit unter der Entfernung, die mit RS-232 möglich sind. USB wurde zwecks Schaffung einer einheitlichen Schnittstelle für alle Arten von PC's Laptops von INTEL entwickelt. USB-Kabel haben vier Leitungen, zwei für die \textit{bitserielle} bidirectionale Datenübertragung, eine Leitung für die +5V Versorgungsspannung und eine für das Massepotenzial. An einen USB-Anschluss eines PC's lassen sich theoretisch bis zu 128 Geräte anschließen, da die angeschlossenen Messgeräte durch den USB-Controller im PC mit einer 7-Bit-Adresse adressiert werden. Daraus folgen $2^7=128$ mögliche Messgeräte. Praktisch sind es 127, da die Adresse \glqq Null \grqq \, (000 0000) für die Geräte-Identifizierung genutzt wird. USB verfügt über zwei Eigenschaften, dem \glqq Hot-Plugging\grqq \, und dem \glqq Plug-and-Play\grqq . Dank dem Hot-Plugging ist es vor dem Verbinden eines Geräts mit dem PC nicht notwendig diesen auszuschalten. Dank Plug-and-Play konfiguriert sich die Verbindung selbst. USB 1.0 hat eine Übertragungsgeschwindigkeit von 1,5 bzw. 12 MBit/s, USB 2.0 bis zu 480 MBit/s und USB 3.0 hat eine Highspeedübertragungsrate von 5 GBit/s. Es ist je nach verwendetem Geräte möglich, diese an einer USB-Schnittstelle zu betreiben, die eine geringere Übertragungsrate besitzen als die USB-Schnittstelle des PC's.
+
+\subsubsection{Bluetooth}
+
+Bluetooth ist eine Kabellose Datenübertragungsmethode via Funk. Der Frequenzbereich ist zwischen 2,402 bis 2,480 GHz. Die Übertragungsdistanz beträgt ca. 10 m mit einer Übertragungsgeschwindigkeit von 2,1 MBit/s für die Spezifikation \textit{Bluetooth 2.0 + EDR} (Enhanced Data Rate) \cite[S. 481 f.]{Busch2015}.
+Bluetooth 2.0 + EDR ist 2004 auf dem Markt erschienen. Bluetooth 4.2 Smart ist 2014 mit Einführungen von wichtigen Funktionen für das Internet der Dinge (IoT) erschienen. Bluetooth 5 (2017) ist die aktuellste Version und hat IoT im Fokus. Bluetooth 5 unterstützt Übertragungsraten von 2 MBit/s und einer Reichweite von maximal ca. 250 m \cite{bt5}.\\
+
+Drahtlose IoT- Lösungen nehmen in der produzierenden Industrie an Bedeutung zu. Da Kabellose Netzwerke beim Aufbau von neuen Fertigungslinien flexibler sind als Kabelgebundene Netzwerke, ist Bluetooth im Rahmen von Industrie 4.0 eine bedeutende Schnittstelle. Bluetooth Mesh Networking wurde unter anderem für industrielle drahtlose Sensornetzwerke konzipiert (WSN). Mit diesem Standard ist es möglich eine viele Geräte und Sensoren in einem Bluetoothnetzwerk kkommunizieren zu lassen. Jedes Gerät wird \glqq Knoten\grqq \, genannt \cite{bti40}.
+
+\paragraph{Sicherheit: Mesh-Vernetzung per Bluetooth \cite{bti40}}
+
+Die Netzwerksicherheit bei Produzierenden betrieben nicht verhandelbar. Die Sicherheit bei der Verwendung von Bluetooth, soll durch die sog. Mesh-Vernetzung gewährleistet werden. Die Informationssicherheit soll durch ein Schichtenmodell erreicht weden, dass auf voneinander getrennten Sicherheitsschlüssel basiert:
+
+\paragraph{Netzwerkschlüssel (NetKeys)} gelten für alle Nachrichten im Netzwerk, damit die Knoten sicher miteinander kommunizieren.
+
+\paragraph{Anwendungsschlüssel (AppKeys)} schützen Nachrichten zu bestimmten Anwendungen wie Klimaanlage, Beleuchtung oder physische Sicherheit.
+
+\paragraph{Geräteschlüssel (DevKey)} ermöglichen das Einrichten und Konfigurieren eines Knotens, um neue Geräte zum Netzwerk hinzuzufügen.
+
+\subsubsection{WLAN}
+
+WLAN ermöglicht die Datenübertragung via Funk, ermöglicht jedoch eine signifikant höhere Übertragungsgeschwindigkeit und Übertagungsreichweite als Bluetooth. Mit der Technischen Lösung 802.11 ist eine Gruppe von Standards für Funknetzwerke des Institute of Electrical and Electronics Engineers (IEEE) entwickelt worden. 
+
+\subsubsection{Verarbeitung digitaler Signale in Labview}
+
+Jeff Kodosky et al. hat in Zusammenarbeit mit der University of Texas die Programmiersprache G und die dazugehörige Enwicklungsumgebung LabVIEW entwickelt. 
+
+LabVIEW stellt zum Umsetzen spezieller Anwendung spezifische Werkzeuge und Modelle bereit. Mit LabVIEW 
+
+Das Ziel war ein Tool zu entwickeln, wodurch Menschen mit unterschiedlichem know-how im Programmieren befähigt werden maßgeschneiderte Programme grafisch generieren zu können, da sich im Laborumfeld Versuchsaufbauten und somit auch Messungsaufgaben und Prozessabläufe schnell ändern. Diese Programmiersprache setzt sich aus zwei Programmiermethoden zusammen, dem strukturorientiertem Programmieren und der datenstromorientierten Programmierung  \cite{kodosky}. Zu den strukturorientierten textbasierten Programmiersprachen gehören unter anderem \textit{C++, Java} und \textit{Python}. Programmiersprachen, die strukturorientiert arbeiten, befolgen auf der untersten Funktionsebene folgende drei Kontrollstrukturen \cite{structured}:
+
+\begin{enumerate}
+\item Sequenzielle Abarbeitung von Programmanweisungen
+\item Verzweigung innerhalb Programmabschnitte (if/when/else)
+\item Iterationen/Schleifen
+\end{enumerate} 
+
+Viele Messobjekte generieren kontinuierliche Datenströme. Die datenstromorientierte Programmiermethode ist bei dieser Art von Messobjekt die Methode der Wahl, daher liegt der Programmiersprache G im wesentlichen das Datenflusskonzept zugrunde. G ist eine effiziente Programmiersprache, die die Kommunikation mit den Geräten, die Visualisierung von Daten und deren Analyse ermöglicht. Mittels LabVIEW lassen sich Programme grafisch mittels Drag and Drop entwickeln. LabVIEW Programme setzen sich aus interaktiven Front Panels und dem Programm in Form von Blockdiagrammen \cite{kodosky}. Das Front Panel ist die Programmoberfläche des Programms, womit das Programm angewendet wird. In Abbildung \ref{blockdiagramm_frontpanel} sind Frontpanel und Blockdiagramm eines einfachen Programms dargestellt.
+
+\bild{0.8}
+{blockdiagramm_frontpanel.png}
+{-1em}
+{Beispiel für ein Blockdiagramm und das zugehörige Frontpanel}
+{Beispiel für ein Blockdiagramm und das zugehörige Frontpanel \cite{blockdiagramm_frontpanel}}
+{blockdiagramm_frontpanel}
+
+%\input{Datenverwaltung}
+\subsection{Datenverwaltung}
+
+Für Für die Verwaltung von Daten bieten sich Datenbank Management Systemen (DBMS) an. DBMS, die in Laboren angewendet werden nennen sich Labor Informations Management Systeme (LIMS). In vielen Fällen werden LIMS in Kombination mit Elektronischen Labor Notebooks (ELN) verwendet. LIMS sind Datenbanksysteme, die Daten bzw. Datensätze verschiedener Routineinstanzen (z.B. Waren/Probeneingang, Prüfungsdurchführende Labormitarbeiter etc.) relational verknüpfen. Die LIMS verwalten in Laboren sämtliche Daten entlang der Laborroutinen, vom Proben Eingang, bis hin zur Qualitätsfreigabe. Die ELN Applikationen dienen dem Laborpersonal, um beispielsweise Erkenntnisse aus Versuchsreihen zu dokumentieren. ELN Systeme können in LIMS integriert werden, um redundante Dateneingaben zu reduzieren oder um sie zu eliminieren. Des Weiteren existieren neben dem relationalen Datenbanktyp noch weitere Datenbanktypen. \\
+
+\subsubsection{PERA}
+
+Das Purdue Enterprise Reference Architecture (PERA) Modell beschreibt Automatisierungsnetze und unterteilt diese in fünf Ebenen, bzw. \glqq Level\grqq{} (siehe  Abbildung \ref{pera_modell}. Die oberen zwei Hierarchieebenen sind in vielen Unternehmen von den Ebenen 3 bis 0 aus sicherheitstechnischen Gründen physisch voneinander getrennt. Die oberen zwei Ebenen werden IT-Ebene und die unteren vier sind der Industrial Control Systems (ICS; deutsch: industrielle Steuerungssysteme, Automatisierungssysteme) Ebene zugeordnet \cite{ics_kompendium}.
+
+\begin{figure}
+\begin{center}
+\caption{PERA Model \, \cite{pera_modell}}
+\vspace{1em}
+\begin{tikzpicture}[
+	scale=0.75,
+	start chain=1 going below, 
+	start chain=2 going right,
+	node distance=1mm,
+	desc/.style={
+		scale=0.75,
+		on chain=2,
+		rectangle,
+		rounded corners,
+		draw=black, 
+		very thick,
+		text centered,
+		text width=8cm,
+		minimum height=12mm,
+		fill=blue!30
+		},
+	it/.style={
+		fill=blue!10
+	},
+	level/.style={
+		scale=0.75,
+		on chain=1,
+		minimum height=12mm,
+		text width=2cm,
+		text centered
+	},
+	every node/.style={font=\sffamily}
+]
+
+% Levels
+\node [level] (Level 5) {Level 5};
+\node [level] (Level 4) {Level 4};
+\node [level] (Level 3) {Level 3};
+\node [level] (Level 2) {Level 2};
+\node [level] (Level 1.5) { };
+\node [level] (Level 1) {Level 1};
+\node [level] (Level 0) {Level 0};
+
+% Descriptions
+\chainin (Level 5); % Start right of Level 5
+% IT levels
+\node [desc, it] (Archives) {Archives/File Servers};
+\node [desc, it, continue chain=going below] (ERP) {ERP/Finance/Messaging};
+% ICS levels
+\node [desc] (Operations) {Operations Management/Historians};
+\node [desc] (Supervisory) {Supervisory Controls};
+\node [desc, text width=3.5cm, xshift=2.25cm] (PLC) {PLC/RTU IP Communication};
+%\node [desc, text width=3.5cm, xshift=-4.5cm] (SIS) {Safety Instrumented Systems};
+\node [desc, xshift=-2.25cm] (SIS) {Safety Instrumented Systems};
+\node [desc] (IO) {I/O from Sensors};
+
+\end{tikzpicture}
+\label{pera_modell}
+\end{center}
+\end{figure}
+
+
+\paragraph{Level 4} Es ist zu erkennen, dass das Level 4 dem Enterprise Level entspricht. Softwarelösungen dieser Ebene werden Enterprise Ressource Planning (ERP) Systeme genannt. Der Enterprise Ebene sind beispielsweise Systeme der Buchhaltung und der Personalabteilung zugeordnet. Zwischen dem Level 4 und dem Level 3 befindet sich die Schnittstelle zum Anlagennetz.
+
+\paragraph{Level 3} Das operative Management ist dem Level 3 zugeordnet. Auf diesem Level findet die Betriebsführung, wie z.B. die Produktionsplanung, Produktversand etc. statt.
+
+\paragraph{Level 2} Dem Level 2 ist die spezifische Prozessführung (Supervisory Control) zugeordnet. Ein Absturz von Systemen diesen Levels haben keinen Einfluss auf die Produktion, da die Datenverarbeitung diesen Levels nicht in Echtzeit verläuft. Die Level 2, 1 und 0 unterscheiden sich z.T. gravierend, je nach betrachtetem Unternehmen.
+
+\paragraph{Level 1} Level 1 ist das Basic Control. Daten und Signale sind auf dieser Ebene in Echtzeit. Die Ausführung und Steuerung physischer Prozesse geschieht auf dieser Ebene. Anlagen werden hier gesteuert und über Sensoren geregelt.
+
+\paragraph{Level 0} Level 0 ist die sogenannte Feldebene. Anlagen und Sensoren sind dieser Ebene zugeordnet.
+
+
+
+\subsubsection{ISA-S95}
+
+Unternehmen sind sozio-ökonimische Systeme. Um global Wettbewerbsfähig zu bleiben ist Flexibilität und das anwenden effizientere Methoden als Unternehmen aus Billiglohnländern ein muss. Um das zu gewährleisten, ist ein System notwendig, welches die gesamte Wertschöpfungskette abbilden kann. Ein effizienter Datenfluss zwischen verschiedenen Unternehmenssystemen wie ERP oder MES ermöglicht der ISA-95 Standard. ISA-S95 definiert Terminologie und einheitliche Modelle, um die Kommunikation zwischen sämtlicher Kontroll- und Unternehmenssystemen zu verbessern. Die Aktivitäten innerhalb eines Unternehmens werden nach dem PERA Modell unterteilt. Die Level 0,1 und 2 decken damit die Aktivitäten der Produktion ab.
+
+Ein Unternehmen kann man hierarchisch unterteilen. Die International Society of Automation, kurz ISA hat 1995 einen Standard etabliert der Terminology und ein Model für den effizienten Datenaustausch zwischen Systemen verschiedener Hierarchiestufen ermöglicht. Der Name des Standards ist ISA-S95. Der ISA-S95 Standard bedient sich der Purdue Enterprise Reference Architecture (PERA). 
+
+ISA-S95 besteht aus fünf Parts. Der erste Part besteht aus Terminologie und Model für e
+
+Um eine effiziente Unternehmensführung zu gewährleisten werden Tools verwendet. Unternehmen nutzen eine Vielzahl von Software Lösungen und Systemen. 
+
+\subsubsection{Datenbanken}
+
+\paragraph{XML}
+
+
+
+
+\include{Konzeptentwicklung}
+
+
+%\include{Schnittstellenkonfiguration_und_Signalverarbeitung_von_Messeinrichtungen}
+\section{Ist-Analyse des Verfahrenstechnik Labors}
+
+Zu Beginn des Projekts, wurde eine Ist-Analyse (siehe Anhang: Ist-Analyse-VT-Labor.xlsx) des Verfahrenstechnik Labors (VT-Labor) durchgeführt. Es wurde sich alle Versuchsstandkomponenten angeschaut, um zu ermitteln welche Messeinrichtungen die Möglichkeit besitzen Daten auszutauschen. Es hat sich herausgestellt, dass die Mehrheit der Messeinrichtungen im mech. VT-Labor eine RS-232 Schnittstelle besitzt. Um die Daten zu empfangen, benötigt man einen PC mit einer RS-232 (DB-9) Schnittstelle. 
+
+\paragraph{RS-232 zu USB Adapter} Bei Bedarf kann auch ein RS-232 zu USB Adapter verwendet werden. Ein Mikroprozessor im Kabel emuliert eine RS-232 Schnittstelle. Unter Windows werden diese seriellen Schnittstellen Com Ports und wie folgt benannt, $Com 1 .. n$.\\
+
+Es sind kontinuierliche und diskrete Messdaten zu erwarten. Die Versuchsdokumentationseingaben wie z.B. Gruppennummer, Schüttgut, Masse, Dokumentation der genutzten Laborkomponenten etc. sind ebenfalls diskret.
+
+
+\section{RS-232 Schnittstellenkonfiguration und Signalverarbeitung von  Mess\-einrichtungen}
+
+
+Für eine Reihe an Versuchsständen Fallen kontinuierliche Zeitreihendaten an. In diesem Abschnitt wird ein VI programmiert, was kontinuierlich Daten im \textit{ASCII} Format über eine RS-232 Schnittstelle empfängt und die Daten verarbeitet. Unter der Verarbeitung wird das 
+
+In diesem Abschnitt werden die Schritte erklärt, wie man einen kontinuierlichen Datenstrom verarbeitet, der über eine RS-232 Schnittstelle empfangen wird. Es wird ein Windows 10 PC und LabVIEW 2020 verwendet, um die Signale eines Messinstruments zu verarbeiten. In den folgenden Abschnitten wird eine Digitalwaage des Modells CP 4201 des Herstellers Sartorius ausgelsen und die Daten interpretiert, die in eine Tabulator getrennten Text-Datei (*.txt) geschrieben werden. Die Waage hat eine integrierte digitale RS-232 Schnittstelle. Das Programm wird aus einem Sub VI und dem Haupt VI bestehen. \\
+
+
+Im Sub VI wird der Datenstrom, der von der Waage übermittelt wird, Akquiriert. Das Sub VI wird folgend \textit{Serial Sub VI} in der Kurzform \textbf{SSVI} genannt. Das \textbf{Haupt VI} wird die Daten, die es vom Sub VI erhält verarbeiten/interpretieren und in der *.txt Datei Loggen. Für einen Header der Bei allen Versuchen Gleich sein sollen kannein Sub VI geschrieben werden, welcher Daten wie Gruppennummer, Lokaler (des jeweiligen PC's) Datum und Zeitstempel, Eingabe welches VT Praktikum o.ä. enthält.\\
+
+Um die korrekte Konfiguration Ihres Geräts vorzunehmen zu können, ist in dem Handbuch des Geräts nach folgenden Daten zu schauen:
+
+\begin{itemize}
+\item Zeichen Codierung, z.B. 7-bit 'ASCII'
+\item Baudrate
+\item Parität
+\item Stopbit
+\item Flusssteuerung (\textit{Flow Control})
+\end{itemize}
+
+Die Digitalwaage sendet ihre digitalen Signale über eine RS-232 Schnittstelle, die 7-bit ASCII-encodiert sind. Um einen \textbf{kontinuierlichen Datenstrom} zu erhalten und somit \textbf{kontinuierlich} zu Wiegen, wird in der Einstellung der Waage \glqq automatisches Senden\grqq{} eingestellt. Das Gewicht soll gesendet werden, auch wenn der Wert nicht stabil ist. Die seriellen Konfigurationsparameter der Waage und des PC's bzw. des LabVIEW Programms müssen identisch sein, um decodierbare Daten Empfangen zu können. Diese Einstellungen sind über das Menü der Waage Vorzunehmen. In der Tabelle \ref{cp4201} werden die verwendeten seriellen Konfigurationsparameter der Waage des Herstellers Sartorius CP-4201 aufgelistet.
+
+\begin{table}[h]
+\caption{Serielle Konfigurationsparameter der Digitalwaage Sartorius CP 4201}
+\begin{center}
+
+\begin{tabularx}{1\textwidth}{XX}
+\hline
+Baudrate in 1/s & 1200 \\
+Bytesizen in bit & 7  \\
+Parität & Odd \\
+Stopbit & 1 \\
+Encoded & ASCII \\
+Flow-Control & Software-Handshake \\
+\hline
+\end{tabularx}
+\end{center}
+\label{cp4201}
+\end{table}
+
+\subsection{Serielle Schnittstelle im Betriebssystem finden} 
+\paragraph{Microsoft Windows} Bei der Verwendung eines Windows PC's wird der Port der seriellen Schnittstelle Com Port genannt und wird als \textit{Com1-N} aufgelistet. 
+
+\paragraph{Mac Unix}Bei der Verwendung eines Mac/Unix wird die serielle Schnittstelle in LabVIEW \mbox{ASLR 1::INSTR} genannt und ist im Terminal des Mac unter ~dev/tty.* und ~dev/cu.* zu finden. 
+
+\subsection{Tool zur Identifikation und Debuggen serieller Schnittstellen} Um herauszufinden ob die Konfigurationsparameter Stimmen, ein Gerät Daten Sendet, wie das Datenformat aussieht und ob die Daten korrekt übermittelt werden, kann man unter Windows ein konstenloses Tool namens hTerm verwenden. \\
+
+\subsection{Kontinuierliches auslesen einer Digitalwaage via RS-232 mit LabVIEW }
+
+Die grafische Programmiersprache G mit der Entwicklungsumgebung LabVIEW ist in der Lage Daten via RS-232 Schnittstelle zu akquirieren und zu interpretieren. Um eine serielle Schnittstelle in LabVIEW auslesen zu können, wird der \textbf{NI-VISA} Treiber benötigt. \\
+
+\subsubsection{Anpassung der LabVIEW-Einstellungen}
+\label{sec:LabVIEW_Einstellungen}
+
+Damit Texteingaben in Eingabefenster (\textit{Control} Fenster) mit der Betätigung von Enter bestätigt/quittiert wird, ist in den LabVIEW Einstellungen folgender Hacken zu setzen:
+
+\begin{center} 
+Tools > Options... > Category > Enviroment > End text entry with Enter key
+\end{center} 
+
+Wenn ein Gerät, die Daten via RS-232 versendet, \textbf{ist es wichtig, dass bei dem Beenden des Programms der serielle Port geschlossen wird.} Bei der Verwendung eines Windows PC's wird der Port der seriellen Schnittstelle Com Port genannt und wird als \textit{Com1-N} aufgelistet. Bei der Verwendung eines Mac/Unix wird die serelle Schnittstelle in LabVIEW \mbox{ASLR 1::INSTR} genannt und ist im Terminal des Mac unter ~dev/tty.* und ~dev/cu.* zu finden. Wenn der Abbruchbutton (\textit{engl. abort Button}] von LabVIEW genutzt wird, wird der Port nicht geschlossen, daher soll das VI nur über den \textit{Stop Button} des Frontpanels geschlossen werden. Um den \textit{Abort Button} für das Programm zu entfernen, gehen Sie bitte wie folgt vor.
+
+\begin{center} 
+File > VI properties... > Window Apperance > Customize ... >  Show Abort button [deaktivieren]
+\end{center} 
+ 
+\subsubsection{Serielle Sub VI programmierung}
+
+Im \textbf{ersten Schritt} wird ein Sub VI oder wie auch nachfolgend \textit{Objekt} genannt programmiert (in LabVIEW auf englisch \textit{Function}). Dazu öffnet man ein neues Leeres VI. Das \textit{Serielle Sub VI} im folgenden \textit{SSVI} wird für die Konfiguration einer seriellen Schnittstelle verwendet \textit{Objekte} die sie der Tabelle \ref{tab:labviewserialobject} entnehmen können. In der Tabelle \ref{tab:labviewserialobject} sind allen Objekten aufgelistet, die benötigt werden, um die in diesem Abschnitt programmierten VI's zu programmieren. In der Tabelle \ref{tab:labviewserialobject} wird das Blockdiagramm mit \textbf{BD}, das Front Panel mit \textbf{FP} und die rechte Maustaste mit \textbf{rM} abgekürzt.\\
+
+
+
+\input{Benötigte_LabVIEW_Objekte}
+
+
+
+%Im folgenden soll erst ein VI Objekt programmiert werden, in dem der serielle Port konfiguriert und geöffnet wird und den Flußsteuerungsbefehl XON (Hex 11) dem Messinstrument geschickt wird. Im Anschluss müssen die Bytes, die im Buffer des Ports vorhanden sind, ausgelesen werden. Diese Bytes werden dann dem Haupt-VI übergeben. Wenn das Programm beendet wird muss der Port geschlossen werden.\\
+
+In den folgenden Programmierabbildungen sind die Funktion wie in Tabelle \ref{tab:labviewserialobject} nummeriert.
+
+\paragraph{Schritt 1: Serielle Objekte} Nach dem Erstellen eines neuen VI's, fügt man alle Objekte ein, die man für den Datentransfer mit serieller Schnittstelle benötigt (4 - 9 in Tabelle \ref{tab:labviewserialobject}) (siehe Abbildung \ref{step1}). Das \textit{Control} oder \textbf{VISA resource name} (13) (Modern/ I/O /Visa Resource) Objekt fügt man z.B. über das Front Panel ein. 
+
+\bild{1}
+{LabVIEW_serialport/step_1_all_serial_functions_2.png}
+{0em}
+{Einfügen aller seriellen Funktionen}
+{Einfügen aller seriellen Funktionen}
+{step1}
+
+
+\paragraph{Schritt 2: Port Initialisierungs- und Abbruchskonfiguration} An dem Objekt \textit{Configure Port} müssen wir Konstanten mit den Konfigurationswerten hinzufügen. An den Objekteingängen auf der Linken Seite des Objekts, erstellt man Konstanten (rechte Maustaste/\textit{Create Constant} (11), siehe Abbildung \ref{step2}), die die seriellen Konfigurationsparameter enthalten (siehe Tabelle \ref{cp4201}). Anschließend zieht man eine \textit{Case-Structur} (2a) um das \textit{Configure Port} (zzgl. Konstanten) und das \textit{Flush Buffer} (9) Objekt und eine weitere \textit{Case-Structur} (2b) um das \textit{Close Port} Objekt. Wird die \textit{Case-Structure} (29) mittels eines Wahrheitswerts (\textit{boolean variable (\texttt{true}/\texttt{false})}) getriggert, wird somit der Port Konfiguriert und der I/O Buffer geflushed. Die \textit{Case Structure} (2b), auf der rechten Seite wird mittels eines \textit{Stop Buttons} auf \texttt{ true } gestellt, um den Port mittels des \textit{Close} (8) Objekts zu schließen.\\
+
+Den Stop \textit{Button} (14), die \textit{VISA ressource name}(13) zur Auswahl des Ports und den String \textit{Indicator} (12) (siehe Tabelle \ref{labviewserialobject}, 12 - 14) fügt man über as Front Panel hinzu und positioniert die dazugehörigen Objekte, die automatisch im Blockdiagramm erscheinen, an die richtigen Positionen. Der \textit{Stop Button} wird mit dem \textit{Case Selektor} der zweiten \textit{Case-Structure} (2b) verbunden. Wird das Programm durch diesen \textit{Stop Button} beendet, wird somit der Port geschlossen. \textbf{Aufgrund dessen ist es wichtig, den VI Abbruch Button zu Deaktivieren: \emph{File > VI properties... > Window Apperance > Customize ... > [Markierung entfernen] Show Abort button}}. Ein \textit{Indicator} zum Anzeigen der String Werte, die durch das \textit{Read} Objekt (6) ausgelsesen werden, wird an das \textit{Read} Objekt (6) angeschlossen. Die erste \textit{Case Structure} (2a) wird durch ein \textit{First Call?} Objekt (if Schleifeniterationsindex = 0, then true) getriggert (siehe Tabelle \ref{labviewserialobject}, 3).
+
+\bild{1}
+{LabVIEW_serialport/step_2_cases_buttons-indicators-controls_2.png}
+{0em}
+{Einfügen von Stop-button/Indicators/VISA resource}
+{Einfügen des Stop-Buttons, Indicators und VISA resource}
+{step2}
+
+\paragraph{Schritt 3: N=1 For Loop, XON flow control}
+
+\bild{1}
+{LabVIEW_serialport/step_3_for-loop_add-shift-register_2.png}
+{0em}
+{Einfügen von For Loops/Schieberegister}
+{Einfügen des For Loops und der Schieberegister}
+{step3}
+
+Nun zieht man ein eine \textit{For Loop} um alle Objekte, bis auf die \textit{VISA Resource} und das \textit{Flush Buffer} Objekt. Die \textit{For Loop} wird in diesem Fall mit der Konstante 1 Indiziert (siehe Abbildung \ref{step3}, oben links). Nach dem hinzufügen von zwei Schieberegistern (\textit{engl. Shift Register}) an einem Ende der \textit{For Loop}, werden automatisch die Schieberegister auf der anderen Seite des Loops generiert. Alle Funktionen müssen nun im wie in Abbildung \ref{step3} verbunden werden (die blaue Leitung zwischen \textit{Bytes at Port} und \textit{Read Port} ist ebenfalls zu verbinden). Da die \glqq Verkabelung\grqq{} im Fall, das beide \textit{Case-Structures} im \texttt{true} Case getriggert sind, verbunden sind, muss selbiges noch im \textit{False Case} beider \textit{Case Structures} (2ab) geschehen (siehe Abbildung \ref{step3b}). Das \textit{Write} Objekt (7) muss noch mit der \textit{String Konstante} (10) mit dem Wert \texttt{11} verknüpft werden. Die \textit{String Konstante} 11 beinhaltet das ASCII Flow Control (siehe Abschnitt RS-232) Signal XON und signalisiert der Waage, dass der PC bereit ist Daten zu empfangen, da die Sartorius Waage als Flow Control den Software-Handshake verwendet. Dieses Objekt in dieser Form ist nun alleinstehend fähig den seriellen Port zu konfigurieren, der Waage das flow control Signal XON zu Senden, die Bytes Auszulesen und Darzustellen oder dem Haupt VI zu übergeben sowie den seriellen Port zu schließen, wenn das Programm über den stop Button beendet wird.
+
+\bild{1}
+{LabVIEW_serialport/step_3b_false_cases.png}
+{0em}
+{\glqq Verkabelung\grqq{} der False Cases}
+{\glqq Verkabelung\grqq{} der False Cases}
+{step3b}
+
+\paragraph{Optimierung} Das Programm in Abbildung \ref{step3} und \ref{step3b} konfiguriert bei jeder Iteration den Port und öffnet ihn. Das öffnen eines seriellen Ports, der bereits geöffnet ist, kann zu Störungen führen, daher sollte die Konfiguration des Ports über das Haupt-VI erfolgen. Der I/O-Buffer soll auch nur bei der ersten Iteration des Hauptprogramms gelöscht werden, der wird ebenfalls ins Haupt VI verlagert. In Abbildung \ref{step5} ist das Objekt nach der Optimierung abgebildet. Um den ausglesenen String nach Abschluss der Iteration an das Haupt VI übergeben zu können, wird der read Buffer rechts aus die For Loop geleitet. 
+
+\bild{1}
+{LabVIEW_serialport/step5_optimierung.png}
+{0em}
+{Optimiertes VI-Objekt}
+{Optimiertes VI-Objekt}
+{step5}
+
+Mit Abschluss dieser Schritte ist das VI Objekt einsatzbereit und kann in mehrere Programmen, implementiert werden. Dafür müssen in der oberen rechten Ecke des Frontpanels die Ein- und Ausgänge des VI festgelegt werden (siehe Abbildung \ref{step4}, Nr. 16). Dazu klickt man auf ein Feld des Icons in der oberen rechten Ecke und auf eine Funktion, die sich im Frontpanel befindet. In diesem Beispiel wurde die obere rechte Ecke des mini Icons angewählt und mit einem Klick auf \textit{read buffer}, dem ausgelesenen String zugeordnet. Die obere linke Ecke des mini Icons wird mit VISA resource name und die Ecke unten links mit dem \textit{Stop Button} belegt.
+
+\bild{.4}
+{LabVIEW_serialport/step_4_VI_generieren_3.png}
+{0em}
+{Definition der VI Objekt Ein- und Ausgänge}
+{Definition der VI Objekt Ein- und Ausgänge}
+{step4}
+
+
+\subsubsection{Haupt VI programmierung}
+
+Die Daten, die man via RS-232 empfängt müssen interpretiert und in eine *.txt gelogged werden. Die empfangenen Daten hängen von der verwendeten Messtechnik an. Das Untersuchungsobjekt im Rahmen dieses Abschnitts ist eine Digitalwaage (CP 4201 des Herstellers Sartorius). Das Datenformat dieser Waage ist wie folgt:
+
+\begin{enumerate}
+\item Die Empfangen Daten können unbekannte viele Leerzeichen zu Beginn des Strings enthalten (\texttt{'\textbackslash s'}). 
+\item Es kann ein \texttt{N } enthalten
+\item Es kann die Vorzeichen \texttt{+} oder \texttt{-} enthalten
+\item Es können beliebig viele \texttt{'\textbackslash s'} folgen
+\item Es können beliebig viele Ziffern folgen
+\item Es wird ein dezimal Trennungszeichen folgen (ASCII encodiert wäre es der Punkt \texttt{'.'})
+\item Es können wieder unbekannt viele Ziffern folgen
+\item Es können wieder unbekannt viele Leerzeichen folgen
+\item Es kann die Maßeinheit \texttt{'g'} folgen, wenn der Messwert stabil ist
+\item Es können beliebig viele \texttt{'\textbackslash s'} folgen
+\item Das Zeilenende kann je nach System variieren. Es kann \texttt{'\textbackslash r'}, \texttt{'\textbackslash n'} oder \texttt{'\textbackslash r\textbackslash n'} sein
+\end{enumerate}
+
+
+\input{Benötigte_LabVIEW_Objekte}
+
+
+\paragraph{Erster Schritt: Port Konfiguration und String verketten/Anzeigen lassen} Nach dem Erstellen eines neuen, leeren VI's, wird das VI des vorherigen Abschnitts per drag and drop in das leere VI gezogen, dazu zieht man das Symbol 16 wie in Abbildung \ref{step4} in das neue VI. Als nächstes setzt man eine While Loop um dieses VI Objekt und verknüpft einen Stop Button (14) mit dem Stop Eingang des SSVI sowie dem Abbruchkriterium der While Loop (20). Außerhalb des Loops wird die Portkonfiguration (siehe Tabelle \ref{cp4201} und das Objekt, welches den I/O Buffer löscht, plaziert. Um die Daten aus dem SSVI auszulesen wird die Funktion, zum Verketten von Strings \textit{engl. Concatenate Strings} (17) in den Loop platziert. Man benötigt Schieberegister (\textit{engl. Shift Register}), erweitert ihn auf zwei Eingänge und verbindet die \textit{Shift Register} mit der \textit{Concatenate Strings} Funktion (links oberer Eingang). 
+
+\bild{1}
+{LabVIEW_serialport/step6.png}
+{0em}
+{BD Haupt VI: SSVI Integration/Port Konfiguration/Stringoperationen}
+{BD Haupt VI: SSVI Integration, Port Konfiguration, String auslesen und \mbox{verketten}}
+{step6}
+
+Damit das \textit{Shift Register} bei der ersten Iteration (Index = 0, da LabVIEW, wie viele andere Programmiersprachen 0 indiziert arbeitet) leer ist, wird das linke \textit{Shift Register} mit einer leeren String konstante gelöscht. In Abbildung \ref{step6} sind die beschriebenen Funktionen abgebildet. Um zu sehen ob und was empfangen und verkettet wird, fügen wir einen \textit{String Indicator} (21) ein. Da der nutzer des Programms \textit{VISA Ressource} und \textit{String Indicator} sehen wird, ist es empfehlenswert es im FP in etwas eindeutiges umzubenennen. Um eindeutig erkennen zu können, welche Zeichen empfangen werden, kann man die \textit{String Indicator} Anzeige in '\textbackslash' umstellen (siehe Abbildung \ref{step6b}).
+
+\bild{0.4}
+{LabVIEW_serialport/step6b.png}
+{0em}
+{FP Haupt VI: SSVI Integration/Port Konfiguration/Stringoperationen}
+{FP Haupt VI: SSVI Integration, Port Konfiguration, String auslesen und \mbox{verketten}}
+{step6b}
+
+\paragraph{Zweiter Schritt: \glqq String Slicing\grqq{}} Das VI verkettet den String bis zum Beenden des Programms. Um eine einzige abgeschlossene Zeichenkette (von String Beginn bis '\textbackslash n') zu erhalten, müssen wir den String kürzen (\textit{engl. slicing}). Dazu wird eine \textit{Case Structure} (2c) programmiert, die den String verkettet, bis die \textit{Search/Split String} (23) Funktion das von uns gesuchte Zeichen, das ASCII Steuerzeichen '\textbackslash n' liest. Es können zwei Zustände vorliegen. Bei der Funktion \textit{Configure Port} (4) ist per default \textit{Termination Character} auf true gesetzt, was dazu führt, dass \textit{Read} (6) des SSVI beim decodieren der bytes, die sich im Input Buffer des Serial Ports befinden, beim decodieren des Steuerzeichens '\textbackslash n', die Zeichenkette terminiert und alle weiteren Bytes, die sich im Input Buffer befinden, in der nächsten Iteration bis maximal zu einem '\textbackslash n' gelesen und decodiert werden.
+
+
+\paragraph*{false} Die \textit{Search/Split String} Funktion soll nach einem '\textbackslash n' Suchen. Der \textit{offset of match} Ausgang der Funktion gibt den Index des Matches im String an. Wenn die \textit{Search/Split String} Funktion das zu suchende Zeichen (in dieser Situation '\textbackslash n') nicht findet, gibt \textit{offset of match} -1 wieder.. Diese Information wird genutzt, um den \textit{Case Selektor} auf {false} zu setzen. Um das zu erreichen, wird \textit{offset of match} durch den Vergleichsoperator \textit{Equal?} (25) mit einer numerischen Konstante mit dem Wert -1 verglichen. Wenn der String kein '\textbackslash n' enthält, gibt die Funktion als \textit{offset of match} den Index -1 zurück, demnach ist das boolsche Signal (true) aus der \textit{Equal?} (26) Funktion mit dem boolschen Operator \textit{Not} (27) zu negieren. Der \textit{Case Selector} (24) ist somit auf \textit{false} gesetzt.
+Ist der \textit{Case Selector} (24) auf \textit{false}, wird der Draht, der den Verketteten String (\textit{Shift Register} und \textit{SSVI}) enthält, in die \textit{Case Structure} (2c) geleitet und mit dem rechten \textit{Shift Register} verbunden.
+
+\subparagraph*{true} Wenn der String \texttt{'\textbackslash n'} enthält, gibt \textit{offset of match} dem \textit{Search/Split String} (23) Objekt den Index an, wo das Zeichen (in diesem Fall \texttt{'\textbackslash n'}) im String gefunden wurde. Der ist ungleich -1, der boolsche Zustand ist somit \texttt{true} und wird mit der \textit{Not} (27) Funktion wieder in ein \textit{true} umgewandelt und der \textit{Case Structure Selektor} (24) damit auf \textit{true} gesetzt. Nun soll der Folgeiteration der Teil des Strings ab (einschließlich des gesuchten Zeichens) dem gesuchten Zeichen übergeben werden. Das kann mithilfe des Objekts \textit{String Subset} erreicht werden, indem man den Rest des Strings, des Objekts \textit{Search/Split String} (23), im \texttt{true} Case dem Objekt \textit{String Subset} (25) übergibt. Das Objekt \textit{String Subset} (25) wird die Konstante 1 der Funktion \textit{offset} zugewiesen. Durch diese Konfiguration der Funktionen wird der Rest des Strings \textbf{nach} dem gesuchten Zeichen (\texttt{'\textbackslash n'}) dem \textit{Shift Register} (19) übergeben.
+
+ \bild{1}
+{LabVIEW_serialport/step7.png}
+{0em}
+{\glqq String Slicing\grqq{}: Daten Interpretation}
+{\glqq String Slicing\grqq{}: Daten Interpretation}
+{step7}
+
+\paragraph{Dritter Schritt: \glqq Dateninterpretation\grqq{}} Sobald eine Vollständige Zeichenkette gelesen wurde, müssen die Daten in ihre Bestandteile zerlegt werden (siehe Abbildung \ref{step7}. In die \textit{Case Structure} (2c) werden wir im \texttt{true} \, Case mit dem Objekt \textit{Regular Expression Match} (28), aus dem gesamten vorgelegten String alle gewünschten und potentiell vorkommenden Ausdrücke separat extrahieren. In der folgenden Tabelle sind die Ausdrücke (\textit{engl. Submatches}) Aufgelistet, die der String enthält.
+
+\begin{itemize}
+\item Es kann ein \texttt{'+'} oder \texttt{'-'} enthalten
+\item Beliebig viele \texttt{'\textbackslash s'} (Leerzeichen)
+\item Beliebig viele Ziffern
+\item Dezimaltrennzeichen (unter ASCII \texttt{'.'})
+\item Beliebig viele Ziffern
+\item Beliebig viele \texttt{'\textbackslash s'}
+\item Es kann ein \texttt{'g'} enthalten sein
+\item Beliebig viele \texttt{'\textbackslash s'}
+\end{itemize}
+
+
+ In der folgenden Liste werden die verwendeten \textit{Regular Expression} Operatoren erklärt.
+
+\begin{itemize}
+\item \texttt{(}x\texttt{)} generiert ein Submatch des Ausdrucks x
+\item x\texttt{?} der Ausdruck x kann null oder einmal vorkommen
+\item x\texttt{*} der Ausdruck x kann null oder viele male vorkommen
+\item \texttt{\textbackslash d+} es können beliebig viele Ziffern (\textit{engl. digits}) vorkommen
+\texttt{[}...\texttt{]} erstellt eine Zeichenklasse, die Angabe von \texttt{[}xyz\texttt{]} bedeutet, es kann x, y oder z vorkommen; sollen Elemente der Zeichenklasse mehrfach vorkommen dürfen, dann ist \texttt{[}...\texttt{]} ein \texttt{+} nachzustellen werden, daraus folgt \texttt{[}xyz\texttt{]+} 
+\end{itemize}
+
+Dem Objekt \textit{Regular Expression Match} müssen wir folgenden Ausdruck in einer String Konstanten mitteilen, die drei Submatches generiert.
+
+\begin{center}
+\texttt{
+\textbackslash s*([\textbackslash +-)?\textbackslash s*(\textbackslash d+\textbackslash .\textbackslash d+)\textbackslash s*(g?)\textbackslash s*
+}
+\end{center}
+
+\begin{description}
+\item[Submatch 1] ([\textbackslash +-)?
+\item[Submatch 2] (\textbackslash d+\textbackslash .\textbackslash d+)
+\item[Submatch 3] (g?)
+\end{description}
+
+Nun müssen wir eine String Zeile Konstruieren (siehe Abbildung \ref{step7}. Das Ziel ist eine *.txt Datei, bei der die Spalteneinträge durch das \textit{Tabulator} Steuerzeichen (\texttt{'\textbackslash t'}) (32) als Spaltentrennzeichen getrennt werden. \textbf{Beim Import einer, mit diesem Programm generierten, Ta\-bu\-lator-getrennt.txt-Datei in, z.B. ein Tabellenkalkulationsprogramm, wie Excel, ist als Spaltentrennzeichen Tabulator anzugeben.} Für die Konstruktion (Verkettung von Strings) einer Zeile verwendet man das \textit{Concatenate} (17) Objekt. Ein String wird in einer textbasierten Programmiersprache wie Python mit  Anführungsstrichen deklariert'' Concatenate verkettet Strings \mbox{(\mbox{'ich bin'} + \mbox{'ein String'} = \mbox{'ich bin ein String'})}. LabVIEW liest byte-serielle Strings vom seriellen Port. Eine von der Waage gesendete Zeile könnte wie folgt aussehen:
+
+\begin{figure}[h!]
+\centering
+\begin{BVerbatim}
+'\s''\+''\s''\s''\s''\s''12''\.''8''\s''g''\s''\r''\n'
+\end{BVerbatim}
+\end{figure}
+
+
+Bei dem \textit{Configure Port} Objekt (4) ist per default Termination Character auf \texttt{ true } gesetzt, d.h. \textit{Read} (6) liest bis zu einem \texttt{ '\textbackslash n' }. Der Rest verbleibt im Input Buffer, für die folgenden Iterationen. Eine vollständig von \textit{Read} (6) gelesene Zeile ergibt somit folgenden String:
+
+
+\begin{figure}[h!]
+\centering
+\begin{varwidth}{\linewidth}
+\begin{verbatim}
+'\s\+\s\s\s\s12\.8\sg\s\r\n'
+\end{verbatim}
+\end{varwidth}
+\end{figure}
+
+
+Nun sollen die drei potentiellen (Vorzeichen und der Character \texttt{ 't' } können, müssen aber nicht vorkommen) Bestandteile (\texttt{ '+' }, \texttt{ '12.8' }, \texttt{ 'g' }) extrahiert werden, wenn ein vollständiger String empfangen wird. Die drei Submatches sind somit:
+
+\begin{center}  \texttt{ '+' },\texttt{ '12.8' },\texttt{ 'g' } \end{center}
+
+Mit den drei Elementen soll eine Datalogger Zeile generiert werden. Die Zeile soll wie folgt aufgebaut sein.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{varwidth}{\linewidth}
+\begin{verbatim}
+              Zeitstempel \t Messwert \t Einheit (wenn Messwert Stabil)
+\end{verbatim}
+\end{varwidth}
+\end{center}
+\end{figure}
+
+
+\paragraph{Step 4: Zeitstempel oder Zeitreihen Programmierung}  Der Zeitstempel kann durch die folgenden zwei Methoden implementiert werden. Bei der ersten Methode (siehe Abbildung \ref{step7_format_date-time}) wird mittels des Objekts \textit{Format Date/Time String} (31) eine frei formatierbare Zeitreihe möglich (für genauere Infos schauen Sie bitte in \cite{zeitreihenformatierung}.
+
+\bild{0.4}
+{LabVIEW_serialport/step7_format_date-time.png}
+{0em}
+{Methode 1 \glqq Format Date/Time String\grqq{} (31)}
+{Methode 1 \glqq Format Date/Time String\grqq{} (31)}
+{step7_format_date-time}
+
+Um Als Zeitreihe die verstrichene Zeit in ms zu bekommen, ist das Objekt wie in den Abbildungen \ref{step7_elapsed_true} und \ref{step7_elapsed_false} zu  Programmieren (Elapsed Time Sub VI, ETSV) (37): 
+
+
+\bild{0.4}
+{LabVIEW_serialport/step7_elapsed_true.png}
+{0em}
+{Methode 2 \glqq Elapsed Time\grqq{} (37) \texttt{true}}
+{Methode 2 \glqq Elapsed Time\grqq{} (37) \texttt{true}}
+{step7_elapsed_true}
+
+Elapsed time false
+
+
+\bild{0.4}
+{LabVIEW_serialport/step7_elapsed_false.png}
+{0em}
+{Methode 2 \glqq Elapsed Time\grqq{} (37) \texttt{false}}
+{Methode 2 \glqq Elapsed Time\grqq{} (37) \texttt{false}}
+{step7_elapsed_false}
+
+
+%\begin{figure}%
+%  \centering
+%  \subfloat{\includegraphics[width=0.4\linewidth]{%
+%  LabVIEW_serialport/step7_elapsed_true.png}}%
+%  \qquad
+%  \subfloat{\includegraphics[width=0.4\linewidth]{%
+%  LabVIEW_serialport/step7_elapsed_false.png}}%
+% % \vspace{0em}
+%  \caption{Methode 2 \\
+%  \textbf{links} \glqq Elapsed Time\grqq{} (37) \texttt{false} \\
+%  \textbf{rechts}  \glqq Elapsed Time\grqq{} (37) \texttt{true}
+%  }
+%	 \label{elapsed_time}
+%\end{figure}
+
+%\begin{figure}
+%     \centering
+%     \subfloat[][true]
+%     {\includegraphics[width=0.4\textwidth]
+%     {LabVIEW_serialport/step7_elapsed_true.png}
+%     \subfloat[][false]{\includegraphics[width=0.4\textwidth]
+%     {LabVIEW_serialport/step7_elapsed_false.png}
+%     \caption{Methode 2 Elapsed Time in ms}
+%     \label{elapsed_time}
+%\end{figure}
+
+
+
+\paragraph{Versuchsbeobachtungen} Es ist eine Kommentarfunktion gewünscht. Das Kommentar soll eingegeben werden können und nach der Bestätigung der Eingabe mit Enter, soll das Kommentar dem jeweiligen Zeitstempel einmal zugeordnet werden. Dafür ist die Einstellung gemäß Abschnitt \ref{sec:LabVIEW_Einstellungen} vorzunehmen. Ein \textit{\textbf{Control}} Objekt (22) kann als Variablenspeicher interpretiert werden. Nach der Übergabe eines Wertes an das \textit{Control} Objekt des Kommentar muss diese nach der Ausgabe wieder gelöscht (\textit{engl. wiped}, umgangsprachlich gewiped werden. Zum \glqq löschen\grqq{} der letzten Eingabe in \textit{Control} Objekten, ist diese mit einer leeren Stringkonstanten zu überschreiben (siehe Abbildung \ref{step7} ) 2\textsubscript{variable reset}. Der Programmablauf wäre dann wie folgt:
+
+\begin{itemize}
+\item In \textit{Control} [Versuchsbeobachtung] wird etwas Eingeben Eingegeben
+\item soll hinterlegt bleiben bis er Ausgelesen wird
+\item nach dem Auslesen soll Kommentar wieder Leer sein
+\end{itemize}
+ 
+In diesem Anwendungsfall soll Versuchsbeobachtung gewiped gewerden, sobald ein Eintrag in den Datalogger (*.txt) erfolgt. (siehe Abschnitt \ref{sec:Datalogger})
+
+
+\paragraph{Step 5: Dataloggerprogrammierung}
+\label{sec:Datalogger}
+
+Die Messwert sollen in eine Tabstopp-Getrennte.txt geschrieben werden. Als nächstes ist ein Datalogger zu programmieren (siehe Abbildung \ref{datalogger}).
+
+\bild{0.4}
+{LabVIEW_serialport/step7_format_date-time.png}
+{0em}
+{Methode 1 \glqq Format Date/Time String\grqq{}}
+{Methode 1 \glqq Format Date/Time String\grqq{}}
+{step7_format_date-time}
+
+
+\subparagraph{Messwertaufnahmeintervall}
+
+\paragraph{Auslastungsoptimierung} Um die optimale Programmtaktrate empirisch zu ermitteln, kann man eine \textit{LED} (30) zwischen den Objekten \textit{Equal?} (26) und \textit{Not} (27) platzieren. Nun variiert man die Taktrate der \textit{While Loop} des  \textit{Haupt VI's}, bis die \textit{LED} für die Optimierung blinkt, um Daten \textit{Just in Time} zu erhalten. Das Blinken signalisiert, dass der (Read Buffer) der Datenquelle nicht überfüllt wird. Damit ist gewährleistet, dass für das Ausführen des Programms \textbf{ nur soviel Rechenkapazität verwendet wird wie nötig!} Um die Taktrate rechnerisch zu ermitteln benötigt man die zu erwartende Zeichenlänge pro Zeile, diese wird in dem folgenden Beispiel die Variable \textit{T} sein. Die Baudrate (Bd) gibt an, wie viele Zeichen pro Sekunde versendet werden Dauer pro Byte.
+
+Mit dem Objekt \textit{wait (ms)} (34) kann man eine Wartedauer (\textit{engl. sleep}) vor jeder Iteration. Mit dem Objekt \textit{wait until next ms multiple} (35) kann man eine Taktzeit für einen Iteration einprogrammieren. Die \textit{sleep} Dauer sollte geringer sein, als die Dauer, die benötigt wird, um die Daten vom seriellen Port auszulesen. Die Dauer zum empfangen einer Zeile lässt sich wie folgt berechnen (Annahmen: Bd = 1200 $\frac{\texttt{Bytes}}{s}$, 15 $\frac{\texttt{Bytes}}{Zeile}$). 
+
+\begin{align*}
+\frac{1}{Bd} \, \frac{\texttt{Bytes}}{Zeile} &= Zeit \, zum \, Empfangen \, einer \, Zeile  \\ 
+\frac{1}{1200} \cdot \frac{s}{\texttt{Byte}} \cdot 15 \,  \frac{\texttt{Bytes}}{Zeile} &= 0,0125 \, s \\
+&\equiv 12,5 \, ms
+\end{align*}
+
+\subsubsection{Nutzen des VI`s}
+
+Die Kommentarfunktion wie gewünscht funktioniert, ist vor der Verwendung des Programms in den LabVIEW Einstellungen unter Environment \glqq End Text entry with Enter key\grqq{} einzustellen (siehe Abbildung \ref{endtextentry}). Ist diese Option nicht eingestellt, muss nach jeder Betätigung der Enter-Taste, die Eingabe ein weiteres mal mittels eines Mausklicks auf einen schwarzen Haken, der neben dem VI Ausführen Pfeil (oben links im Front Panel) erscheint, quittiert werden.
+
+
+
+
+\bild{0.7}
+{LabVIEW_serialport/endtextentry.png}
+{0em}
+{Einstellung \glqq End text entry with Enter key\grqq{}}
+{Einstellung \glqq End text entry with Enter key\grqq{}}
+{endtextentry}
+
+
+
+\section{Teilumsetzung Wirbelschicht}
+
+
+%\begin{table}[h]
+%\caption{Gegenüberstellung der Herstellmethoden von Umformwerkzeugen}
+%\begin{tabularx}{1\textwidth}{|X|X|X|}
+%\hline 
+% & konventioneller WZB & additiver WZB  \\ 
+%\hline 
+%Herstellkosten &\cellcolor{red} höher  & \cellcolor{green} niedriger  \\ 
+%\hline 
+%Herstellzeit & \cellcolor{red} höher & \cellcolor{green} niedriger  \\ 
+%\hline 
+%Standmenge & \cellcolor{green} höher & \cellcolor{red} niedriger \\ 
+%\hline 
+%\end{tabularx} 
+%\label{herstellmethoden}
+%\end{table}
+
+\section{Fazit und Vision}
+
+
+
+\pagebreak
+\printbibliography
+%\bibliography{MPQuellen_biblatex}
+
+\pagenumbering{roman}
+
+\newpage
+
+%\thispagestyle{empty}
+\listoffigures
+%\thispagestyle{empty}
+\listoftables
+
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\pagebreak
+%\thispagestyle{empty}
+\input{Anhang}
+
+
+\end{document}  

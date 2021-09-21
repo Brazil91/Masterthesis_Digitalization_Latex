@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\begin{document}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Teacher & Title & Year \\
+\hline
+\hline
+\multirow{3}{*}{Dave Miller} & First steps \LaTeX{} & 2004 \\
+ & \LaTeX{} course & 2005 \\
+ & \LaTeX{} seminar & 2009 \\
+\hline
+\end{tabular}
+
+% =======================================================================
+\vspace{1,5cm}
+\begin{tabular}{|ccc|c|}
+\hline
+BBB & CCC & DDD & AAA\\
+\hline
+\multicolumn{3}{|c|}{\multirow{2}{*}{multicolumn \& multirow}}& 
+AAA \\ \cline{4-4}
+& & & AAA \\
+\hline
+BBB & CCC & DDD & AAA\\
+\hline
+\end{tabular}
+
+% =======================================================================
+\vspace{1,5cm}
+\begin{tabular}{|l|l|l|}
+\hline
+Teacher & Title & Year \\
+\hline
+\hline
+\multirow{3}{*}{Dave Miller} & First steps \LaTeX{} & 2004 \\ \cline{2-3}
+ & \LaTeX{} course & 2005 \\ \cline{2-3}
+ & \LaTeX{} seminar & 2009 \\ 
+\hline
+\end{tabular}
+
+% =======================================================================
+\vspace{1,5cm}
+\begin{tabular}{lll}
+\toprule
+Teacher & Title & Year \\
+\midrule
+\multirow{3}{*}{Dave Miller} & First steps \LaTeX{} & 2004 \\ 
+ & \LaTeX{} course & 2005 \\ 
+ & \LaTeX{} seminar & 2009 \\ 
+\bottomrule
+\end{tabular}
+
+
+% =======================================================================
+
+% \usepackage{booktabs}
+\vspace{1,5cm}
+\begin{tabular}{lll}
+\toprule
+Teacher & Title & Year \\
+\midrule
+\multicolumn{1}{c}{\multirow{3}{*}{C}} & First steps \LaTeX{} & 2004 \\ 
+ & \LaTeX{} course & 2005 \\ 
+ & \LaTeX{} seminar & 2009 \\ 
+\bottomrule
+\end{tabular}
+
+% =======================================================================
+\vspace{1,5cm}
+\begin{tabular}{lll}
+\toprule
+Teacher & Title & Year \\
+\midrule
+\multirow[t]{3}{*}{Top} & First steps \LaTeX{} & 2004 \\ 
+ & \LaTeX{} course & 2005 \\ 
+ & \LaTeX{} seminar & 2009 \\ 
+\bottomrule
+\end{tabular}
+
+% =======================================================================
+\vspace{1,5cm}
+\begin{tabular}{lll}
+\toprule
+Teacher & Title & Year \\
+\midrule
+\multirow{3}{3cm}{but fix width could work} & First
+ steps \LaTeX{} & 2004 \\ 
+ & \LaTeX{} course & 2005 \\ 
+ & \LaTeX{} seminar & 2009 \\ 
+\bottomrule
+\end{tabular}
+
+
+% =======================================================================
+% \usepackage{tabularx}
+\vspace{1,5cm}
+\begin{tabularx}{0.8\textwidth}{Xll}
+\toprule
+Teacher & Title & Year \\
+\midrule
+\multirow{3}{=}{ neither \textbackslash newline nor
+ \textbackslash linebreak nor \textbackslash\textbackslash
+will work in multirow} & First steps \LaTeX{} & 2004 \\ 
+ & \LaTeX{} course & 2005 \\ 
+ & \LaTeX{} seminar & 2009 \\ 
+\bottomrule
+\end{tabularx}
+
+\end{document}

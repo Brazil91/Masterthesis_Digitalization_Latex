@@ -1,0 +1,35 @@
+\begin{titlepage}
+	\centering
+
+
+
+	\begin{flushright}
+		\vspace{-30em}
+	\includegraphics[width=0.55\textwidth, cfbox=CornflowerBlue!50	 2pt 0.25pt,
+	 cfbox=NavyBlue!70	 3pt 0.75pt]{Bilder/HAW-Logo.png}
+	\end{flushright}\par
+	%\vspace{0,5cm}
+%	{\scshape\LARGE HAW Hamburg \par}
+\vspace{-.25em}
+	\vspace{1cm}
+	{\scshape\Large Masterthesis\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Entwicklung eines Konzeptes zur Digitalisierung des Labors der
+mechanischen Verfahrenstechnik der HAW, inklusive einer ersten
+Teilumsetzung \par}
+	\vspace{1.5cm}
+	{\Large\itshape B. Sc. Daniel Ludwig Matr.: 2241272\par}
+	\vfill
+	\par
+	\vspace{0.55cm}
+	\vspace{1em}
+	\begin{tabbing}
+	\hspace{20pt}\=\hspace{80pt}\=\hspace{200pt}\=\kill
+	\> Erstprüfer: \> Prof. Dr. Enno Stöver \\
+	\> Zweitprüfer: \> Prof. Dr. Martin Geweke \\
+	\end{tabbing}
+	\vfill
+
+% Bottom of the page
+	{\large 28. Februar 2021\par}
+\end{titlepage}

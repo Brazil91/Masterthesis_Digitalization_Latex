@@ -1,0 +1,716 @@
+\documentclass[
+fontsize=12pt, 
+paper=a4, 
+ BCOR=10mm, 
+twoside=false,
+DIV=25 
+% headsepline, 
+% footsepline,
+usegeometry%<- ergänzt
+%headinclude=false
+%footinclude=false 
+]{scrartcl} 
+ 
+
+\usepackage
+[bottom=3.3cm
+%,footskip=60pt
+]{geometry}
+
+%\setlength{\footskip}{4em}
+
+% 1,5 facher ZeilenAbstand
+\usepackage[onehalfspacing]{setspace}
+%\usepackage[singlespacing]{setspace}
+%\usepackage[doublespacing]{setspace}
+%
+%oder man nehme \linespread{value}
+%
+%where value determine line spacing. This value is somewhat confusing, because:
+%
+%Value	Line spacing
+%1.0		single spacing
+%1.3		one-and-a-half spacing
+%1.6		double spacing
+
+% Bindungskorrektur papierverlust durch Hefter 7,5 und durchs knicken 0,75
+%\KOMAoptions{BCOR=8.25mm}
+%%________________________________________________________
+
+\AfterTOCHead{\singlespacing} %Nach der Überschrift des Inhaltsverzeichnisses wird ein \\gesetzt
+
+
+%Neue Satztspiegelberchenen
+\recalctypearea
+\KOMAoptions{DIV=last}
+
+%\KOMAoptions{headsepline}
+%\KOMAoptions{footsepline}
+
+\usepackage[autooneside=true]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+%\lohead{}
+%\rohead{Daniel Ludwig}
+%\lofoot{HAW Hamburg}
+\setkomafont{pageheadfoot}{\small} % Aufrechte und kleine Schrift in header und foot
+\chead{\headmark}
+\automark[subsection]{section}
+
+%Kollumnentitel (Section) wird links in den Header geschrieben, mit Stern
+%\ihead*{\headmark}
+%\ohead{Daniel Ludwig}
+
+%Wer das Dokument nicht mit KOMA/typeare nach Satzspiegel formatieren möchte
+% nutzt
+
+\usepackage[english,ngerman]{babel} % Die letzte angegebene Sprache wird als Hauptsprache festgelegt.
+
+%\usepackage[utf8]{inputenc} %UTF-8 Codierung (Umlaute etc.; Deutsch, Englisch, Portugiesisch...)
+%\usepackage[T1]{fontenc} % zum nutzen von pdfLaTeX
+
+%Schrifttyp
+%\setmainfont{QTCaslan}
+%\setmainfont{Arno Pro}
+
+%%________________________________________________________ 
+%%________________________________________________________ 
+
+\usepackage{fontspec} %Um installierte fonts mit XeTeX zu nutzen
+\usepackage{caption}
+
+\newfontfamily\Menlo[Mapping=tex-text, Scale=.78]{Menlo}
+\newfontfamily\Hypatia[Mapping=tex-text, Scale=0.95]{Hypatia Sans Pro}
+
+%\DeclareCaptionFormat{Menlo}{\captionfont\normalsize#1#2}
+%\captionsetup{labelformat=Menlo}
+%Serifen Schiften
+%_____________________________________________________________________________
+%
+\setromanfont{Arno Pro}
+%\setromanfont{Century Schoolbook}
+%\setromanfont{PT Serif}
+
+%Serifenlose Schiften
+%_____________________________________________________________________________
+
+\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Hypatia Sans Pro}
+%\setsansfont{Futura}
+%\setsansfont{PT Sans}
+
+%Typewriter (Programmiercode, Hyperref) Schiften
+%_____________________________________________________________________________
+%\setmonofont[Color={0019D4},Scale=0.85]{Special Elite}
+%\setmonofont[Scale=0.9]{Special Elite}
+%\setmonofont[Color={0019D4},Scale=1]{Lucida Grande}
+\setmonofont[Color={0019D4}, Scale=.78]{Menlo}
+%\setmonofont[Color={0019D4},Scale=.8]{Andale Mono}
+%\setmonofont[Color={0019D4}]{RM Typerighter}
+%\setmonofont[Color={0019D4}]{Courier New} %Typewriter/Schreibmaschinen Schrift in Blau 
+
+%\newfontfamily\captionfont[Scale=.78]{Menlo} 
+
+%Progammcode/Typewriter Umgebung
+%\begin{verbatim}
+%usually this environment is used to display code
+%\end{verbatim}
+
+%\usepackage{geometry}                		
+%\geometry{a4paper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+
+% \geometry{
+% left = 3cm,
+% right = 2cm,
+% top = 2cm
+% bottom = 2cm}
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage[graphicx]{realboxes}
+\usepackage{rotating} 				%Picture rotation
+\usepackage[table,xcdraw,dvipsnames]{xcolor} % https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{caption}								
+\usepackage{float}
+
+\usepackage{pdfpages}
+
+%%====================================================================
+%%====================================================================
+% Tabellen packages!!!!!!!
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+\usepackage{siunitx}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{nicematrix}
+\usepackage{booktabs}
+
+\definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
+\definecolor{hellgrün}{RGB}{198,224,180}
+\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+
+\usepackage{colortbl}
+\usepackage{textcomp} % Griechischesymbole richtig im Mathemodus darstellendarstellen
+\usepackage{multirow}
+\usepackage{makecell} % Tabellenzelle formatieren
+
+\usepackage{wrapfig}
+
+%%====================================================================
+%%====================================================================
+
+\usepackage{varwidth}
+%\begin{figure}[h!]
+%\centering
+%\begin{varwidth}{\linewidth}
+%\begin{verbatim}
+%'\s\+\s\s\s\s12\.8\sg\s\r\n'
+%\end{verbatim}
+%\end{varwidth}
+%\end{figure}
+%___________________________________________________________________________
+
+\usepackage{fancyvrb}
+%\begin{figure}[h!]
+%\centering
+%\begin{BVerbatim}
+%'\s''\+''\s''\s''\s''\s''12''\.''8''\s''g''\s''\r''\n'
+%\end{BVerbatim}
+%\end{figure}
+%___________________________________________________________________________%___________________________________________________________________________
+
+\usepackage{tikz}
+
+%=======================================
+% Tikz schraffierte Zelle programmieren
+%=======================================
+\usetikzlibrary{patterns} % für die Schraffur
+
+\ExplSyntaxOn
+\cs_new_protected:Nn \__pantigny_hatchcell:nnn
+{
+	\begin { tikzpicture }
+		\fill [ pattern = north~west~lines , pattern~color = #3 ]
+		( row - #1 -| col - #2)
+		rectangle
+		( row - \int_eval:n { #1 + 1 } -| col - \int_eval:n { #2 + 1 } ) ;
+	\end { tikzpicture }
+}
+\NewDocumentCommand \hatchcell { ! O { black } }
+{
+\tl_gput_right:Nx \g_nicematrix_code_before_tl
+{
+\__pantigny_hatchcell:nnn
+	{ \int_use:c { c@iRow } }
+		{ \int_use:c { c@jCol } }
+			{ #1 }
+		}
+	}
+\ExplSyntaxOff
+
+%\begin{NiceTabular}{ccc}[hvlines]   % \usepackage{nicematrix,tikz}
+%Tokyo & Paris & London \\
+%Roma & \hatchcell[blue!30]Oslo & Miami \\
+%Los Angeles & Madrid & Roma
+%\end{NiceTabular}
+
+%========================================
+
+\usetikzlibrary{chains}
+
+%==========================================
+
+%\include{tikz-chains-beispiel}
+
+%==========================================
+
+
+%%Bibtex JabRef *.bib Datei
+%__________________________________________________________________
+\bibliographystyle{unsrt}
+\usepackage[backend=biber]{biblatex}  %biblatex mit biber laden
+
+
+%\ExecuteBibliographyOptions{
+%sorting=nyt, %Sortierung Autor, Titel, Jahr
+%bibwarn=true, %Probleme mit den Daten, die Backend betreffen anzeigen
+%isbn=false, %keine isbn anzeigen
+%url=false %keine url anzeigen
+%}
+\addbibresource{Masterthesis_Literaturverzeichnis.bib} 
+%__________________________________________________________________
+%__________________________________________________________________
+
+
+
+
+
+%%__________________________________________________________________
+%%\usepackage{subcaption}
+\usepackage{subfig} %zwei Bilder nebeneinander
+
+%\renewcommand{\thefigure}{\Alph{chapter}.\Alph{figure}}
+\renewcommand{\thesubfigure}{\texttt{\alph{subfigure}}} % \roman{...} kleine römische Ziffern für die Subcaptions
+
+% Globale Label formattierung tt =Typewriter, bf= Boldface, rm = roman...
+\captionsetup{labelfont={tt,tt}}
+
+%\usepackage{pdfpages}
+\def\bild#1#2#3#4#5#6{%
+\begin{figure}[h!] %[htbp!] bedeutet here top bottom page und das ! bedeutet die Begrenzungen von Latex aufzuheben
+\centering
+\includegraphics[width=#1\textwidth]{Bilder/#2}
+\vspace{#3}
+\caption[#4]{#5}\label{#6}
+\end{figure}
+}
+
+\def\bildp#1#2#3#4#5#6#7{%
+\begin{figure}[#1] %[htbp!] bedeutet here top bottom page und das ! bedeutet die Begrenzungen von Latex aufzuheben
+\centering
+\includegraphics[width=#2\textwidth]{Bilder/#3}
+\vspace{#4}
+\caption[#5]{#6}\label{#7}
+\end{figure}
+}
+
+\usepackage[export]{adjustbox}
+\usepackage[section]{placeins} %% hinter den abbildungen und tabellen gibt es eine float bariere
+\usepackage[most]{tcolorbox}
+\newtcbox{\one}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline={1pt}{-3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  #1
+}
+\newtcbox{\two}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline west={1pt}{3pt}{black},
+  borderline south={1pt}{3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  colframe=black,
+  #1}
+\newtcbox{\three}[1][]{%
+  enhanced,
+  after skip=10pt,
+  sharp corners,
+  borderline west={1pt}{-3pt}{black},
+  borderline south={1pt}{-3pt}{black},
+  toprule=0pt,
+  rightrule=0pt,
+  bottomrule=.5pt,
+  leftrule=.5pt,
+  colback=white,
+  colframe=black,
+  #1}
+  
+  \newtcbox{\four}[1][]{%
+    enhanced,
+    frame hidden,colback=white,enhanced,overlay unbroken={%
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    #1}
+    
+    
+
+\newtcolorbox{five}[1][]{%
+    enhanced,
+    breakable,
+    frame hidden,
+    colback=white,
+    overlay unbroken={%
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    overlay first={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay middle={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay last={
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    #1,
+}
+
+%\begin{five}
+%    \lipsum
+%\end{five}
+
+%__________________________________________________________________
+
+%Inhaltsangabentiefenformatierung
+
+\setcounter{tocdepth}{4}
+%__________________________________________________________________
+
+
+%Paragraph verhält sich wie die vierte Ebene (subsubsubsection)
+%__________________________________________________________________
+%\setcounter{secnumdepth}{4}
+
+
+\makeatletter
+\newcommand*\addsubsec{\secdef\@addsubsec\@saddsubsec}
+\newcommand*{\@addsubsec}{}
+\def\@addsubsec[#1]#2{\subsection*{#2}\addcontentsline{toc}{subsection}{#1}
+  \if@twoside\ifx\@mkboth\markboth\markright{#1}\fi\fi
+}
+%\newcommand*{\@saddsubsec}[1]{\subsection*{#1}\@mkboth{}{}}
+%\makeatother
+ 
+
+
+
+%% Global ITEMIZE alignment!!!
+%%====================================================
+\usepackage{enumitem}
+
+\newlength\mylen
+\settowidth\mylen{\textbullet}
+\addtolength\mylen{-3mm}
+%\setlist[itemize,1]{leftmargin=*,labelsep=-\mylen} GLOBAL!!!!!!!!!!!!!
+
+%\noindent\begin{itemize}[leftmargin=*,labelsep=-\mylen]
+%\item First item.
+%\item Second item.
+%\item Third item.
+%\end{itemize}
+%
+%\noindent\rule{3mm}{1pt}Fourth item?
+%%====================================================
+
+
+\usepackage{adjustbox} %vlaign of subfigures
+
+
+\setlength\parindent{0pt} % keine Zeileneinrückung nah einem Absatz
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+%\usepackage{epigraph}
+\usepackage{csquotes}
+\usepackage{abstract}
+
+
+
+
+%\includeonly{
+%%veroeffentlichungserklaerung,
+%%Danksagung,
+%%Verzeichnisse,
+%%
+%%Einleitung,
+%%Stand_der_Technik,
+%%Konzeptentwicklung,
+%\include{Teilumsetzung}
+%%Schnittstellenkonfiguration_und_Signalverarbeitung_von_Messeinrichtungen,
+%%Fazit,
+%%Tools
+%}
+
+
+
+
+
+\begin{document} 
+
+
+\begin{table}[p!] % Mechanische Unit Operations, deren Versuchsstände und Messtechnische Einrichtungen
+\caption{Mechanische Unit Operations zu Projektbeginn, deren Versuchsstände\\ und messtechnische Einrichtungen (\textcolor{black!60}{Aufrüsten mit Sensoren sollte erfolgen})}
+\centering \vspace{5pt}
+{\fontsize{11}{13,2}
+\begin{NiceTabular}{Wc{2,5cm}Wc{2cm}rl}[hvlines, 
+code-before = \rectanglecolor{blue!13}{19-1}{31-4}, 
+code-before = \rectanglecolor{red!12}{6-2}{8-4}]
+\Block{1-2}{\textbf{Unit Operations}} &						&  \textbf{Versuchsstände} & \textbf{digitale Schnittstelle} \\
+\hline
+\Block{7-1}{ Trennen}	& \Block{1-1}{Klassieren} & Sichten				 & keine \\
+
+								&  \Block{3-1}{Filtration}	& \hatchcell[gray!60] Kuchenfiltration	& keine\\
+								&									& Blaine 										& keine \\
+								&									& Staubabscheidung						& \textcolor{OliveGreen}{\textbf{USB}} \\
+								& \Block{3-1}{thermisch} & Gefriertrocknen 							&  \textcolor{OliveGreen}{\textbf{USB}} \\
+								& 									& Trocknungsofen 							&  \textcolor{OliveGreen}{\textbf{USB, LAN}} \\
+								&									& Vakuumtrockner 							& keine \\								
+\Block{1-2}{Fluidisieren} &								& \hatchcell[gray!60] Wirbelschicht & keine \\
+\Block{6-2}{ Partikelzerkleinerung} &					& Backenbrecher & keine \\
+								& 									&	Planetenkugelmühle 	&  \textcolor{OliveGreen}{\textbf{RS-232, RS-485}} \\
+								&									& Prallmühle					& keine \\
+								&									& Walzenmühle			 	& keine \\
+								&									& Schneidmühle		 		& keine \\
+								&									& Hochdruckhomogenisator 	& keine \\
+\Block{3-2}{ Mischen} 	%&									&	Feststoffdispergierer	& keine	\\	
+								&									& Intensivmischer	& \textcolor{OliveGreen}{\textbf{USB}} \\
+								&									& Conchiermaschine	& keine \\
+								&									& Rührversuch 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\	
+\hline \Block{11-1}{} & \Block{6-1}{MVT}			& Zugversuch    & 	 \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Siebturmanalyse 				& keine \\
+								& 									& Luftstrahlsiebung &\textcolor{OliveGreen}{\textbf{RS-232, USB}} \\
+								&									& Scherzelle 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Stampfdichte 	& keine \\
+								&									& Laserbeugungs-Partikelgrößenanalyse 	& \textcolor{OliveGreen}{\textbf{USB}} \\								
+\Block{3-2}{Analyseeinrichtungen}								&									& Waagen 		& \textcolor{OliveGreen}{\textbf{USB}} \\
+\Block{6-2}{}				&									& IR-Waagen 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Refractometer	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Fluiddichtemesser 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Gaspyknometer 	& \textcolor{OliveGreen}{\textbf{RS-232}} \\
+								&									& Mikroskope 	& \textcolor{OliveGreen}{\textbf{USB}} \\		
+								&									& Viskosimeter &	\textcolor{OliveGreen}{\textbf{USB}} \\	
+
+\end{NiceTabular}
+}
+\label{tab:unitoperations}
+\end{table}
+
+
+\begin{figure}[p!] %[htbp!] 
+\centering
+\includegraphics[width=1\textwidth]{Bilder/digitalisierungskonzept_mit_db.png}
+\vspace{0em}
+ \caption[]
+{Konzeptentwurf 4.0, Signalverarbeitung mittels LabVIEW und co., \\
+Datenarchivierung mittels Datenbanksystem und post processing mit\\
+Applikationen im Rahmen von Big Data }\label{fig:•}
+\end{figure}
+%\bild{1}
+%{digitalisierungskonzept_mit_db.png}
+%{0em}
+%{Digitalisierungsentwurf mit Datenbank}
+%{Digitalisierungsentwurf mit Datenbank}
+%{digitalisierungskonzept_mit_db}
+
+\begin{figure}[p!] %[htbp!] 
+\centering
+%\vspace{-4em}
+\includegraphics[width=1\textwidth]{Bilder/DB/Labordatenstrukturdarstellung_im_ISA-95 Standard.pdf}
+%\vspace{-4em}
+ \caption[Hierarchische Darstellung der Labordaten, angelehnt an ISA-S95]
+ {Potentielle hierarchische Gliederung\\ der Daten des  verfahrenstechnischen\\ Labors, angelehnt an ISA-S95}\label{fig:hierarchisch_vt}
+\end{figure}
+
+
+\begin{figure}[p!] % 
+% \captionsetup{position=top}
+    \centering
+%        \subfloat[][Filterkuchenversuchsstand vor den Modifikationen\label{fig:filterkuchenversuchsstand}]{%
+%            \hspace{0em}
+%            \includegraphics[width=1\textwidth]
+%            {Bilder/filterkuchversuchsstand.jpg} %{Bilder/LabVIEW_serialport/}
+%        }
+%    \phantomcaption
+%    \vspace{1em}
+%    \ContinuedFloat
+    \subfloat[][Filterkuchenversuchsanlage nach den Modifikationen \label{fig:filterkuchenversuchsstand_upgrade}]{%
+            \hspace{0em}
+            \includegraphics[width=1\textwidth]
+            {Bilder/HAW/filterkuchenversuchsanlage_upgrade.jpg} %{Bilder/LabVIEW_serialport/}
+        }
+    \phantomcaption
+    \vspace{0.5em}
+    \ContinuedFloat
+%\captionsetup{position=bottom}
+    \subfloat[][Fließschema in Form einer schematischen Skizze, angelehnt an \text{[Filterkuchenversuchsanweisung von Prof. M. Geweke]} \label{fig:schema_filterkuchenversuchsstand_upgrade}]{%
+        \includegraphics[width=0.65\textwidth]
+        {Bilder/filterkuchversuch_schema_upgrade.jpg} %{Bilder/LabVIEW_serialport/}
+    }
+    \vspace{0.5em}
+    \caption[]{Filterkuchenversuchsanlage nach dem Aufrüsten mit digitaler Sensorik\\
+    \texttt{(a)} Versuchsanlage \hfill \texttt{(b)} Fließschema in Form einer schematischen Skizze}
+\end{figure}
+
+%\begin{table}[p!]
+%\centering
+%\caption{Bezeichnungen der Filterkuchenversuchsanlage}\label{tab:filterkuchenversuchsanlagenbezeichnungen}
+%\vspace{0.5em}
+%{\Hypatia \begin{tabular}{r l r l}
+%A & Verbindung zur Vacuumpumpe 				&  H2	& Absperrhahn	\\[0.1em]
+%B 	& Vacuummanometer 								& I	& Filternutsche 		\\[0.1em]  
+%C & Rezipient und Wasserabscheider \quad \quad	& J & Trübebehälter  \\[0.1em]
+%D	& Filtratauffangbehälter    							& K 	& Rührer 				\\[0.1em]	
+%E & Schutzplatte für Waage 							&  L & Pufferbehälter		\\[0.1em]
+%F 	& Waage mit digitaler Schnittstlelle 				& M & Drucksensor 		\\[0.1em]	
+%G & Kunststoffklemmvorrichtung									& N & Spannungsquelle \\[0.1em]	
+% & --~\,Gummidichtung 									& O & HMI (Human-Machine-Interface)\\[0.1em]	
+%H1 &  	Dreiwegehahn									& 		& \\ 
+%\end{tabular}}
+%\end{table}
+
+
+
+
+
+%\begin{enumerate}
+%\item \textbf{{\Hypatia Starten des HMI}}
+%	\begin{itemize}
+%		\item Inbetriebnahme der Spannungsquelle
+%			\begin{enumerate}[label = \roman*]
+%			\item Hauptschalter auf der Rückseite betätigen
+%			\item Spannungshöhe zwischen 15 und 24 V einstellen
+%			\item On-button auf der Vorderseite betätigen $\Rightarrow$ Spannung stellt sich auf den gewählen Betrag ein
+%			\end{enumerate}	
+%	\item Waagensignalleitung ist mit der RS-232 Schnittstelle des HMI Towers zu verbinden.
+%	\item DAQ ist mit einem beliebigen USB Slot des HMI Towers zu verbinden
+%	\item Starten der LabVIEW Applikation \: {\Menlo Filterkuchenversuch\_V01DL.vi}
+%	\item Dateinamen eingeben: FK\_{\Menlo GruppenID.txt}
+%		\begin{enumerate}[label = -]
+%		\item Der Dateiname kann über den Versuchstag identisch bleiben, die Daten werden an das Datei\-ende angehängt.
+%		\end{enumerate}
+%	\item Tubidimeterdateinamen eingeben: FK\_Tubi\_{\Menlo GruppenID.txt}
+%		\begin{enumerate}[label = -]
+%		\item Der Dateiname kann über den Versuchstag identisch bleiben, die Daten werden pro Versuchsiteration überschrieben.
+%		\end{enumerate}
+%	\item Versuchseingaben tätigen
+%	\item wenn alle Vorbereitung der Filtrationseinrichtung \textbf{abgeschlossen} sind, dann
+%		\begin{enumerate}[label = \Roman*]
+%		\item Start des Programms: Das $\Rightarrow$ Icon oben links 
+%		\item öffnen des Absperrhahns H2
+%		\item wenn Messung abgeschlossen, dann
+%			\begin{enumerate}[label = --]
+%			\item Stop betätigen
+%				\begin{enumerate}[label = -]
+%				\item Filtratmenge bestimmen 
+%				\item Filterkuchendicke bestimmen 
+%				\item die trockene Filterkuchenmasse bestimmen
+%				\end{enumerate}
+%			\item Tubidimeter eingaben tätigen
+%			\item wenn abgeschlossen,  starten der nächsten Iteration bei I		 
+%			 \end{enumerate}
+%			\item \textbf{Nach der letzten Tubidimetereingabe ist das Programm nochmals zu starten und der Stop-button zu betätigen, damit die aktuellsten Tubidimeterdaten in der \newline FK\_Tubi\_{\Menlo GruppenID.txt} gespeichert werden!} 
+%		\end{enumerate}	
+%	\end{itemize}
+%
+%
+%\item \textbf{{\Hypatia Vorbereitung der Filtrationseinrichtung}}
+%	\begin{enumerate}[label = \alph*]
+%	\item Absperrhahn H1 schließen
+%	\item Filtrationsanlage evakuieren, dazu ist die \textit{manuell} Taste des Vakuumcontrollers zu betätigen. Bei erreichen des Solldrucks wird der isobare Zustand der Anlage erhalten.
+% 	\item Gereinigte Filternutsche ({\Hypatia I}) in der Kunststoffklemmvorrichtung ({\Hypatia G}) fixieren.
+% 	\item Es ist darauf zu achten, dass der Metallsteg der Nutschenhalterung nach vorn zeigt
+%	\item Absperrhahn H2 schließen (Hebelstellung: waagerecht).
+%	\item Schläuche sachgemäß montieren.
+%	\item Schutzplatte der Waage entfernen und daraufhin einschalten.	
+%	\item Einfüllen der Suspension und Inbetriebnahme des Rührers. 
+%	\item Öffnen des Dreiwegehahns H1
+%	\item Wenn alle Vorbereitungen abgeschlossen sind und die angezeigte Masse Konstant ist, ist die Waage zu tarieren.
+%	 \end{enumerate}	
+%\end{enumerate}
+
+%\begin{figure}[p!] % Wirbelschichtversuchsanlage nach den Modifikationen
+%% \captionsetup{position=top}
+%    \centering
+%
+%%\subfloat[]
+%%     [Wirbelschichtversuchsanlage vor den Modifikationen \label{fig:Wirbelschicht_mod0}]{%
+%%       \hspace{0em}
+%%       \includegraphics[width=0.8\textwidth]
+%%       {Bilder/HAW/Wirbelschicht.jpg} %{Bilder/LabVIEW_serialport/}
+%%     }
+%%\phantomcaption
+%%\vspace{0.5em}
+%%\ContinuedFloat    
+%    
+%        \subfloat[Wirbelschichtversuchsanlage nach den Modifikationen]
+%        [Wirbelschichtversuchsanlage nach den Modifikationen \label{fig:Wirbelschicht_upgrade}]{%
+%            \hspace{0em}
+%            \includegraphics[width=1.05\textwidth]
+%            {Bilder/HAW/Wirbelschicht_upgrade.jpg} %{Bilder/LabVIEW_serialport/}
+%        }
+%    \phantomcaption
+%    \vspace{0.5em}
+%    \ContinuedFloat
+%% \captionsetup{position=bottom}
+%    \subfloat[][Fließschema in Form einer schematischen Skizze, angelehnt an \text{[Wirbelschichtversuchsanweisung von M. Geweke]} \label{fig:Wirbelschicht_konzept_modifiziert}]{%
+%        \includegraphics[width=0.8\textwidth]
+%        {Bilder/HAW/Wirbelschicht_konzept_modifiziert.jpg} %{Bilder/LabVIEW_serialport/}
+%    }
+%    \caption[]{Wirbelschichtversuchsanlage nach dem Aufrüsten mit digitaler Sensorik\\
+%    \texttt{(a)} Versuchsanlage \hfill \texttt{(b)} Fließschema in Form einer schematischen Skizze}
+%    \label{}
+%\end{figure}
+%
+%\begin{table}[p!]
+%\caption{Bezeichnungen der Wirbelschichtversuchsanlage nach den Modifikationen} \label{tab:bezeichnungstabelle_nach_den Modifikationen}
+%\begin{center}
+%{\Hypatia \begin{tabular}{rl r l}
+%A & Druckminderer 						& H & Fluidisiertopf  \\[0.1em]
+%B & Handventil 	 							& &  --~\, Plexiglassäule\\[0.1em]
+%C & Schwebekörperdurchflussmesser \quad \quad 		& & -- ~\,Gewebefilter als Anströmboden  \\[0.1em]
+%D & thermischer Durchflusssensor 	&  I & Absaugungen \\[0.1em]
+%E & piezoresistiver Drucksensor	 	& J & Spannungsquelle \\[0.1em]
+%F & U-Rohr Manometer 					&	K & NI DAQ USB-6001 \\[0.1em]
+%G & Strom-/Spannungswandler	 	&  L  & HMI (Human-Machine-Interface)\\[0.1em]				
+%\end{tabular}}
+%\end{center}
+%\end{table}
+
+
+\begin{table}[p!] % Grad der Digitalisierung
+\caption{\glqq Grad der Digitalisierung\grqq{} der MVT Geräte und Anlagen zum Projektende} \label{tab:grad_der_digitalisierung_upgrade}
+\begin{center}
+\begin{NiceTabular}{r|c|c|c|c}%[hvlines-except-corners=NW]
+MVT Versuchsstände 			& 	\makecell{Sensorik\\ zweckmäßig} & \makecell{Sensorik\\ vorhanden} &  \makecell{\glqq effektive\grqq \\Schnittstelle}	& \makecell{\textit{priorisierte} \\Einrichtungen}  	 \\ \hline 
+Sichten 								&						&	 			&  									&\\[0.2em]
+Kuchenfiltration 					&		$\circ$		& 	\textcolor{OliveGreen}{\cmark}	&	\textcolor{OliveGreen}{\cmark} 	& \textcolor{OliveGreen}{\cmark}\\[0.2em]
+Blaine								&						&			& 										&			\\[0.2em]
+Staubabscheidung 				&		$\circ$		& \cmark			& \cmark							&  \cmark \\[0.2em]
+Wirbelschicht 					&		$\circ$		&	\textcolor{OliveGreen}{\cmark} &	 \textcolor{OliveGreen}{\cmark} & \textcolor{OliveGreen}{\cmark}	 \\[0.2em]
+Backenbrecher 					&						& 	 		& 										&\\[0.2em]
+Planetenkugelmühle 			&		$\circ$		& \cmark	& 	 \xmark									&\\[0.2em]
+Prallmühle 						&						&			& 										&\\[0.2em]
+Walzenmühle						&						&	 		& 		&\\[0.2em]
+Schneidmühle 					&						&  		& &\\[0.2em]
+Hochdruckhomogenisator 	&						& 			& &\\[0.2em]
+Intensivmischer 					&						& \cmark	& \xmark& \\[0.2em]
+Conchiermaschine 				&						&			& & \\[0.2em]
+Rührversuch 						&		$\circ$		&	\cmark		& \cmark	&   \cmark \\[0.2em]
+\hline \hline
+Summe aller~ \cmark,~\textcolor{OliveGreen}{\cmark}~oder~ $\circ$		&			5			& 4 					& 4    & 4 \\
+Summe 	aller~ \xmark ~oder~ \textcolor{red}{\xmark}			&						&  	& 2    & 2\\[0.25em]
+\makecell{prozentualer Anteil, relativ zu allen \\
+\textcolor{black!50}{Einrichtungen} | Spalteneinträgen}	&	\textcolor{black!50}{36~\%}				&	\textcolor{black!50}{43 \%} 	 & 67~ \% & 100 \%\\[0.2em]
+
+\Block{1-5}{} 						&			& 						& & \\[0.2em]
+MVT Analyseeinrichtungen	&  \makecell{Sensorik\\ zweckmäßig}	&	\makecell{Sensorik\\ vorhanden} 	& \makecell{\glqq effektive\grqq \\Schnittstelle} & \makecell{ \textit{priorisierte }\\Einrichtungen} \\ \hline 
+Zugversuch 						&	$\circ$	& \cmark 	& 	\cmark	&		\\[0.2em]
+{Siebturmanalyse}\textsubscript{zzgl. digital Waage}				&	$\circ$	& \cmark 			& 		\xmark			&	\textcolor{red}{\xmark}	\\[0.2em]
+Luftstrahlsiebung				& 	$\circ$	& \cmark 			& \cmark 		& \cmark \\[0.2em]
+Scherzelle 							&	$\circ$	& \cmark 	&  \xmark 	& \textcolor{red}{\xmark}\\[0.2em]
+Stampfdichte 					&		&  			&   									&\\[0.2em]
+\makecell[r]{Laserbeugungs-\\
+Partikelgrößenanalyse}					& 	$\circ$	& \cmark 			&  \cmark 							& \cmark\\[0.2em]
+\hline \hline
+Summe aller~ \cmark ~oder~ $\circ$							&	5	& 4 					& 2	&	2		\\
+Summe 	aller~ \xmark ~oder~ \textcolor{red}{\xmark}	&		&  					& 2	&		2	\\[0.25em]
+\makecell{prozentualer Anteil, relativ zu allen \\
+\textcolor{black!50}{Einrichtungen} | Spalteneinträgen} 			& \textcolor{black!50}{83~\%}	&	\textcolor{black!50}{83 \%} 		& 60 \% 						& 50~\%	\\[0.2em]
+\end{NiceTabular}
+\end{center}
+\end{table}
+
+\end{document}  

@@ -1,0 +1,365 @@
+\documentclass[
+fontsize=12pt, 
+paper=a4, 
+% BCOR=8mm, 
+twoside=false,
+ DIV=11, 
+ headsepline, 
+ footsepline
+ ]{scrartcl} 
+ 
+%  \usepackage[table]{xcolor}
+ \usepackage{xcolor}
+%\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{nicematrix}
+\usepackage{booktabs}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{enumitem} 								% Table footnotequotation
+\usepackage{siunitx} 									% Columalignment 
+%\usepackage{diagbox}
+\usepackage{tikz}
+
+%=======================================
+% Tikz schraffierte Zelle programmieren
+%=======================================
+\usetikzlibrary{patterns}
+
+\ExplSyntaxOn
+\cs_new_protected:Nn \__pantigny_hatchcell:nnn
+{
+	\begin { tikzpicture }
+		\fill [ pattern = north~west~lines , pattern~color = #3 ]
+		( row - #1 -| col - #2)
+		rectangle
+		( row - \int_eval:n { #1 + 1 } -| col - \int_eval:n { #2 + 1 } ) ;
+	\end { tikzpicture }
+}
+\NewDocumentCommand \hatchcell { ! O { black } }
+{
+\tl_gput_right:Nx \g_nicematrix_code_before_tl
+{
+\__pantigny_hatchcell:nnn
+	{ \int_use:c { c@iRow } }
+		{ \int_use:c { c@jCol } }
+			{ #1 }
+		}
+	}
+\ExplSyntaxOff
+
+%========================================
+
+\begin{document}
+\centering
+
+
+\singlespacing
+
+\begin{NiceTabular}{cwc{2cm}wc{3cm}c}
+\centering
+rose		 & tulipe 																					& marguerite & dahlia \\
+violette	 & \Block[draw=red,fill=red!15]{2-2}{\LARGE De très jolies fleurs} 	&					 & souci \\
+pervenche & 																							&					& lys \\
+arum 		& iris 																					& jacinthe		 & muguet
+\end{NiceTabular}
+
+\singlespacing
+
+\begin{table}
+\centering
+\setlength{\arrayrulewidth}{2pt}
+\begin{NiceTabular}{cccc} \hline
+A&B&C&D \\ \cline{2-2}
+A&B&C&D \\ \hline
+\end{NiceTabular}
+\end{table}
+
+\singlespacing
+
+\begin{table}
+\setlength{\arrayrulewidth}{1pt}
+\begin{NiceTabular}{cccc}[hvlines,rules/color=blue]
+rose & tulipe & marguerite & dahlia \\
+violette & \Block[draw=red]{2-2}{\LARGE fleurs} & & souci \\
+pervenche & & & lys \\
+arum & iris & jacinthe & muguet
+\end{NiceTabular}
+\end{table}
+
+\singlespacing
+
+\begin{NiceTabular}{*{6}{c}}[hvlines-except-corners,cell-space-top-limit=3pt]
+& & & & A \\
+& & A & A & A \\
+& & & A \\
+& & A & A & A & A \\
+A & A & A & A & A & A \\
+A & A & A & A & A & A \\
+& \Block{2-2}{B} & & A \\
+& & & A \\
+& A & A & A \\
+\end{NiceTabular}
+
+\singlespacing
+
+$\begin{NiceArray}{*{5}{c}}[hvlines]
+\diagbox{x}{y} & e & a & b & c \\
+e & e & a & b & c \\
+a & a & e & c & b \\
+b & b & c & e & a \\
+c & c & b & a & e
+\end{NiceArray}$
+
+\singlespacing
+
+\[\begin{NiceMatrix}[
+code-before =
+{
+\tikz \draw [fill = red!15]
+(row-7-|col-4) -- (row-8-|col-4) -- (row-8-|col-5) --
+(row-9-|col-5) -- (row-9-|col-6) |- cycle ;
+}
+]
+1 \\
+1 & 1 \\
+1 & 2 & 1 \\
+1 & 3 & 3 & 1 \\
+1 & 4 & 6 & 4 & 1 \\
+1 & 5 & 10 & 10 & 5 & 1 \\
+1 & 6 & 15 & 20 & 15 & 6 & 1 \\
+1 & 7 & 21 & 35 & 35 & 21 & 7 & 1 \\
+1 & 8 & 28 & 56 & 70 & 56 & 28 & 8 & 1
+\end{NiceMatrix}\]
+
+\singlespacing
+
+\begin{NiceTabular}{|c|c|c|}[code-before =
+\cellcolor{red!15}{3-1,2-2,1-3}]
+\hline
+a & b & c \\ \hline
+e & f & g \\ \hline
+h & i & j \\ \hline
+\end{NiceTabular}
+
+\singlespacing
+
+\begin{NiceTabular}{|c|c|c|}[code-before =
+\rectanglecolor{blue!15}{2-2}{3-3}]
+\hline
+a & b & c \\ \hline
+e & f & g \\ \hline
+h & i & j \\ \hline
+\end{NiceTabular}
+
+\singlespacing
+
+\begin{NiceTabular}{*{6}{c}}%
+[hvlines-except-corners=NE,cell-space-top-limit=3pt]
+1\\
+1&1\\
+1&2&1\\
+1&3&3&1\\
+1&4&6&4&1\\
+1&5&10&10&5&1
+\end{NiceTabular}
+
+\singlespacing
+
+$\begin{NiceArray}{lll}[hvlines, code-before = \rowcolor{red!15}{1,3-5,8-}]
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+a_4 & b_4 & c_4 \\
+a_5 & b_5 & c_5 \\
+a_6 & b_6 & c_6 \\
+a_7 & b_7 & c_7 \\
+a_8 & b_8 & c_8 \\
+a_9 & b_9 & c_9 \\
+a_{10} & b_{10} & c_{10} \\
+\end{NiceArray}$
+
+\singlespacing
+
+$\begin{pNiceMatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\CodeAfter
+\tikz \draw (2-2) circle (2mm) ;
+\end{pNiceMatrix}$
+
+\singlespacing
+
+\begin{NiceTabular}{@{}lr@{}}[hlines,code-before = \rowcolors{1}{blue!10}{}]
+John & 12 \\
+Stephen & 8 \\
+Sarah & 18 \\
+Ashley & 20 \\
+Henry & 14 \\
+Madison & 15
+\end{NiceTabular}
+
+\singlespacing
+
+\begin{NiceTabular}{lr}[hvlines,code-before =
+\rowcolors{1}{blue!10}{}[respect-blocks]]
+\Block{2-1}{John} & 12 \\
+							& 13 \\
+Steph 					& 8 \\
+\Block{3-1}{Sarah} & 18 \\
+							& 17 \\
+							& 15 \\
+Ashley & 20 \\
+Henry & 14 \\
+\Block{2-1}{Madison} & 15 \\
+								& 19
+\end{NiceTabular}
+
+\singlespacing
+%
+\begin{NiceTabular}[c]{lSSSS}%   S kommt von siunitx
+[code-before = \rowcolor{red!15}{1-2} \rowcolors{3}{blue!15}{}]
+\toprule
+\Block{2-1}{Product} &
+\Block{1-3}{dimensions (cm)} & & &
+\Block{2-1}{\rotate Price} \\
+\cmidrule(rl){2-4}
+& L & l & h \\
+\midrule
+small & 3 & 5.5 & 1 & 30 \\
+standard & 5.5 & 8 & 1.5 & 50.5 \\
+premium & 8.5 & 10.5 & 2 & 80 \\
+extra & 8.5 & 10 & 1.5 & 85.5 \\
+special & 12 & 12 & 0.5 & 70 \\
+\bottomrule
+\end{NiceTabular}
+
+\singlespacing
+
+\NewDocumentCommand { \Blue } { } { \columncolor{blue!15} }
+\begin{NiceTabular}[colortbl-like]{>{\Blue}c>{\Blue}cc}
+\toprule
+\rowcolor{red!15}
+Last name & First name & Birth day \\
+\midrule
+Achard & Jacques & 5 juin 1962 \\
+Lefebvre & Mathilde & 23 mai 1988 \\
+Vanesse & Stephany & 30 octobre 1994 \\
+Dupont & Chantal & 15 janvier 1998 \\
+\bottomrule
+\end{NiceTabular}
+
+\singlespacing
+
+\begin{NiceTabular}[colortbl-like]{ccc}%
+[code-before = \columncolor{blue!15}{1,2}]
+\toprule
+\rowcolor{red!15}
+Last name & First name & Birth day \\
+\midrule
+Achard & Jacques & 5 juin 1962 \\
+Lefebvre & Mathilde & 23 mai 1988 \\
+Vanesse & Stephany & 30 octobre 1994 \\
+Dupont & Chantal & 15 janvier 1998 \\
+\bottomrule
+\end{NiceTabular}
+
+\singlespacing
+
+%In the environments with an explicit preamble (like {NiceTabular}, {NiceArray}, etc.), it’s possible
+%to fix the width of a given column with the standard letters w and W of the package array.
+
+\begin{NiceTabular}{Wc{2cm}cc}[hvlines]
+Paris & New York & Madrid \\
+Berlin & London & Roma \\
+Rio & Tokyo & Oslo
+\end{NiceTabular}
+
+\singlespacing
+
+$\begin{pNiceMatrix}[r,margin, code-before=\chessboardcolors{red!15}{blue!15}]
+1 & -1 & 1 \\
+-1 & 1 & -1 \\
+1 & -1 & 1
+\end{pNiceMatrix}$
+
+\singlespacing
+
+\begin{NiceTabular}{@{}llr@{}}[first-row,code-for-first-row = \bfseries]
+\toprule
+Last name & First name & Birth day \\
+\midrule
+Achard\tabularnote{Achard is an old family of the Poitou.} % usepackage{enumitem}
+& Jacques & 5 juin 1962 \\
+Lefebvre\tabularnote{The name Lefebvre is an alteration of the name Lefebure.}
+& Mathilde & 23 mai 1988 \\
+Vanesse & Stephany & 30 octobre 1994 \\
+Dupont & Chantal & 15 janvier 1998 \\
+\bottomrule
+\end{NiceTabular}
+
+%================================================================
+%\usetikzlibrary{patterns}
+%ExplSyntaxOn
+%\cs_new_protected:Nn \__pantigny_hatchcell:nnn
+%{
+%\begin { tikzpicture }
+%\fill [ pattern = north~west~lines , pattern~color = #3 ]
+%( row - #1 -| col - #2)
+%rectangle
+%( row - \int_eval:n { #1 + 1 } -| col - \int_eval:n { #2 + 1 } ) ;
+%\end { tikzpicture }
+%}
+%\NewDocumentCommand \hatchcell { ! O { black } }
+%{
+%\tl_gput_right:Nx \g_nicematrix_code_before_tl
+%{
+%\__pantigny_hatchcell:nnn
+%{ \int_use:c { c@iRow } }
+%{ \int_use:c { c@jCol } }
+%{ #1 }
+%}
+%}
+%\ExplSyntaxOff
+
+\begin{NiceTabular}{ccc}[hvlines]
+Tokyo & Paris & London \\
+Roma & \hatchcell[blue!30]Oslo & Miami \\
+Los Angeles & Madrid & Roma
+\end{NiceTabular}
+
+\arrayrulecolor{cyan}
+$\begin{NiceArray}{CCCC}%
+[hvlines,first-row,first-col]
+% & e & a & b & c \\
+e & e & a & b & c \\
+a & a & e & c & b \\
+b & b & c & e & a \\
+c & c & b & a & e
+\end{NiceArray}$
+\arrayrulecolor{black}
+
+\begin{NiceTabular}{|ccc|}[rules/color=[gray]{0.9},rules/width=1pt]
+\hline
+rose & tulipe & lys \\
+arum & iris & violette \\
+muguet & dahlia & souci \\
+\hline
+\end{NiceTabular}
+
+\begin{tabular}{SSSSSSSS} \toprule
+    {$m$} & {$\Re\{\underline{\mathfrak{X}}(m)\}$} & {$-\Im\{\underline{\mathfrak{X}}(m)\}$} & {$\mathfrak{X}(m)$} & {$\frac{\mathfrak{X}(m)}{23}$} & {$A_m$} & {$\varphi(m)\ /\ ^{\circ}$} & {$\varphi_m\ /\ ^{\circ}$} \\ \midrule
+    1  & 16.128 & +8.872 & 16.128 & 1.402 & 1.373 & -146.6 & -137.6 \\
+    2  & 3.442  & -2.509 & 3.442  & 0.299 & 0.343 & 133.2  & 152.4  \\
+    3  & 1.826  & -0.363 & 1.826  & 0.159 & 0.119 & 168.5  & -161.1 \\
+    4  & 0.993  & -0.429 & 0.993  & 0.086 & 0.08  & 25.6   & 90     \\ \midrule
+    5  & 1.29   & +0.099 & 1.29   & 0.112 & 0.097 & -175.6 & -114.7 \\
+    6  & 0.483  & -0.183 & 0.483  & 0.042 & 0.063 & 22.3   & 122.5  \\
+    7  & 0.766  & -0.475 & 0.766  & 0.067 & 0.039 & 141.6  & -122   \\
+    8  & 0.624  & +0.365 & 0.624  & 0.054 & 0.04  & -35.7  & 90     \\ \midrule
+    9  & 0.641  & -0.466 & 0.641  & 0.056 & 0.045 & 133.3  & -106.3 \\
+    10 & 0.45   & +0.421 & 0.45   & 0.039 & 0.034 & -69.4  & 110.9  \\
+    11 & 0.598  & -0.597 & 0.598  & 0.052 & 0.025 & 92.3   & -109.3 \\ \bottomrule
+\end{tabular}
+
+\end{document}

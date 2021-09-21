@@ -1,0 +1,207 @@
+\documentclass{article}
+\usepackage[letterpaper,margin=1in]{geometry} % choose page parameters suitably
+\usepackage{tabularx,ragged2e,siunitx}
+\newcolumntype{C}{>{\Centering\arraybackslash}X}
+\usepackage[skip=0.333\baselineskip]{caption} % optional
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{siunitx}
+%\sisetup{separate-uncertainty}
+\usepackage{mhchem}
+
+%\sisetup{per-mode = symbol}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%___________________________________________________________________________
+
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{multirow}
+
+
+
+\begin{document}
+\begin{table}
+\caption{Table with \texttt{tabularx}} \label{tab:tabularx}
+
+\begin{tabularx}{\linewidth}{@{} l *{6}{C}@{}}
+\toprule
+Material & \multicolumn{6}{c@{}}{Test} \\ 
+\cmidrule(l){2-7} 
+& \multicolumn{2}{c}{Impact at \SI{10}{\joule}} 
+& \multicolumn{2}{c}{Impact at \SI{14}{\joule}} 
+& \multicolumn{2}{c}{QSI} \\ 
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(l){6-7} 
+& $F_i$ & Load drop & $F_i$ & Load drop & $F_Q$ & Load drop \\ 
+& (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) \\
+\midrule
+LTHIN\textsubscript{LVI}    & 3.24 $\pm$ 0.02       & 19.75 $\pm$ 0.55       & 3.41 $\pm$ 0.25       & 22.80 $\pm$ 1.40       & 3.32     & Multiple     \\
+LV1\textsubscript{LVI}      & 3.19 $\pm$ 0.04       & 14.64 $\pm$ 2.55       & 3.24 $\pm$ 0.22       & 11.34 $\pm$ 4.46       & 3.10     & Multiple     \\
+LV2\textsubscript{LVI}      & 3.51 $\pm$ 0.15       & 8.17 $\pm$ 2.36        & 3.95 $\pm$ 0.51       & 10.80 $\pm$ 1.28       & None     & None  \\ 
+\bottomrule
+\end{tabularx}
+
+\bigskip\bigskip
+
+\caption{Table with \texttt{tabular}} \label{tab:tabular}
+\centering
+\begin{tabular}{@{} l *{6}{c} @{}}
+\toprule
+Material & \multicolumn{6}{c@{}}{Test} \\ 
+\cmidrule(l){2-7} 
+& \multicolumn{2}{c}{Impact at \SI{10}{\joule}} 
+& \multicolumn{2}{c}{Impact at \SI{14}{\joule}} 
+& \multicolumn{2}{c}{QSI} \\ 
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(l){6-7} 
+& $F_i$ & Load drop & $F_i$ & Load drop & $F_Q$ & Load drop \\ 
+& (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) \\
+\midrule
+LTHIN\textsubscript{LVI}    & 3.24 $\pm$ 0.02       & 19.75 $\pm$ 0.55       & 3.41 $\pm$ 0.25       & 22.80 $\pm$ 1.40       & 3.32     & Multiple     \\
+LV1\textsubscript{LVI}      & 3.19 $\pm$ 0.04       & 14.64 $\pm$ 2.55       & 3.24 $\pm$ 0.22       & 11.34 $\pm$ 4.46       & 3.10     & Multiple     \\
+LV2\textsubscript{LVI}      & 3.51 $\pm$ 0.15       & 8.17 $\pm$ 2.36        & 3.95 $\pm$ 0.51       & 10.80 $\pm$ 1.28       & None     & None  \\ 
+\bottomrule
+\end{tabular}
+
+\bigskip\bigskip
+
+\caption{Table with \texttt{tabular*}} \label{tab:tabular*}
+\setlength\tabcolsep{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l *{6}{c}}
+\toprule
+Material & \multicolumn{6}{c}{Test} \\ 
+\cmidrule(l){2-7} 
+& \multicolumn{2}{c}{Impact at \SI{10}{\joule}} 
+& \multicolumn{2}{c}{Impact at \SI{14}{\joule}} 
+& \multicolumn{2}{c}{QSI} \\ 
+\cmidrule{2-3} \cmidrule{4-5} \cmidrule{6-7} 
+& $F_i$ & Load drop & $F_i$ & Load drop & $F_Q$ & Load drop \\ 
+& (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) & (\si{\kilo\newton}) & (\%) \\
+\midrule
+LTHIN\textsubscript{LVI}    & 3.24 $\pm$ 0.02       & 19.75 $\pm$ 0.55       & 3.41 $\pm$ 0.25       & 22.80 $\pm$ 1.40       & 3.32     & Multiple     \\
+LV1\textsubscript{LVI}      & 3.19 $\pm$ 0.04       & 14.64 $\pm$ 2.55       & 3.24 $\pm$ 0.22       & 11.34 $\pm$ 4.46       & 3.10     & Multiple     \\
+LV2\textsubscript{LVI}      & 3.51 $\pm$ 0.15       & 8.17 $\pm$ 2.36        & 3.95 $\pm$ 0.51       & 10.80 $\pm$ 1.28       & None     & None  \\ 
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+\section{Plusminus alignment über die S Spalten Formatierung des si packages}
+
+
+\begin{table}[]
+\sisetup{separate-uncertainty}
+    \centering
+    \caption{Value of the force local maximums (F\textsubscript{i} and F\textsubscript{Q}) and magnitude of the associated load drops observed in the load-displacement curves of impacted and indented LTHIN\textsubscript{LVI}, LV1\textsubscript{LVI} and LV2\textsubscript{LVI} specimens, $\pm$ refers to the standard deviation between experiments.}
+    \label{Table3pD}
+    \begin{tabular}{c
+                    S[table-format=1.2(3)]
+                    S[table-format=2.2(3)]
+                    S[table-format=1.2(3)]
+                    S[table-format=2.2(3)]
+                    S[table-format=1.2]
+                    c}
+        \toprule
+        Material & \multicolumn{6}{c}{Test}                                                                          \\ \cmidrule{2-7} 
+        & \multicolumn{2}{c}{Impact at 10 J} & \multicolumn{2}{c}{Impact at 14 J} & \multicolumn{2}{c}{QSI} \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(l){6-7} 
+        & {F\textsubscript{i} (\si{\kilo\newton})}             & {Load drop (\%)}       & {F\textsubscript{i} (\si{\kilo\newton})}              & {Load drop (\%)}         & {F\textsubscript{Q} (\si{\kilo\newton})}      & {Load drop (\%)}   \\
+        \midrule
+        LTHIN\textsubscript{LVI}    & 3.24 \pm 0.02       & 19.75 \pm 0.55       & 3.41 \pm 0.25       & 22.80 \pm 1.40       & 3.32     & Multiple     \\
+        LV1\textsubscript{LVI}      & 3.19 \pm 0.04       & 14.64 \pm 2.55       & 3.24 \pm 0.22       & 11.34 \pm 4.46       & 3.10     & Multiple     \\
+        LV2\textsubscript{LVI}      & 3.51 \pm 0.15       & 8.17 \pm 2.36        & 3.95 \pm 0.51       & 10.80 \pm 1.28       & {None}     & None         \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{mhchem Package \textbackslash ce}
+
+\begin{table}[ht]
+
+\caption{Model Input Information: Materials}
+\sisetup{per-mode = symbol}
+\centering
+\begin{tabular}{c  c  c}
+\toprule
+Available Materials & Material Input Parameters & Description \\
+\midrule
+
+Fused Silica (delta eV = 9) & alpha & Avalanche Coefficient [\si{\cm\squared\per\joule}] \\
+Fused Silica (delta eV = 7.5) & delta eV & Material Band Gap [\si{\electronvolt}] \\
+\ce{GaAs} & me & Effective Electron Mass [\si{\kilogram}] \\
+\ce{ZnSe} & n0 & Linear Refractive Index \\
+\ce{Ge} & n2 & Non-Linear Refractive Index \\
+\ce{HfO_2} & T & Effective Decay Constant [fs] \\
+\ce{TiO_2} & & \\
+\ce{Ta_2O_5} & & \\
+\ce{Al_2O_3} & & \\
+\ce{SiO_2} & & \\
+
+\bottomrule
+\end{tabular}
+\label{table:MaterialInputs}
+\end{table}
+
+%___________________________________________________________________________
+
+
+
+\section{Linienverschiebung}
+
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+
+\begin{table}
+\begin{tabular}{ p{8em}  r  r  l }  
+\hline      
+          & Total     & Average   & Unit \T\B  \\    \hline      
+Area 1    & 419773    &   9.15    &  m\textsuperscript{2} \T \\      
+Volume 1  & 0         &      0    &  m\textsuperscript{3} \B \\    \hline  
+\end{tabular}
+\end{table}
+
+
+
+
+
+%\documentclass[a4paper]{article}
+%
+%\usepackage{longtable}
+%\usepackage{rotating}
+%\usepackage{array}
+%\usepackage{multicol}
+%\usepackage{multirow}
+
+
+\setlength\extrarowheight{3pt}
+
+\begin{longtable}[c]{|c|cc|c|c|c|c|}
+\cline{4-7}
+\multicolumn{2}{c}{}& & \multicolumn{4}{c|}{Var Y} \\ 
+\cline{4-7}
+\multicolumn{2}{c}{}& & 
+\rotatebox{90}{Cat Y1\ }&
+\rotatebox{90}{Cat Y2\ }&
+\rotatebox{90}{Cat Y3\ }&
+\rotatebox{90}{Cat Y4\ }\\
+    \hline 	
+    			\multirow{6}{*}{\begin{sideways}Var X\end{sideways}}  	&   \multicolumn{1}{|c}{\multirow{2}{*}{Cat X1}} 	& \multicolumn{1}{c|}{N}	& 4 				&  			  	&  			&  \\
+               	\multicolumn{1}{|c|}{}        													&               																& \multicolumn{1}{c|}{\%} & 100.00\% &  			  	&  			&  \\
+              	\cline{2-7}																  			& \multicolumn{1}{|c}{\multirow{2}{*}{Cat X2}}  	& \multicolumn{1}{c|}{N}  	&  				& 7 			  	& 3 				&  \\
+             	\multicolumn{1}{|c|}{}        													&                																& \multicolumn{1}{c|}{\%}	&  				& 70.00\% 	& 30.00\% 	&  \\
+    			\cline{2-7} 																			&	\multicolumn{1}{|c}{\multirow{2}{*}{Cat X3}} 	& \multicolumn{1}{c|}{N} 	&  				& 25 			& 				& 10 \\
+   				\multicolumn{1}{|c|}{}        													&                																&	\multicolumn{1}{c|}{\%}	&  				& 71.43\% 	&  				& 28.57\% \\
+  \hline		
+  				\multicolumn{2}{|c}{\multirow{2}{*}{Total}} 						&	\multicolumn{1}{c|}{N} 										& 4 										& 23 			& 3 				& 10    \\
+    			\multicolumn{2}{|c}{}                 											&	\multicolumn{1}{c|}{\%}										& 10.00\% 							& 57.50\% 	& 7.50\% 	& 2.50\% \\
+   \hline
+\end{longtable} 
+
+\end{document}
+
+				

@@ -1,0 +1,356 @@
+
+@Article{digitwin_prozessmodellierung,
+  author       = {Pfeiffer, B. Markus and Bozek, Ewa and Oppelt, Mathias and Kempf, Jörg},
+  date         = {2020-01-15},
+  journaltitle = {Process Vogel},
+  title        = {Digitale Zwillinge und Prozessmodellierung – wie Sie davon profitieren können},
+  url          = {https://www.process.vogel.de/digitale-zwillinge-und-prozessmodellierung-wie-sie-davon-profitieren-koennen-a-896481/},
+  urldate      = {2020-08.20},
+}
+
+@Article{diedreiachsen,
+  author       = {Metzger, Philippe},
+  date         = {2015-11-10},
+  journaltitle = {KEM Konstruktion},
+  title        = {Entdecken was dahinter steckt},
+  url          = {https://kem.industrie.de/sensoren/entdecken-was-dahintersteckt/#slider-intro-1},
+  keywords     = {4.0,},
+}
+
+@Article{cloudservice_heise,
+  author       = {Minnich, Sebastian},
+  date         = {2020-08-24},
+  journaltitle = {heise},
+  title        = {Die Vorteile und Nachteile des Cloud-Computing},
+  url          = {https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041},
+}
+
+@Book{Brauckmann2018,
+  author    = {Brauckmann, Otto},
+  title     = {Digitale Revolution in der industriellen Fertigung – Denkansätze -},
+  isbn      = {978-3-662-58037-0},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2018},
+}
+
+@Article{lab40,
+  author       = {Accenture},
+  date         = {2019-02-12},
+  journaltitle = {CHEManager},
+  title        = {Labor 4.0 – digitale Transformation erfasst Forschung und Entwicklung},
+  url          = {https://www.chemanager-online.com/themen/strategie/labor-40-digitale-transformation-erfasst-forschung-und-entwicklung},
+  urldate      = {2020-09-26},
+}
+
+@Book{Busch2015,
+  author    = {Busch, Rudolf},
+  title     = {Elektrotechnik und Elektronik - Für Maschinenbauer und Verfahrenstechniker},
+  isbn      = {978-3-658-09675-5},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2015},
+}
+
+@Online{db9,
+  author = {Infotip Service GmbH},
+  date   = {2020-10-10},
+  title  = {RS232},
+  url    = {https://kompendium.infotip.de/rs-232-die-serielle-schnittstelle.html},
+}
+
+@Online{wasistrs232,
+  author  = {Luber, Stefan AND Donner, Andreas},
+  date    = {2019-03-21},
+  title   = {Was ist RS-232?},
+  url     = {https://www.ip-insider.de/was-ist-rs-232-a-807547/},
+  urldate = {2020-10-10},
+}
+
+@Article{bt5,
+  author       = {Cross, Jason},
+  date         = {2018-03-21},
+  journaltitle = {Computerwoche Voice of Digital},
+  title        = {Bluetooth-Standard: Mehr Reichweite, mehr Speed},
+  url          = {https://www.computerwoche.de/a/mehr-reichweite-mehr-speed,3544575},
+  urldate      = {2020-10-10},
+}
+
+@Online{bti40,
+  author  = {Andrea, Gillhuber},
+  date    = {2019-05-30},
+  title   = {Bluetooth in Industrie 4.0},
+  url     = {https://www.industrial-production.de/ki---datenanalyse/bluetooth-in-industrie-4-0.htm},
+  urldate = {2020-10-10},
+}
+
+@InProceedings{kodosky,
+  author    = {J. Kodosky and J. MacCrisken and G. Rymar},
+  booktitle = {Proceedings 1991 IEEE Workshop on Visual Languages},
+  title     = {Visual programming using structured data flow},
+  doi       = {10.1109/WVL.1991.238853},
+  pages     = {34,35,36,37,38,39},
+  publisher = {IEEE Computer Society},
+  url       = {https://doi.ieeecomputersociety.org/10.1109/WVL.1991.238853},
+  address   = {Los Alamitos, CA, USA},
+  keywords  = {instruments;laboratories;computer languages;automation;testing;software systems;signal generators;frequency;costs;lifting equipment},
+  month     = {oct},
+  year      = {1991},
+}
+
+@Book{structured,
+  title     = {Structured Programming},
+  editor    = {Dahl, O. J. and Dijkstra, E. W. and Hoare, C. A. R.},
+  isbn      = {0122005503},
+  publisher = {Academic Press Ltd.},
+  abstract  = {In recent years there has been an increasing interest in the art of computer programming, the conceptual tools available for the design of programs, and the prevention of programming oversights and error. The initial outstanding contribution to our understanding of this subject was made by E. W. Dijkstra, whose Notes on Structured Programming form the first and major section of this book. They clearly expound the reflections of a brilliant programmer on the methods which he has hitherto unconsciously applied; there can be no programmer of the present day who could not increase his skills by a study and conscious application of these principles.In the second monograph I have tried to describe how similar principles can be applied in the design of data structures. I have suggested that in analysing a problem and groping towards a solution, a programmer should take advantage of abstract concepts such as sets, sequences, and mappings; and judiciously postpone decisions on representation until he is constructing the more detailed code of the program. The monograph also describes a range of useful ideas for data representation, and suggests the criteria relevant for their selection.The third monograph provides a synthesis of the previous two, and expounds the close theoretical and practical connections between the design of data and the design of programs. It introduces useful additional methods for program and data structuring which may be unfamiliar to many programmers. The examples show that structured programming principles can be equally applied in "bottom-up" as in "top-down" program design. The original inspiration, insight, and all the examples were contributed by O.-J. Dahl; I have only assembled the material, and added some additional explanations where I found it difficult to understand.},
+  address   = {GBR},
+  year      = {1972},
+}
+
+@Online{blockdiagramm_frontpanel,
+  author  = {National Instruments},
+  date    = {2020-10-13},
+  title   = {Grundlagen zur LabVIEW-Umgebung},
+  url     = {https://www.ni.com/getting-started/labview-basics/d/environment},
+  urldate = {2020-10-13},
+}
+
+@Book{hughes2010real,
+  author    = {Hughes, J.M.},
+  title     = {Real World Instrumentation with Python: Automated Data Acquisition and Control Systems},
+  isbn      = {9781449396633},
+  publisher = {O'Reilly Media},
+  url       = {https://books.google.de/books?id=MAdNTvLNrJsC},
+  year      = {2010},
+}
+
+@Online{pythonvslabview,
+  author  = {Jones, Jason},
+  date    = {2020-03-01},
+  title   = {Replacing LabVIEW with Python},
+  url     = {http://forembed.com/replacing-labview-with-python-0.html},
+  urldate = {2020-10-15},
+}
+
+@Online{ascii,
+  author = {Przywóski, Jakub},
+  date   = {2015},
+  title  = {ASCII Table},
+  url    = {https://python-reference.readthedocs.io/en/latest/docs/str/ASCII.html},
+}
+
+@Article{pera,
+  author       = {Geiger, Marcus},
+  date         = {2018-04-03},
+  journaltitle = {Sichere Industrie},
+  title        = {Purdue Model: Wie Sie komplizierte Automatisierungsnetze anschaulich überblicken können},
+  url          = {https://www.sichere-industrie.de/purdue-model-wie-sie-komplizierte-automatisierungsnetze-anschaulich-ueberblicken-koennen/},
+  urldate      = {2020-11-07},
+}
+
+@Misc{pera_modell,
+  author  = {Erno Pentzin},
+  date    = {2013-02-10},
+  title   = {PERA Doel},
+  url     = {https://texample.net/tikz/examples/pera-model/},
+  urldate = {2020-11-08},
+}
+
+@Article{ics_kompendium,
+  author  = {Bundesamt für Sicherheit in der Informationstechnik},
+  date    = {2013},
+  title   = {ICS-Security-Kompendium},
+  url     = {https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ICS/ICS-Security_kompendium_pdf.pdf?__blob=publicationFile},
+  urldate = {2020-11-08},
+}
+
+@Online{zeitreihenformatierung,
+  author  = {National Instruments},
+  date    = {2020-12-24},
+  title   = {Zeitreihenformattierung},
+  url     = {https://zone.ni.com/reference/en-XX/help/371361R-01/glang/codes_for_time_format_str/},
+  urldate = {2020-11-17},
+}
+
+@Article{processisa95,
+  author       = {PROCESS},
+  date         = {2006-09-18},
+  journaltitle = {Process Vogel},
+  title        = {ISA-95 schließt letzte Lücke zwischen Geschäfts- und Produktions-Prozessen},
+  url          = {https://www.process.vogel.de/isa-95-schliesst-letzte-luecke-zwischen-geschaefts-und-produktions-prozessen-a-60348/},
+  urldate      = {2020-11-24},
+}
+
+@Online{isa_s95,
+  author  = {ISA-S95},
+  date    = {2020-11-23},
+  title   = {ISA-S95},
+  url     = {https://isa-95.com/isa-95-enterprise-control-systems/},
+  urldate = {2020-11-23},
+}
+
+@Book{sqlnosql,
+  author    = {Meier, Andreas AND Kaufmann, Michael},
+  title     = {SQL- and NoSQL-Datenbanken},
+  isbn      = {978-3-662-47664-2},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2016},
+}
+
+@Article{bigdata,
+  author       = {Luber, Stefan AND Litzel, Nico},
+  date         = {2018-02-15},
+  journaltitle = {BigData Insider},
+  title        = {Was ist ein Datalake?},
+  url          = {https://www.bigdata-insider.de/was-ist-ein-data-lake-a-686778/},
+}
+
+@Online{BigData,
+  author = {Gartner Group},
+  date   = {2021-01-06},
+  title  = {Big Data},
+  url    = {https://www.gartner.com/en/information-technology/glossary/big-data},
+}
+
+@Article{cloudcomputing,
+  author       = {Minnich, Sebastian},
+  date         = {2017-05-11},
+  journaltitle = {heise},
+  title        = {Vor- und Nachteile des Cloudcomputing},
+  url          = {https://www.heise.de/download/blog/Die-Vorteile-und-Nachteile-des-Cloud-Computing-3713041},
+  urldate      = {2020-08-25},
+}
+
+@Article{dbmserklaert,
+  author       = {Hosting-Technik},
+  date         = {2020-05-18},
+  journaltitle = {IONOS},
+  title        = {Datenbankmanagementsystem (DBMS) erklärt},
+  url          = {https://www.ionos.de/digitalguide/hosting/hosting-technik/datenbankmanagementsystem-dbms-erklaert/},
+  urldate      = {2020-08-25},
+}
+
+@Article{cloudcomputing_insider,
+  author       = {Luber, Stefan AND Karlstetter, Florian},
+  date         = {2018-03-16},
+  journaltitle = {Cloudcomputing Insider},
+  title        = {Was ist Database as a Service (DBaaS)?},
+  url          = {https://www.cloudcomputing-insider.de/was-ist-database-as-a-service-dbaas-a-692502/},
+  urldate      = {2020-08-25},
+}
+
+@Online{digitale_transformation,
+  author  = {Technikum-Wien-Academy},
+  date    = {2020-08-25},
+  title   = {Was ist digitale Transformation?},
+  url     = {https://academy.technikum-wien.at/ratgeber/digitale-transformation-was-ist-das/},
+  urldate = {2020-08-25},
+}
+
+@Book{SensorTechnologien,
+  author    = {Marcus Wolff},
+  title     = {Sensor-Technologien: Band 2: Geschwindigkeit, Durchfluss, Strömungsfeld},
+  doi       = {https://doi.org/10.1515/9783110477849},
+  isbn      = {978-3-11-047784-9},
+  publisher = {De Gruyter Oldenbourg},
+  url       = {https://www.degruyter.com/view/title/521081},
+  address   = {Berlin, Boston},
+  year      = {2017-12-18},
+}
+
+@Book{Wiegleb2016,
+  author    = {Wiegleb, Gerhard},
+  title     = {Gasmesstechnik in Theorie und Praxis - Messgeräte, Sensoren, Anwendungen},
+  isbn      = {978-3-658-10687-4},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2016},
+}
+
+@Book{Tränkler2015,
+  author    = {Tränkler, Hans-Rolf AND Reindl, Leonhard M.},
+  title     = {Sensortechnik - Handbuch für Praxis und Wissenschaft},
+  isbn      = {978-3-642-29942-1},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2015},
+}
+
+@Book{Stiess2008,
+  author    = {Stiess, Matthias},
+  title     = {Mechanische Verfahrenstechnik - Partikeltechnologie 1 -},
+  isbn      = {978-3-540-32552-9},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2008},
+}
+
+@Article{ELN_laborjournal,
+  author       = {Mäder, Alexander},
+  date         = {2018-03},
+  journaltitle = {Laborjournal},
+  title        = {Überflüssiger Papierkram},
+  pages        = {S. 44-45},
+  url          = {http://www.laborjournal-archiv.de/epaper/LJ_18_03/44/},
+  urldate      = {202-01-24},
+}
+
+@Book{HandbuchfuerLabview,
+  author    = {Mütterlein, Bernward},
+  title     = {Handbuch für die Programmierung mit LabVIEW - mit Studentenversion LabVIEW 2009},
+  isbn      = {978-3-827-42338-2},
+  publisher = {Springer-Verlag},
+  address   = {Berlin Heidelberg New York},
+  year      = {2009},
+}
+
+@Online{db9-male-female,
+  author = {Weiß, Olga},
+  date   = {2020-06-23},
+  title  = {Pinbelegung und Verwendung des RS-232 DB9},
+  url    = {https://www.eltima.com/de/article/9-pin-serial-port.html},
+}
+
+@Article{ki_fuer_mittelstaendische,
+  author       = {Litzel, Nico and Rüdiger, Ariane},
+  date         = {2020-10-19},
+  journaltitle = {BigData Insider},
+  title        = {KI für mittelständische Unternehmen},
+  url          = {https://www.bigdata-insider.de/ki-fuer-mittelstaendische-unternehmen-a-972019/},
+  urldate      = {2021-01-26},
+}
+
+@Book{machine_learning_kompakt,
+  author    = {Burkov, Andriy},
+  title     = {Machine Learning Kompakt},
+  edition   = {1.},
+  isbn      = {978-3-9-5845-9},
+  publisher = {mitp Verlag},
+  address   = {Frechen},
+  year      = {2019},
+}
+
+@Article{reinforced_learning_go,
+  author       = {Lemke, Christian},
+  date         = {2019-10-18},
+  journaltitle = {Digitale Welt},
+  title        = {Mit Reinforcement Learning auf dem Weg zur Allgemeinen KI},
+  url          = {https://digitaleweltmagazin.de/2019/10/18/mit-reinforcement-learning-auf-dem-weg-zur-allgemeinen-ki/},
+}
+
+@Misc{intellipaat_unsupervised,
+  author = {Intellipaat},
+  date   = {2021-01-27},
+  title  = {Supervised Learning vs Unsupervised Learning vs Reinforcement Learning},
+  url    = {https://intellipaat.com/blog/supervised-learning-vs-unsupervised-learning-vs-reinforcement-learning/},
+}
+
+@Software{tensorflow_framework,
+  author  = {TensorFlow},
+  date    = {2021-01-27},
+  title   = {Das neuronale strukturierte Lern-Framework},
+  url     = {https://www.tensorflow.org/neural_structured_learning/framework},
+  urldate = {2021-01-27},
+}

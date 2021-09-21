@@ -1,0 +1,19 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'SW_Daniel_Ludwig-Masterthesis-28022021.blg'
+[147] biber-MSWIN64:340> INFO - === 
+[197] Biber.pm:415> INFO - Reading 'SW_Daniel_Ludwig-Masterthesis-28022021.bcf'
+[381] Biber.pm:952> INFO - Found 52 citekeys in bib section 0
+[401] Biber.pm:4340> INFO - Processing section 0
+[417] Biber.pm:4531> INFO - Looking for bibtex format file 'Masterthesis_Literaturverzeichnis.bib' for section 0
+[492] bibtex.pm:1689> INFO - LaTeX decoding ...
+[572] bibtex.pm:1494> INFO - Found BibTeX data source 'Masterthesis_Literaturverzeichnis.bib'
+[574] Utils.pm:395> WARN - Possible typo (case mismatch) between datasource keys: 'BigData' and 'bigdata' in file 'Masterthesis_Literaturverzeichnis.bib'
+[723] Utils.pm:395> WARN - legacy month field 'oct' in entry 'kodosky' is not an integer - this will probably not sort properly.
+[808] Utils.pm:395> WARN - ISBN '978-3-9-5845-9' in entry 'machine_learning_kompakt' is invalid - run biber with '--validate_datamodel' for details.
+[893] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[894] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[894] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[894] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[959] bbl.pm:654> INFO - Writing 'SW_Daniel_Ludwig-Masterthesis-28022021.bbl' with encoding 'UTF-8'
+[986] bbl.pm:757> INFO - Output to SW_Daniel_Ludwig-Masterthesis-28022021.bbl
+[992] Biber.pm:128> INFO - WARNINGS: 3

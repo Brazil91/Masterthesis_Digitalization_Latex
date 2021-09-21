@@ -1,0 +1,437 @@
+\addsec{Anhang}
+%\addcontentsline{toc}{section}{Anhang}
+\pagenumbering{roman}
+%\vspace{-14pt}
+
+\addsubsec{Einleitung}
+
+\begin{table}[h!] % Parameter
+\caption{Versuchsparameter der MVT Geräte und Anlagen} \label{tab:Versuchsparameter}
+\begin{center}
+\vspace{-4pt}
+\begin{NiceTabular}{r|c|ccr|c|c}%[hvlines-except-corners=NW]
+MVT Versuchsstände 	&	diskret 	& konti. & &MVT Versuchsstände 	&	diskret 	& konti. \\ \cline{1-3}  \cline{5-7}
+\Block{1-7}{} 						& 						& &&&& \\[-13pt] \cline{1-3}  \cline{5-7}
+Kuchenfiltration & &&& \makecell{Hochdruckhomo-\\genisator (HDH)}  \\ \cline{1-3}  \cline{5-7}
+Gewicht 							& & \cmark && Fluid1 & \cmark &\\
+Druck 								& & \cmark && Fluidvolumen1& \cmark &\\
+Suspensionskonzentration 	& \cmark &&&Fluid2& \cmark & \\
+Suspensionsvolumen 			& \cmark &&&Fluidvolumen2& \cmark &\\
+Filterkuchendicke 				& \cmark &&&Disperer RPM& \cmark &   \\
+Filterkuchendurchmesser		& \cmark &&&Dispersionsdauer& \cmark &\\
+Filterkuchenvolumen 			& \cmark &&&Druck& \cmark &\\
+Filterkuchenfeuchtegehalt 	& \cmark &&&HDH Dauer& \cmark &\\
+Filternutschen Nr. 				& \cmark &&&Temperatur& \cmark & \\
+Filterporösität 					& \cmark &&&Partikelgrößenverteilung& \cmark & \\
+\Block{1-7}{} 						& 						& &&&& \\
+
+Gas-Feststoff Wirbelschicht & &&& ZickZack Sichten && \\  \cline{1-3}  \cline{5-7}
+$\mathrm{Volumenstrom_{Luft}}$ & & \cmark && Feststoff & \cmark & \\
+Druck & & \cmark && Gesamtmasse & \cmark & \\
+Festbetthöhe & \cmark & && Masse Grobgut&\cmark &\\
+Schüttgutmasse & \cmark & && Masse Feingut&& \\
+Partikeldichte & \cmark & && \makecell{ Vibrationsintensität der\\ Vibrationsförderung} & \cmark &\\
+Wirbelschichthöhe = f(p) & \cmark &  \cmark && Volumenstrom & \cmark &  \\
+Wirbelschichtporösität = f(p) & \cmark &  \cmark && Förderklappenstellung & \cmark & \\
+Sauterdurchmesser & \cmark & \Block{1-5}{} &&& \\
+Festbettporösität & \cmark & \Block{1-5}{} &&&& \\
+\Block{1-7}{} 				& 						& &&&& \\
+
+Rührversuch &&&& Walzenmühle && \\  \cline{1-3} \cline{5-7}
+Fluid & \cmark  &&& Feststoff & \cmark & \\
+Fluiddichte & \cmark &&& Masse & \cmark & \\
+dynamische Viskosität & \cmark &&& Walzengeometrie (Profil) & \cmark & \\
+Rührer & \cmark &&& Walzenspalt & \cmark & \\
+Rührereintauchtiefe & \cmark &&& Umfangsgeschwindigkeit & \cmark & \\
+Strombrecher & \cmark & \Block{1-5}{} &&&& \\
+RPM & \cmark & \Block{1-5}{} &&&& \\
+Drehmoment &  & \cmark & \Block{1-4}{} &&& \\
+
+%Kuchenfiltration & \xmark 			& \textcolor{red}{\xmark} \\
+
+\end{NiceTabular}
+\end{center}
+\end{table}
+
+%%==================================================================================
+%\newpage
+%\begin{figure}[]
+%\centering
+%\includegraphics[width=0.8\textwidth]{Bilder/speicherbedarf_ascii-binär.jpg}
+%\caption{Speicherbedarfsvergleich ASCII/binär \cite[S. 44]{speicherbedarf_vergleich_binär-ascii}}
+%\label{fig:speicherbedarf_vergleich}
+%\end{figure}
+\FloatBarrier
+\addsubsec{Ergänzung des Abschnitts Dehnungsresistive Sensoren}
+
+an dieser Stelle ist anzumerken, dass die Variablenbezeichnung nicht vollständig mit dem Hauptdokument übereinstimmen und auch nicht den DIN Normen entsprechen.\\
+
+Die Drucksensoren mittels DMS sind dehnungsresistive Sensoren. Das Messprinzip beruht auf die Änderung des elektrischen Widerstandes R, eines elektrisch leitenden Werkstoffs, als Folge einer mechanischen Verformung. Ein zylinderförmiger Werkstoff, charakterisiert durch die Ausgangslänge $l_0$, Ausgangsquerschnitt $A_0$ und dem spezifischem elektrischem Widerstand $\rho_{el}$, hat einen elektrischen Widerstand R gemäß folgender Gleichung \cite[S. 4 ff.]{Wolff2016}:
+
+\begin{align}
+R=\rho_{el} \cdot \frac{l_0}{A_0}
+\end{align}
+
+Um die relative Widerstandsänderung $\Delta R / R$ zu berechnen wird das totale Differenzial (Gleichung \ref{eq:totaldif_dms}) aus Gleichung \ref{eq:zyl_wiederstand} gebildet.
+
+
+\begin{align}  
+\label{eq:totaldif_dms}
+	dR &=\frac{\partial R}{\partial \rho_{el}} \: d\rho_{el}+\frac{\partial R}{\partial l_0} \: dl_0+\frac{\partial R}{\partial A} \: dA \\[1em]
+		&= \frac{l_0}{A} ~ d\rho_{el} + \frac{\rho_{el}}{A} \: dl_0 - \frac{\rho_{el} \cdot l_0}{A^2} \: dA \\[1em]
+		&= R \cdot ( \frac{d\rho_{el}}{\rho_{el}} + \frac{dl_0}{l_0} - \frac{dA}{A} )
+\end{align}
+
+
+Ersetzt man das Infinitisimal $d$ durch eine eine größere Schrittweite $\Delta$, unter der Bedingung dass $\Delta \rho \ll \rho,\, \Delta l_0 \ll l_0, \Delta A \ll A$, dann erhält man Gleichung \ref{eq:delta}. 
+
+\begin{align}
+% \label{eq:delta}
+\frac{\Delta R}{R} = \frac{\Delta \rho_{el}}{\rho_{el}} + \frac{\Delta l}{l_0} - \frac{\Delta A}{A_0}
+\end{align}
+
+Die geometrische Verformung wird durch die beiden letzten Terme repräsentiert. Die Dehnung $\varepsilon$ ersetzt $\Delta l / l_0$ und der Term $\Delta A/A$ wird durch die Querkontraktion ($\varepsilon_Q = \frac{\Delta D}{D_0} = - \nu \cdot \varepsilon$), mit der Querkontraktionszahl (Poisson-Konstante) $\nu$, beschrieben und führt zu der Lösung der Gleichung (\ref{eq:querkontraktion}) .
+
+%\begin{equation}
+ \begin{align}
+\frac{\Delta A}{A} &= \frac{\frac{\pi}{4} \cdot \bigl((D+\Delta D)^2-D^2 \bigr)}{\frac{\pi}{4} \cdot D^2}  \\[0.7em]
+&= \frac{2D \cdot \Delta D + (\Delta D)^2}{D^2} \\[0.7em]
+&\approx \frac{2 \Delta D}{D} \\[0.7em]
+&=2\varepsilon_Q = -2 \cdot \nu \cdot \varepsilon %\label{eq:querkontraktion}
+\end{align}
+%\end{equation}
+
+Durch Einsetzen der Gleichung (\ref{eq:querkontraktion}) und der Dehnung $\varepsilon$ in die Gleichung (\ref{eq:delta}) erhält man:
+
+\begin{align}
+\label{eq:wiederstand_substi}
+\frac{\Delta R}{R} =(1+2 \cdot \nu) \cdot \varepsilon + \frac{\Delta \rho_{el}}{\rho_{el}}
+\end{align}
+
+Der Term $\frac{\Delta \rho_{el}}{\rho_{el}}$ ist der sog. \glqq piezoresistive Effekt\grqq , der bei metallischen Leitern vernachlässigbar ist, jedoch bei Halbleitern überwiegt. 
+
+
+\begin{figure}[h!]
+\centering
+\caption{Kenndaten von Kapazitiven und piezoresistenten Drucksensoren \cite[S. 472 ff.]{Tränkler2015}}
+\includegraphics[width=1\textwidth]{Bilder/piezo_kapa.jpg}
+\label{tab:piezo_kapa} 
+\end{figure}
+
+\FloatBarrier
+\addsubsec{Anhang des Abschnitts Datenverwaltung im Stand der Technik}
+
+\begin{figure}[ph!]
+\centering
+\includegraphics[width=0.9\textwidth]{Bilder/Hierarchische_Gliederung_eines_ICS_gemäß_ICS-Kompendium.jpg}
+\vspace{0em}
+\captionof{figure}{Hierarchische Gliederung eines ICS, gemäß ICS-Kompendium des Bundesamtes für Sicherheit in der Informationstechnik \cite[S. 18]{ics_kompendium}}\label{fig:Hierarchische_Gliederung_gem_ICS}
+\end{figure}
+
+\begin{figure}[ph!]
+\centering 
+\includegraphics[width=1\textwidth]{Bilder/processsegmentinformationtype.jpg}
+\caption[Ausschnitt der \textit{ProcessSegment} XSD der B2MML-V0600-ProcessSegment.xsd]{Ausschnitt der \textit{ProcessSegment} XSD der B2MML-V0600-ProcessSegment.xsd}
+\label{fig:processsegment}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\FloatBarrier
+\pagebreak
+\addsubsec{Anhang der Konzeptentwicklung}
+
+\begin{minipage}[][][t]{1\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{Bilder/speicherbedarf_ascii-binär.jpg}
+\captionof{figure}{Speicherbedarfsvergleich ASCII/binär \cite[S. 44]{speicherbedarf_vergleich_binär-ascii}}
+\label{fig:speicherbedarf_vergleich}
+\end{minipage}
+
+\begin{table}[h!]
+\caption{Labordatenstrukturdarstellung, angelehnt an ISA-S95 und B2MML}\label{tab:Labordatenstrukturdarstellung}
+\vspace{1em}
+\begin{tabularx}{1\textwidth}{XXX}
+100\_Informations & 200\_ProcessEngineering & 300\_Trials \\ \toprule[2pt] \addlinespace
+
+101\_PrincipalsPersonel\-Information & 201\_MechUnitOperations & 301\_TrialPersonalInformation \\ \midrule
+
+102\_SupervisorPersonel\-Information & 202\_ThermalUnitOperations & 302\_TrialDevices \\ \midrule
+
+103\_GroupInformations & 203\_ChemicalUnitOperations & 303\_Universal\-DeviceDatas \\ \midrule
+
+104\_DeviceInformations & 204\_FoodProcessing\-UnitOperations & 304\_UnitOperation\-TrialDatas \\ \midrule
+
+105\_Standard\-Operating\-Procedures & 205\_Enviromental\-Processing\-UnitOperations & 305\_StandaloneDevice\-ProcessDatas \\ \midrule
+106\_MaterialSafetySheets &  &  \\ \midrule
+
+107\_DeviceManuals &  &  \\ \midrule
+
+108\_Components\-Geometry\-datas &  &  \\ \bottomrule[2pt]
+\end{tabularx} 
+\end{table}
+
+
+\begin{figure}[p!] %[htbp!] 
+\centering
+\includegraphics[width=1.05\textwidth]{Bilder/DB/200_ProcessEngineering.pdf}
+\vspace{0em}
+ \caption[200\-ProcessEngineering, angelehnt an ISA-S95 und B2MML]{200\-ProcessEngineering, angelehnt an ISA-S95}\label{fig:200process}
+\end{figure}
+
+
+\begin{figure}[p!] %[htbp!] 
+\centering
+\includegraphics[width=1\textwidth]{Bilder/DB/300_Trials.pdf}
+\vspace{0em}
+ \caption[300\_Trials, angelehnt an ISA-S95 und B2MML]{300\_Trials, angelehnt an ISA-S95}\label{fig:300trials}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[p!] %[htbp!] 
+\vspace{-2em}
+\includegraphics[width=0.9\textwidth]{Bilder/DB/Dataflow_sql_db.pdf}
+\vspace{-0.5em}
+\caption[Abstrakte Dataflow Darstellung einer potentiellen SQL DB]{Abstrakte Dataflow Darstellung einer potentiellen SQL DB}\label{fig:Dataflow_sql_db} \vspace{1em}
+
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\vspace{-3em}
+\includegraphics[width=1\textwidth]{Bilder/DB/sql_Dataflow__lot_info.pdf}
+\vspace{-3em}
+ \caption[potentieller SQL Dataflow (Abstraktionsebenen gemix)]
+{potentieller SQL Dataflow (Abstraktionsebenen gemix)}\label{fig:mixed_abstraction}
+\end{figure}
+
+
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\vspace{-4em}
+\includegraphics[width=1\textwidth]{Bilder/sql_unterste_abstraktionsebene.pdf}
+\vspace{-3em}
+ \caption[Unterste Abstraktionsebene der SQL Datenstruktur]
+{Unterste Abstraktionsebene der SQL Datenstruktur}\label{fig:sql_explizit}
+\end{figure}
+
+
+
+\pagebreak
+
+
+
+
+
+
+
+%\newpage
+
+
+
+
+\FloatBarrier
+\newpage
+\addsubsec{Machine Learning}
+
+Einige Algorithmen müssen angelernt werden (\textit{engl. \textbf{supervised} or \textbf{semi-supervised}}), z.B. das vom Google-Brain-Team entwickelte open-source Modell, Tensor Flow \cite{tensorflow_framework}. Andere werden nicht angelernt und generieren Ihren Algorithmus autonom (\textit{engl. \textbf{unsupervised}}; vgl. \ref{fig:supervised_machinelearning} im Anhang). \textbf{Supervised Learning}  (vgl. Abbildung \ref{fig:supervised_machinelearning} im Anhang) bedeutet, dass Datensätze vorgegeben werden und zugleich deren Lösung bzw. Klassifizierungen. Anhand des dadurch generierten Algorithmus werden unbekannte Datensätze klassifiziert. Je nach verwendetem Algorithmus können Klassifizierungen binär wie Spam, nicht Spam; Mann, Frau oder Multi-Class-Klassifizierungen, wie z.B. Porsche, Mercedes, VW, .... sein. \textbf{Semi-Supervised Learning} Algorithmen verändern ihren angelernt Algorithmen, bzw. können Ihren Algorithmus, anhand der unvalidierten Daten, die sie nach dem anlernen erhalten, optimieren. KI Algorithmen benötigen große, Datenmengen. Einfache KI's benötigen zusätzlich strukturierte Daten, damit ist die Verfügbarkeit der Daten in Datenbanken gemeint. Die neusten, komplexen \cite{unstrukturierte_daten_ki} maschine learning Algorithmen können auch mit unstrukturierten Daten verwertbare Ergebnisse generieren, doch es gilt stets GIGO, \glqq garbage in, garbage out!\grqq{} Die Güte der Ergebnisse einer KI wird durch die Güte der Ausgangsdaten bestimmt, demnach ist die Wahrscheinlichkeit mit strukturierten Daten ein sinnvolles, aussagekräftiges Ergebnis zu erzielen wahrscheinlich höher.
+Es existiert noch eine vierte Kategorie, die \textbf{Reinforced Learning} Algorithmen. Diese Algorithmen unterscheiden sich von den unsupervised Algorithmen in der Art, dass sie mit einer Umgebung (\textit{engl. environment}) interagieren und dadurch lernen \cite[S. 15 f.]{machine_learning_kompakt}. Als Beispiele können Roboter oder KI in einem Spiel wie Schach, Go (die asiatische, komplexere Schachvariante), aber auch in Videospielen genannt werden \cite{reinforced_learning_go}.
+
+Zu den \textbf{Unsupervised Lerning} Algorithmen zählen z.B. die Regressionsanalyse oder die k-mean Clusteranalyse \cite[S. 114]{machine_learning_kompakt}. Um bei \textbf{supervised} oder \textbf{semi-supervised} verwertbare Ergebnisse zu erhalten, wird in vielen Anwendungsfällen eine \glqq große\grqq{} Datenbasis benötigt. Des Weiteren ist die Güte der Daten entscheidend für die Güte der Ergebnisse. Weniger komplexe KI Algorithmen benötigen strukturierte Daten, wofür sich Datenbankmanagementsysteme (DBMS) auszeichnen.\\
+
+   \begin{figure}[ph!] % 
+%\captionsetup{position=top}
+\centering
+     \subfloat[Supervised Machine Learning][Supervised Machine Learning \label{fig:supervised_machinelearning}]{%
+       \hspace{0em}
+       \includegraphics[width=0.8\textwidth]{Bilder/supervised.jpg}
+            }
+    \phantomcaption
+    \vspace{1em}
+    \ContinuedFloat
+\captionsetup{position=bottom}
+\subfloat[Unsupervised Machine Learning][Unsupervised Machine Learning \label{fig:unsupervised_machinelearning}]{%
+       \includegraphics[width=0.8\textwidth]{Bilder/unsupervised.jpg}
+       }
+        \phantomcaption
+    \vspace{1em}
+    \ContinuedFloat
+\captionsetup{position=bottom}
+\subfloat[Reinforced Machine Learning][Reinforced Machine Learning \label{fig:reinforced_machinelearning}]{%
+       \includegraphics[width=0.8\textwidth]{Bilder/reinforced.jpg}
+       }
+\caption[]{Machine Learning \cite{intellipaat_unsupervised}}
+\label{}
+   \end{figure}
+  
+  
+  
+  
+  
+  
+  
+\FloatBarrier  
+\newpage 
+\addsubsec{Anhang der Teilumsetzung}
+  
+  
+\begin{figure}[h!] %[htbp!] 
+\centering
+\includegraphics[width=0.5\textwidth]{Bilder/drtr-technische-Daten.jpg}
+\vspace{0em}
+ \caption[Technische Daten des DRTR-AL-10V-RV1 Drucksensors]{Technische Daten des DRTR-AL-10V-RV1 Drucksensors, (dem technischen Datenblatt entnommen \cite{BTTG2021})}\label{fig:BTTG2021}
+\end{figure}
+
+  
+  
+\begin{sidewaysfigure}
+\caption[]{Dehnungsresistive Sensoren}\label{fig:metall_halbleiter_dms} \vspace{1em}
+\includegraphics[width=1\textwidth]{Bilder/Metall_Halbleiter_dms.jpg}
+\vspace{0em}
+ \end{sidewaysfigure}
+ 
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\includegraphics[width=1.05\textwidth]{Bilder/va-525.jpg}
+\vspace{0em}
+ \caption[VA-525 Kalibrierzertifikat]
+{VA-525 Kalibrierzertifikat}\label{fig:va-525_kalib}
+\end{figure}
+
+
+
+\hspace{-1em} 
+\begin{figure}[p!] %[htbp!] 
+\centering
+\vspace{-4.5em}
+\includegraphics[width=1.05\textwidth]{Bilder/Cloudnutzung1.pdf}
+\vspace{-4em}
+ \caption[Cloudnutzungsalternative S. 2]{Cloudnutzungsalternative S. 2}\label{appendix:Cloudnutzung1}
+\end{figure}
+
+\hspace{-1em} 
+\begin{figure}[p!] %[htbp!] 
+\centering
+%\hspace{-1em} 
+\vspace{-4.3em}
+\includegraphics[width=1.05\textwidth]{Bilder/Cloudnutzung2.pdf}
+\vspace{-4em}
+ \caption[Cloudnutzungsalternative S. 2]{Cloudnutzungsalternative S. 2}\label{appendix:Cloudnutzung2}
+\end{figure}
+
+
+
+
+\FloatBarrier  
+\pagebreak
+\addsubsec{Anhang der Schnittstellenprogrammierung}
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\includegraphics[width=0.95\textwidth]{Bilder/Filterkuchen_Appfotos/Dateidialog.jpg}
+\vspace{0em}
+ \caption[Dateidialog]
+{Dateidialog}\label{fig:Dateidialog}
+\end{figure}
+
+\begin{figure}[h!] %[htbp!] 
+\centering
+\includegraphics[width=0.95\textwidth]{Bilder/Filterkuchen_Appfotos/Filterkuchen_go_to_debugging.jpg}
+\vspace{0em}
+ \caption[Go to hidden tabs]
+{Go to hidden tabs}\label{fig:Filterkuchen_go_to_debugging}
+\end{figure}
+
+
+
+\newpage
+\begin{table}
+\captionof{table}{Tabelle mit den Werten aller Sensordiagramme}\label{tab:alle_diagrammwerte}
+\vspace{0.5em}
+\centering
+\begin{tabular}{c|c|c|l}
+Index &
+kleiner SKDM in mm &
+großer SKDM in mm &
+\makecell{SKDM Umrechnungs-\\funktionen} \\ \midrule
+ \bottomrule[2pt]
+1	& 19,2 	&  & 	y=0,0177x-0,1866  \\ 
+2	& 59 	&  & 		y=0,0177x-0,1866  \\ 
+3	&	189	&  & 		y=0,0177x-0,1866  \\ 
+4  &		& 45 & 		y=0192x-2,0927  \\ 
+5  &		& 150 & 	y=0,2577x-7,4485  \\ 
+6  	&		& 177 & 	y=0,2577x-7,4485 \\ 
+7 	&		& 85 & 		y=0,2577x-7,4485  \\ 
+8	&	 	& 31,5 & 	y=0192x-2,0927  \\ 
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+\captionof{table}{Tabelle mit den Werten Aller Sensordiagramme}\label{tab:alle_diagrammwerte}
+\vspace{0.5em}
+\centering
+\begin{tabular}{c|c|c|c|c|c|c}
+Index &
+\makecell{Drucksensor\\ in bar} & 
+\makecell{Volumen-\\stromsensor \\in l/min} &
+\makecell{Manometer-\\differenz \\in mm} &
+\makecell{SKDM\\ in l/min} & 
+\makecell{Manometer-\\druck in bar} &
+\makecell{absolute Volumenstrom-\\ messungs\-differenz\\ in~$\vert \frac{\mathrm{l}}{\mathrm{min}} \vert$} \\ \midrule \bottomrule[2pt]
+1	&	0,99 & 0,03 &  2 & 0,99 &  0,15 & 0,12 \\ 
+2	&	0,99 & 1,09 &   7 & 0,99 & 0,86  & 0,23 \\ 
+3	&	0,99 &4,17 &  32 & 0,99 & 4,29  & 0,12 \\ 
+4	&	0,99 & 6,97 &    52 & 1,00 & 6,55  & 0,42 \\ 
+5	&	 & 34,83 &   253 & 1,01 & 31,21  & 3,62 \\  
+6	&	 & 44,9 &   327 & 1,02 & 38,16 &  6,74 \\ 
+7	&	 & 15,65 &   118 & 1,00 & 14,46 & 1,19 \\ 
+8	&	0,99 & 3,98 &    32 & 0,99 & 3,96 &  0,02 \\ 
+
+\end{tabular}
+\end{table}
+
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/schwebekörperkennline_ms-0_6585g.jpg}
+ \vspace{0em}
+  \caption[Schwebekörperdurchflussmesser (m=0,6585~g) mit einer Messspanne von 0,185~bis~5~l/min, zzgl. Approximationsfunktionen der Kennlinie]{Schwebekörperdurchflussmesser (m=0,6585~g) mit einer Messspanne von 0,185~bis~5~l/min, zzgl. Approximationsfunktionen der Kennlinie}\label{fig:kleiner_skdm}
+ \end{figure} 
+ 
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/schwebekörperkennline_ms-2_225g.jpg}
+ \vspace{0em}
+  \caption[Schwebekörperdurchflussmesser (m=2,225~g) mit einer Messspanne von 1,86~l/min~bis~50~l/min, zzgl. Approximationsfunktionen der Kennlinie]{Schwebekörperdurchflussmesser (m=2,225~g) mit einer Messspanne von 1,86~l/min~bis~50~l/min, zzgl. Approximationsfunktionen der Kennlinie}\label{fig:grosser_skdm}
+ \end{figure}
+ 
+ \begin{figure}[h!] %[htbp!] 
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/manometer_plus_0-99_bar_atm.jpg}
+ \vspace{0em}
+  \caption[Manometerkennline; Druckdifferenz zzgl. 0,99~bar, laut digitalem Drucksensor am 17.12.20, um 13:02~Uhr]{Manometerkennline; Druckdifferenz zzgl. 0,99~bar, laut digitalem Drucksensor am 17.12.20, um 13:02~Uhr}\label{fig:manometer_kennlinie}
+ \end{figure}
+
+%%==================================================================================
+%\input{ascii_table}
+
+%\input{Benötigte_LabVIEW_Objekte}
+%\input{Benötigte_LabVIEW_Konfigurationsfunktionen_Teil_2}

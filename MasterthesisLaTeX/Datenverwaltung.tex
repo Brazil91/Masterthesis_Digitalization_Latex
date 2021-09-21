@@ -1,0 +1,96 @@
+\subsection{Datenverwaltung}
+
+Für Für die Verwaltung von Daten bieten sich Datenbank Management Systemen (DBMS) an. DBMS, die in Laboren angewendet werden nennen sich Labor Informations Management Systeme (LIMS). In vielen Fällen werden LIMS in Kombination mit Elektronischen Labor Notebooks (ELN) verwendet. LIMS sind Datenbanksysteme, die Daten bzw. Datensätze verschiedener Routineinstanzen (z.B. Waren/Probeneingang, Prüfungsdurchführende Labormitarbeiter etc.) relational verknüpfen. Die LIMS verwalten in Laboren sämtliche Daten entlang der Laborroutinen, vom Proben Eingang, bis hin zur Qualitätsfreigabe. Die ELN Applikationen dienen dem Laborpersonal, um beispielsweise Erkenntnisse aus Versuchsreihen zu dokumentieren. ELN Systeme können in LIMS integriert werden, um redundante Dateneingaben zu reduzieren oder um sie zu eliminieren. Des Weiteren existieren neben dem relationalen Datenbanktyp noch weitere Datenbanktypen. \\
+
+\subsubsection{PERA}
+
+Das Purdue Enterprise Reference Architecture (PERA) Modell beschreibt Automatisierungsnetze und unterteilt diese in fünf Ebenen, bzw. \glqq Level\grqq{} (siehe  Abbildung \ref{pera_modell}. Die oberen zwei Hierarchieebenen sind in vielen Unternehmen von den Ebenen 3 bis 0 aus sicherheitstechnischen Gründen physisch voneinander getrennt. Die oberen zwei Ebenen werden IT-Ebene und die unteren vier sind der Industrial Control Systems (ICS; deutsch: industrielle Steuerungssysteme, Automatisierungssysteme) Ebene zugeordnet \cite{ics_kompendium}.
+
+\begin{figure}
+\begin{center}
+\caption{PERA Model \, \cite{pera_modell}}
+\vspace{1em}
+\begin{tikzpicture}[
+	scale=0.75,
+	start chain=1 going below, 
+	start chain=2 going right,
+	node distance=1mm,
+	desc/.style={
+		scale=0.75,
+		on chain=2,
+		rectangle,
+		rounded corners,
+		draw=black, 
+		very thick,
+		text centered,
+		text width=8cm,
+		minimum height=12mm,
+		fill=blue!30
+		},
+	it/.style={
+		fill=blue!10
+	},
+	level/.style={
+		scale=0.75,
+		on chain=1,
+		minimum height=12mm,
+		text width=2cm,
+		text centered
+	},
+	every node/.style={font=\sffamily}
+]
+
+% Levels
+\node [level] (Level 5) {Level 5};
+\node [level] (Level 4) {Level 4};
+\node [level] (Level 3) {Level 3};
+\node [level] (Level 2) {Level 2};
+\node [level] (Level 1.5) { };
+\node [level] (Level 1) {Level 1};
+\node [level] (Level 0) {Level 0};
+
+% Descriptions
+\chainin (Level 5); % Start right of Level 5
+% IT levels
+\node [desc, it] (Archives) {Archives/File Servers};
+\node [desc, it, continue chain=going below] (ERP) {ERP/Finance/Messaging};
+% ICS levels
+\node [desc] (Operations) {Operations Management/Historians};
+\node [desc] (Supervisory) {Supervisory Controls};
+\node [desc, text width=3.5cm, xshift=2.25cm] (PLC) {PLC/RTU IP Communication};
+%\node [desc, text width=3.5cm, xshift=-4.5cm] (SIS) {Safety Instrumented Systems};
+\node [desc, xshift=-2.25cm] (SIS) {Safety Instrumented Systems};
+\node [desc] (IO) {I/O from Sensors};
+
+\end{tikzpicture}
+\label{pera_modell}
+\end{center}
+\end{figure}
+
+
+\paragraph{Level 4} Es ist zu erkennen, dass das Level 4 dem Enterprise Level entspricht. Softwarelösungen dieser Ebene werden Enterprise Ressource Planning (ERP) Systeme genannt. Der Enterprise Ebene sind beispielsweise Systeme der Buchhaltung und der Personalabteilung zugeordnet. Zwischen dem Level 4 und dem Level 3 befindet sich die Schnittstelle zum Anlagennetz.
+
+\paragraph{Level 3} Das operative Management ist dem Level 3 zugeordnet. Auf diesem Level findet die Betriebsführung, wie z.B. die Produktionsplanung, Produktversand etc. statt.
+
+\paragraph{Level 2} Dem Level 2 ist die spezifische Prozessführung (Supervisory Control) zugeordnet. Ein Absturz von Systemen diesen Levels haben keinen Einfluss auf die Produktion, da die Datenverarbeitung diesen Levels nicht in Echtzeit verläuft. Die Level 2, 1 und 0 unterscheiden sich z.T. gravierend, je nach betrachtetem Unternehmen.
+
+\paragraph{Level 1} Level 1 ist das Basic Control. Daten und Signale sind auf dieser Ebene in Echtzeit. Die Ausführung und Steuerung physischer Prozesse geschieht auf dieser Ebene. Anlagen werden hier gesteuert und über Sensoren geregelt.
+
+\paragraph{Level 0} Level 0 ist die sogenannte Feldebene. Anlagen und Sensoren sind dieser Ebene zugeordnet.
+
+
+
+\subsubsection{ISA-S95}
+
+Unternehmen sind sozio-ökonimische Systeme. Um global Wettbewerbsfähig zu bleiben ist Flexibilität und das anwenden effizientere Methoden als Unternehmen aus Billiglohnländern ein muss. Um das zu gewährleisten, ist ein System notwendig, welches die gesamte Wertschöpfungskette abbilden kann. Ein effizienter Datenfluss zwischen verschiedenen Unternehmenssystemen wie ERP oder MES ermöglicht der ISA-95 Standard. ISA-S95 definiert Terminologie und einheitliche Modelle, um die Kommunikation zwischen sämtlicher Kontroll- und Unternehmenssystemen zu verbessern. Die Aktivitäten innerhalb eines Unternehmens werden nach dem PERA Modell unterteilt. Die Level 0,1 und 2 decken damit die Aktivitäten der Produktion ab.
+
+Ein Unternehmen kann man hierarchisch unterteilen. Die International Society of Automation, kurz ISA hat 1995 einen Standard etabliert der Terminology und ein Model für den effizienten Datenaustausch zwischen Systemen verschiedener Hierarchiestufen ermöglicht. Der Name des Standards ist ISA-S95. Der ISA-S95 Standard bedient sich der Purdue Enterprise Reference Architecture (PERA). 
+
+ISA-S95 besteht aus fünf Parts. Der erste Part besteht aus Terminologie und Model für e
+
+Um eine effiziente Unternehmensführung zu gewährleisten werden Tools verwendet. Unternehmen nutzen eine Vielzahl von Software Lösungen und Systemen. 
+
+\subsubsection{Datenbanken}
+
+\paragraph{XML}
+

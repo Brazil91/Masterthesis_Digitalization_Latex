@@ -1,0 +1,288 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {4}Signal- und Datenverarbeitung von Mess\-einrichtungen}{41}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline RS-232 zu USB Adapter}{41}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Serielle Schnittstellenkonfiguration und Signalverarbeitung von Messeinrichtungen}{41}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Messeinrichtungen mit integrierter digitaler Schnittstelle}}{42}{}\protected@file@percent }
+\newlabel{fig:sensor_digitale_schnittstelle}{{14}{42}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Sub VI's\relax }}{42}{}\protected@file@percent }
+\newlabel{tab:subvis}{{5}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Serielle Schnittstelle im Betriebssystem finden und Debuggen}{43}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Microsoft Windows}{43}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces RS-232 Konfigurationsparameter der Digitalwaage Kern 440-47 N in shorthand   notation 8-N-1\relax }}{44}{}\protected@file@percent }
+\newlabel{tab:kern440}{{6}{44}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Mac Unix}{44}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Tool zur Identifikation und Debuggen serieller Schnittstellen}{44}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Kontinuierliche Daten via RS-232 und LabVIEW verarbeiten}{44}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Anpassung der LabVIEW-Einstellungen}{45}{}\protected@file@percent }
+\newlabel{sec:LabVIEW_Einstellungen}{{4.3.1}{45}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Serielle Sub VI programmierung}{46}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Erster Schritt: Serielle Objekte}{46}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Zweiter Schritt: Port Initialisierungs- und Abbruchskonfiguration}{46}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Benötigte LabVIEW Konfigurationsfunktionen Teil 1\relax }}{47}{}\protected@file@percent }
+\newlabel{tab:labviewserialobject}{{7}{47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Einfügen aller seriellen Funktionen}}{48}{}\protected@file@percent }
+\newlabel{step1}{{15}{48}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Dritter Schritt: N = 1 For Loop, XON flow control}{49}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Vierter Schritt: Optimierung}{49}{}\protected@file@percent }
+\newlabel{step2}{{16\texttt  {a}}{50}}
+\newlabel{sub@step2}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{step3}{{16\texttt  {b}}{50}}
+\newlabel{sub@step3}{{(\texttt  {b})}{\texttt  {b}}}
+\newlabel{fig:step2_step3}{{16}{50}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {a})}{\ignorespaces Einfügen von Stop Button, Indicators und VISA resource}}{50}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {b})}{\ignorespaces Einfügen von For Loop und Schieberegister}}{50}{}\protected@file@percent }
+\newlabel{step3b}{{17\texttt  {a}}{51}}
+\newlabel{sub@step3b}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{step5}{{17\texttt  {b}}{51}}
+\newlabel{sub@step5}{{(\texttt  {b})}{\texttt  {b}}}
+\newlabel{fig:step3b_step5}{{17}{51}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {a})}{\ignorespaces \glqq Verdrahtung\grqq {} der \texttt {false} Cases}}{51}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {b})}{\ignorespaces Einfügen von For Loop und Schieberegister}}{51}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Definition der VI Objekt Ein- und Ausgänge}}{52}{}\protected@file@percent }
+\newlabel{step4}{{18}{52}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Kontinuierliche Messdatenerfassung RS-232 Haupt VI}{52}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Erster Schritt: Port Konfiguration und String verketten/Anzeigen lassen}{53}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces BD Haupt VI: SSVI Integration/Port Konfiguration/String\-operationen}}{54}{}\protected@file@percent }
+\newlabel{step6}{{19}{54}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Zweiter Schritt: \glqq String Slicing\grqq {}}{54}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces FP Haupt VI: SSVI Integration/Port Konfiguration/String\-operationen}}{55}{}\protected@file@percent }
+\newlabel{step6b}{{20}{55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Slicing Bedingung}}{56}{}\protected@file@percent }
+\newlabel{slicing_bedingung}{{21}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces \glqq String Slicing\grqq {}: Dateninterpretation}}{57}{}\protected@file@percent }
+\newlabel{step7}{{22}{57}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Dritter Schritt: \glqq Dateninterpretation\grqq {}}{57}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Vierter Schritt: Zeilenkonstruktion}{60}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces String-/Zeilenkonstruktion}}{60}{}\protected@file@percent }
+\newlabel{fig:String-/Zeilenkonstruktion}{{23}{60}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fünfter Schritt: Zeitstempel oder Zeitreihen Programmierung}{60}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Sechster Schritt: Versuchsbeobachtungen}{61}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Benötigte LabVIEW Konfigurationsfunktionen Teil 2\relax }}{61}{}\protected@file@percent }
+\newlabel{tab:labviewserialobject2}{{8}{61}}
+\newlabel{fig:true}{{24\texttt  {a}}{62}}
+\newlabel{sub@fig:true}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{fig:false}{{24\texttt  {b}}{62}}
+\newlabel{sub@fig:false}{{(\texttt  {b})}{\texttt  {b}}}
+\newlabel{fig:vtp_elapsed_time}{{24}{62}}
+\newlabel{sec:Datalogger}{{4.3.3}{62}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Siebter Schritt: Dataloggerprogrammierung}{62}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Datalogger}}{63}{}\protected@file@percent }
+\newlabel{datalogger}{{25}{63}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Achter Schritt: Modulare Header}{63}{}\protected@file@percent }
+\newlabel{fig:standard_header}{{26\texttt  {a}}{64}}
+\newlabel{sub@fig:standard_header}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{fig:header}{{26\texttt  {b}}{64}}
+\newlabel{sub@fig:header}{{(\texttt  {b})}{\texttt  {b}}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Neunter Schritt: Auslastungsoptimierung}{64}{}\protected@file@percent }
+\newlabel{fig:vtp_masse}{{26\texttt  {c}}{65}}
+\newlabel{sub@fig:vtp_masse}{{(\texttt  {c})}{\texttt  {c}}}
+\newlabel{fig:dokumentenheader}{{26\texttt  {d}}{65}}
+\newlabel{sub@fig:dokumentenheader}{{(\texttt  {d})}{\texttt  {d}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Modulare Header Sub VI's}}{65}{}\protected@file@percent }
+\newlabel{fig:modularer_header}{{26}{65}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 6, 7, 8 \texttt  {Bit} Encodierung via RS-232\relax }}{65}{}\protected@file@percent }
+\newlabel{tab:678bit}{{9}{65}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Haupt VI Blockdiagramm nach optionalen Verbesserungen}{66}{}\protected@file@percent }
+\newlabel{fig:Haupt_VI_oben_links}{{26\texttt  {a}}{67}}
+\newlabel{sub@fig:Haupt_VI_oben_links}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{fig:Haupt_VI_oben_rechts}{{26\texttt  {b}}{67}}
+\newlabel{sub@fig:Haupt_VI_oben_rechts}{{(\texttt  {b})}{\texttt  {b}}}
+\newlabel{fig:Haupt_VI_unten_links}{{27\texttt  {c}}{67}}
+\newlabel{sub@fig:Haupt_VI_unten_links}{{(\texttt  {c})}{\texttt  {c}}}
+\newlabel{fig:Haupt_VI_unten_rechts}{{27\texttt  {d}}{67}}
+\newlabel{sub@fig:Haupt_VI_unten_rechts}{{(\texttt  {d})}{\texttt  {d}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Gesamtansicht des Haupt VI}}{67}{}\protected@file@percent }
+\newlabel{fig:Haupt_VI}{{27}{67}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {c})}{\ignorespaces position=top}}{67}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(\texttt {d})}{\ignorespaces position=top}}{67}{}\protected@file@percent }
+\newlabel{haupt_ini_oben}{{27\texttt  {a}}{68}}
+\newlabel{sub@haupt_ini_oben}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{haupt_ini_unten}{{28\texttt  {b}}{69}}
+\newlabel{sub@haupt_ini_unten}{{(\texttt  {b})}{\texttt  {b}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Haupt VI Initialisierung \textbf  {(a)} Teil 1 \textbf  {(b)} Teil 2}}{69}{}\protected@file@percent }
+\newlabel{haupt_vi_ini}{{28}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}Nutzen des VI`s}{69}{}\protected@file@percent }
+\newlabel{sec:Haupt_VI_Nutzung}{{4.3.4}{69}}
+\newlabel{fig:datalogger_links}{{29\texttt  {a}}{70}}
+\newlabel{sub@fig:datalogger_links}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{fig:datalogger_rechts}{{29\texttt  {b}}{70}}
+\newlabel{sub@fig:datalogger_rechts}{{(\texttt  {b})}{\texttt  {b}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Datalogger und Elapsed Time in ms \textbf  {(a)} Messwert\-aufnahme\-intervall \textit  {Control} \textbf  {(b)} Datalaogger, Graphprogrammierung, Controleingabe löschen}}{70}{}\protected@file@percent }
+\newlabel{datalogger_2}{{29}{70}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Modularer Header und \textit  {Control} (Variablen) löschen bei Programmende}}{71}{}\protected@file@percent }
+\newlabel{Haupt_Header_datawipe}{{30}{71}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Einstellung \glqq End text entry with Enter key\grqq {}}}{71}{}\protected@file@percent }
+\newlabel{endtextentry}{{31}{71}}
+\newlabel{Haupt_VI_Starteinstellungen}{{32\texttt  {a}}{72}}
+\newlabel{sub@Haupt_VI_Starteinstellungen}{{(\texttt  {a})}{\texttt  {a}}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5}Diskrete Messdatenerfassung RS-232}{72}{}\protected@file@percent }
+\newlabel{Haupt_VI_Eingaben}{{32\texttt  {b}}{73}}
+\newlabel{sub@Haupt_VI_Eingaben}{{(\texttt  {b})}{\texttt  {b}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Haupt VI Starteinstellungen, Haupt VI Eingaben}}{73}{}\protected@file@percent }
+\newlabel{haupt_vi_start_eingaben}{{32}{73}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}DAQ mittels Messkarten}{73}{}\protected@file@percent }
+\newlabel{Haupt_VI_Messung}{{33\texttt  {a}}{74}}
+\newlabel{sub@Haupt_VI_Messung}{{(\texttt  {a})}{\texttt  {a}}}
+\newlabel{Haupt_VI_Konfiguration}{{33\texttt  {b}}{74}}
+\newlabel{sub@Haupt_VI_Konfiguration}{{(\texttt  {b})}{\texttt  {b}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Haupt VI Messung, Haupt VI Konfiguration}}{74}{}\protected@file@percent }
+\newlabel{haupt_vi_messung_konfiguration}{{33}{74}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Kontinuierliche DAQ mittels NI-USB 6001}{74}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Diskrete DAQ mittels NI-USB 6001}{74}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Kontinuierliche Signale via RS-232 mit Python verarbeiten; Python Anaconda Spyder IDE}{74}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Benötigte Libraries}{74}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Haupt VI Debugging}}{75}{}\protected@file@percent }
+\newlabel{Haupt_VI_Debugging}{{34}{75}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Beschreibung des Programmcodes... MatriX lässt Grüßen}{75}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Diskrete Signale via RS-232 mit Python verarbeiten}{75}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Test aller Funktionen und Import in Excel}}{76}{}\protected@file@percent }
+\newlabel{funktionstest}{{35}{76}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Messeinrichtungen mit integrierter digitaler Schnittstelle}}{76}{}\protected@file@percent }
+\newlabel{fig:sensor_digitale_schnittstelle}{{36}{76}}
+\@setckpt{Schnittstellenkonfiguration_und_Signalverarbeitung_von_Messeinrichtungen}{
+\setcounter{page}{77}
+\setcounter{equation}{7}
+\setcounter{enumi}{10}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{4}
+\setcounter{subsection}{6}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{36}
+\setcounter{table}{9}
+\setcounter{caption@flags}{0}
+\setcounter{continuedfloat}{0}
+\setcounter{float@type}{4}
+\setcounter{AM@survey}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{parentequation}{0}
+\setcounter{tabularnote}{0}
+\setcounter{FancyVerbLine}{1}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{58}
+\setcounter{maxnames}{3}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{maxcitecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextraname}{2}
+\setcounter{maxextradate}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlbigbreakpenalty}{100}
+\setcounter{biburlbreakpenalty}{200}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{KVtest}{0}
+\setcounter{subfigure}{0}
+\setcounter{subfigure@save}{2}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{subtable@save}{0}
+\setcounter{lotdepth}{1}
+}
