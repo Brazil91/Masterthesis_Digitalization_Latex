@@ -1,5 +1,0 @@
-[1] Config.pm:312> INFO - This is Biber 2.15
-[1] Config.pm:315> INFO - Logfile is 'Stand_der_Technik.blg'
-[166] biber-darwin:330> INFO - === Wed Feb  3, 2021, 18:04:59
-[449] Utils.pm:411> ERROR - Cannot find 'Stand_der_Technik.bcf'!
-[449] Biber.pm:132> INFO - ERRORS: 1

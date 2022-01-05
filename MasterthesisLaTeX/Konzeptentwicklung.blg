@@ -1,5 +1,0 @@
-[0] Config.pm:312> INFO - This is Biber 2.15
-[1] Config.pm:315> INFO - Logfile is 'Konzeptentwicklung.blg'
-[141] biber-darwin:330> INFO - === Sun Jan 10, 2021, 15:30:28
-[365] Utils.pm:411> ERROR - Cannot find 'Konzeptentwicklung.bcf'!
-[365] Biber.pm:132> INFO - ERRORS: 1
